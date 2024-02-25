@@ -75,21 +75,3286 @@
     
     <py-script>
    from pyscript import display
-   from js import console
-    
-   def my_function(*args, **kwargs):
-      #print('args:', args)
-      #print('kwargs:', kwargs)
-    
-      console.log(f'args: {args}')
-      console.log(f'kwargs: {kwargs}')
-        
-      text = Element('test-input').element.value
-    
-      display('text:', text)
-      console.log(f'text: {text}')
-    
-      pyscript.write('test-output', text)
+   #academath
+      import random
+      def quest() :
+          global count, difficulty, topic
+      
+          qlim = ["Find the limit of (2x + 3) as x approaches 4."
+      , "Calculate the limit of (x^2 - 1) as x approaches -1."
+      , "Determine the limit of (3 - x) as x approaches 3."
+      , "Find the limit of (4x) as x approaches 5."
+      , "Evaluate the limit of (2/x) as x approaches infinity."
+      , "Calculate the limit of (3x^2 + 2x - 1) as x approaches -2."
+      , "Determine the limit of (5 / x) as x approaches 0."
+      , "Find the limit of (x^3 + 2x^2 - 3) as x approaches 1."
+      , "Evaluate the limit of (2x - 1) as x approaches 3."
+      , "Calculate the limit of (1 / x) as x approaches negative infinity."
+      , "Determine the limit of (x^2 - 4) as x approaches 2."
+      , "Find the limit of (3x + 1) as x approaches -1."
+      , "Evaluate the limit of (4 / x) as x approaches infinity."
+      , "Calculate the limit of (x^2 + 2x + 1) as x approaches -1."
+      , "Determine the limit of (2x - 1) as x approaches 2."
+      , "Find the limit of (5 / x^2) as x approaches 0."
+      , "Evaluate the limit of (x - 1) as x approaches 1."
+      , "Calculate the limit of (2x^2 - 3x + 1) as x approaches 1."
+      , "Determine the limit of (1 / x) as x approaches 0 from the right."
+      , "Find the limit of (x^3 - x^2 + x) as x approaches 0."
+      , "Evaluate the limit of (3x + 2) as x approaches -2."
+      , "Calculate the limit of (2 / x) as x approaches negative infinity."
+      , "Determine the limit of (x^2 - 9) as x approaches 3."
+      , "Find the limit of (4x + 1) as x approaches 2."
+      , "Evaluate the limit of (1 / x^2) as x approaches infinity."
+      , "Find the limit of (3x^2 + 2x - 1) / (x^2 - 1) as x approaches 1."
+      , "Calculate the limit of (e^(2x) - 1) / (e^x + 1) as x approaches 0."
+      , "Determine the limit of (sin(x) / x) as x approaches 0."
+      , "Find the limit of (x^3 + 4x^2 - 2x + 1) / (2x^3 - x^2 + 4) as x approaches -2."
+      , "Evaluate the limit of (sqrt(x^2 + 4) - x) / (x^2 + 2) as x approaches  (infinity)."
+      , "Calculate the limit of (1 - cos(x)) / (x) as x approaches 0."
+      , "Determine the limit of (ln(2x + 1) / x) as x approaches 0."
+      , "Find the limit of (2^x - 1) / (3^x - 1) as x approaches (infinity)."
+      , "Evaluate the limit of (tan(x) / x) as x approaches π/2."
+      , "Calculate the limit of (e^(3x) - 1) / (e^(2x) + 2) as x approaches -∞ (negative infinity)."
+      , "Determine the limit of (1/x + 1/(2x) + 1/(3x)) as x approaches ∞ (infinity)."
+      , "Find the limit of (cos(3x) / cos(x)) as x approaches π/6."
+      , "Evaluate the limit of (e^(-2x) - 1) / (e^(-x) - 1) as x approaches ∞ (infinity)."
+      , "Calculate the limit of (4x^2 - 1) / (2x^2 + 3x + 2) as x approaches -1."
+      , "Determine the limit of (tan(x) - sin(x)) / (x - π/3) as x approaches π/3."
+      , "Find the limit of (1/x - 1/(x+2)) as x approaches  (infinity)."
+      , "Evaluate the limit of (e^x - e^(-x)) / (e^x + e^(-x)) as x approaches -∞ (negative infinity)."
+      , "Calculate the limit of (ln(3x + 1) - ln(x)) / ln(x) as x approaches 1."
+      , "Determine the limit of (sin(2x) / x) as x approaches 3π."
+      , "Find the limit of (e^(4x) - e^(2x)) / (e^(3x) + e^(-x)) as x approaches (negative infinity)."
+      , "Evaluate the limit of (x^3 + 3x^2 - 1) / (2x^3 + x^2 - 5) as x approaches -2."
+      , "Calculate the limit of (tan(3x) / sin(4x)) as x approaches 0."
+      , "Determine the limit of (1/x + 1/(2x) + 1/(4x)) as x approaches (negative infinity)."
+      , "Find the limit of (e^(3x) + 1) / (e^x + 1) as x approaches 0."
+      , "Evaluate the limit of (cos(2x) / cos(x)) as x approaches 0."
+      , "Find the limit of (3x^2 + 2x - 1) / (x^2 - 1) as x approaches 1."
+      , "Calculate the limit of (e^(2x) - 1) / (e^x + 1) as x approaches 0."
+      , "Determine the limit of (sin(x) / x) as x approaches 0."
+      , "Find the limit of (x^3 + 4x^2 - 2x + 1) / (2x^3 - x^2 + 4) as x approaches -2."
+      , "Evaluate the limit of (sqrt(x^2 + 4) - x) / (x^2 + 2) as x approaches ∞ (infinity)."
+      , "Calculate the limit of (1 - cos(x)) / (x) as x approaches 0."
+      , "Determine the limit of (ln(2x + 1) / x) as x approaches 0."
+      , "Find the limit of (2^x - 1) / (3^x - 1) as x approaches ∞ (infinity)."
+      , "Evaluate the limit of (tan(x) / x) as x approaches π/2."
+      , "Calculate the limit of (e^(3x) - 1) / (e^(2x) + 2) as x approaches -∞ (negative infinity)."
+      , "Determine the limit of (1/x + 1/(2x) + 1/(3x)) as x approaches ∞ (infinity)."
+      , "Find the limit of (cos(3x) / cos(x)) as x approaches π/6."
+      , "Evaluate the limit of (e^(-2x) - 1) / (e^(-x) - 1) as x approaches ∞ (infinity)."
+      , "Calculate the limit of (4x^2 - 1) / (2x^2 + 3x + 2) as x approaches -1."
+      , "Determine the limit of (tan(x) - sin(x)) / (x - π/3) as x approaches π/3."
+      , "Find the limit of (1/x - 1/(x+2)) as x approaches ∞ (infinity)."
+      , "Evaluate the limit of (e^x - e^(-x)) / (e^x + e^(-x)) as x approaches -∞ (negative infinity)."
+      , "Calculate the limit of (ln(3x + 1) - ln(x)) / ln(x) as x approaches 1."
+      , "Determine the limit of (sin(2x) / x) as x approaches 3π."
+      , "Find the limit of (e^(4x) - e^(2x)) / (e^(3x) + e^(-x)) as x approaches -∞ (negative infinity)."
+      , "Evaluate the limit of (x^3 + 3x^2 - 1) / (2x^3 + x^2 - 5) as x approaches -2."
+      , "Calculate the limit of (tan(3x) / sin(4x)) as x approaches 0."
+      , "Determine the limit of (1/x + 1/(2x) + 1/(4x)) as x approaches -∞ (negative infinity)."
+      , "Find the limit of (e^(3x) + 1) / (e^x + 1) as x approaches 0."
+      , "Evaluate the limit of (cos(2x) / cos(x)) as x approaches 0."
+      , "Find the limit as x approaches 0 of sin(x) / x."
+      , "Evaluate the limit as x approaches infinity of ln(x) / x."
+      , "Determine the limit as x approaches 1 of (x^2 - 1) / ln(x)."
+      , "Find the limit as x approaches 0 of (e^(2x) - 1) / x."
+      , "Calculate the limit as x approaches 0 of tan(x) / x."
+      , "Determine the limit as x approaches infinity of (x^2 + 3x + 2) / e^x."
+      , "Evaluate the limit as x approaches infinity of sqrt(x) / e^x."
+      , "Find the limit as x approaches 0 of (e^(3x) - 1) / (e^(2x) - 1)."
+      , "Calculate the limit as x approaches infinity of (x^3 + 2x^2 + 1) / e^x."
+      , "Determine the limit as x approaches 1 of ln(x) / (x - 1)."
+      , "Find the limit as x approaches 0 of tan(3x) / sin(2x)."
+      , "Evaluate the limit as x approaches infinity of (e^(2x) + 3) / (e^x + 2)."
+      , "Determine the limit as x approaches 0 of (1 - cos(x)) / x^2."
+      , "Find the limit as x approaches infinity of (x^2 + 1) / e^x."
+      , "Calculate the limit as x approaches 0 of (e^(2x) - 2e^x + 1) / x^2."
+      , "Evaluate the limit as x approaches 1 of (x^2 + 2x - 3) / (x^2 + 3x - 4)."
+      , "Determine the limit as x approaches 0 of ln(1 + x) / x."
+      , "Find the limit as x approaches infinity of sin(x) / e^x."
+      , "Calculate the limit as x approaches 0 of (e^(2x) + 2e^x + 1) / sin(x)."
+      , "Determine the limit as x approaches infinity of sqrt(x^2 + 1) / x."
+      , "Find the limit as x approaches infinity of 2^x / e^x."
+      , "Evaluate the limit as x approaches infinity of ln(x + 1) / sqrt(x)."
+      , "Determine the limit as x approaches infinity of e^x / (x^2 + 1)."
+      , "Find the limit as x approaches 0 of tan(2x) / sin(x)."
+      , "Calculate the limit as x approaches 0 of (e^x - 1 - x) / x^2."]
+          
+      
+          qderiv = ["Find the derivative of f(x) = 4x^3 + 2x^2 - 7x + 1."
+      , "Calculate the derivative of g(x) = 5x^6 - 3x^4 + 2x^2."
+      , "Determine the derivative of h(x) = 3x^(-2) - 2x^(-3) + 5x^(-1)."
+      , "Find the derivative of y(x) = x^4 - 2x^2 + 1."
+      , "Calculate the derivative of f(t) = e^t * t^4."
+      , "Determine the derivative of g(x) = 1/x^3."
+      , "Find the derivative of h(x) = sqrt(x^5)."
+      , "Calculate the derivative of y(t) = 6t^(-3) + 2t^2 - 3."
+      , "Determine the derivative of f(x) = 1/x^5."
+      , "Find the derivative of g(t) = 3t^(-1/3)."
+      , "Calculate the derivative of h(x) = 2x^4 - 5x^2 + 4."
+      , "Determine the derivative of y(t) = e^t * t^2."
+      , "Find the derivative of f(x) = 2x^6 - 3x^4 + 7x^2."
+      , "Calculate the derivative of g(x) = 1/sqrt(x)."
+      , "Determine the derivative of h(x) = sqrt(x^3) - x."
+      , "Find the derivative of y(t) = 4t^(-2) - 2t^3 + 1."
+      , "Calculate the derivative of f(x) = 1/x^6."
+      , "Determine the derivative of g(t) = 4t^(1/2)."
+      , "Find the derivative of h(x) = 3x^5 - 2x^3 + 5."
+      , "Calculate the derivative of y(t) = e^t * t^3 - t^2 + 1."
+      , "Determine the derivative of f(x) = 1/x^7."
+      , "Find the derivative of g(t) = 2t^(-1/2) + t^(-3/2)."
+      , "Calculate the derivative of h(x) = 2x^7 - x^5 + 3x^3."
+      , "Determine the derivative of y(t) = e^t * t^5 - 2t^2 + 1."
+      , "Find the derivative of g(x) = 5x^(-4) - 3x^(-2) + 2."
+      , "Find the derivative of f(x) = (3x^2 - 2x + 1) / (4x + 2)."
+      , "Calculate the derivative of g(x) = (5x^3 + 2x^2 - 3x) / (2x + 1)."
+      , "Determine the derivative of h(x) = (2x^2 + 1) / (x - 1)."
+      , "Find the derivative of y(x) = (x^4 - 2x^2 + 1) / (x^2 + 1)."
+      , "Calculate the derivative of f(t) = (e^t - t^2 + 3) / (2e^t + 1)."
+      , "Determine the derivative of g(x) = (cos(x) + 1) / (sin(x) + 2)."
+      , "Find the derivative of h(x) = (ln(x) + 2) / (3x + 1)."
+      , "Calculate the derivative of y(t) = (4t^3 - 2t^2 + 1) / (t^2 - 2)."
+      , "Determine the derivative of f(x) = (1/x) / (2x + 1)."
+      , "Find the derivative of g(t) = (sqrt(t) + 1) / (3 - t)."
+      , "Calculate the derivative of h(x) = (2x^2 - 5x + 4) / (x^2 + 3x - 2)."
+      , "Determine the derivative of y(t) = (e^t + t^2 - 1) / (2e^t - 1)."
+      , "Find the derivative of f(x) = (2x^3 - 3x^2 + 1) / (4x^2 + 2x + 1)."
+      , "Calculate the derivative of g(x) = (tan(x) + 2) / (cos(x) + 1)."
+      , "Determine the derivative of h(x) = (ln(x) - 1) / (x^2 + x + 2)."
+      , "Find the derivative of y(t) = (3t^2 - 2t + 1) / (e^t + 2)."
+      , "Calculate the derivative of f(x) = (1/x^2 - 2) / (3x + 1)."
+      , "Determine the derivative of g(t) = (e^t - 1) / (sqrt(t) + 2)."
+      , "Find the derivative of h(x) = (4x^2 - 3x + 1) / (x^3 + x + 2)."
+      , "Calculate the derivative of y(t) = (e^t + 2t) / (t^2 - 1)."
+      , "Determine the derivative of f(x) = (3x^2 - 4x + 1) / (2/x + 1)."
+      , "Find the derivative of g(t) = (sin(t) + 1) / (cos(t) + 2)."
+      , "Calculate the derivative of h(x) = (2ln(x) - 3) / (4x + 1)."
+      , "Determine the derivative of y(t) = (e^t - t^2 + 1) / (3e^t - 2)."
+      , "Find the derivative of g(x) = (5x^3 - 2x^2 + 3x) / (2x^2 + 1)."
+      , "Find the derivative of the composition: y = (2x^3 - 5x^2 + 1)^2."
+      , "Calculate the derivative of f(t) = e^(3t^2 - 1)."
+      , "Determine the derivative of h(x) = sqrt(cos(2x))."
+      , "Find the derivative of y(x) = ln(4x^2 - 3x + 1)."
+      , "Calculate the derivative of g(t) = e^(sin(t))."
+      , "Determine the derivative of p(x) = (x^2 + 1)^3."
+      , "Find the derivative of y(t) = e^(2t) * sin(t)."
+      , "Calculate the derivative of f(x) = ln(cos(x))."
+      , "Determine the derivative of h(t) = sqrt(3t + 1)^2."
+      , "Find the derivative of y(x) = e^(2x) * cos(3x)."
+      , "Calculate the derivative of g(t) = ln(2t + 1)^2."
+      , "Determine the derivative of p(x) = tan(3x + 1)."
+      , "Find the derivative of y(t) = e^(4t^2 - 1) * sin(t)."
+      , "Calculate the derivative of f(x) = sqrt(1 - x^2)."
+      , "Determine the derivative of h(t) = e^(2t) * ln(t)."
+      , "Find the derivative of y(x) = cos(2x)^2."
+      , "Calculate the derivative of g(t) = ln(e^(2t) + 1))."
+      , "Determine the derivative of p(x) = e^(x^2) * tan(x)."
+      , "Find the derivative of y(t) = e^(3t^2) * cos(2t)."
+      , "Calculate the derivative of f(x) = sin(ln(x))."
+      , "Determine the derivative of h(t) = sqrt(4t^2 + 1)."
+      , "Find the derivative of y(x) = e^(sin(2x))."
+      , "Calculate the derivative of g(t) = cos(e^t + 1)."
+      , "Determine the derivative of p(x) = ln(e^(2x) + 1)."
+      , "Find the derivative of y(t) = tan(e^t)."
+      , "Find the derivative of y = e^(sin(2x)) / ln^2(1 + x^2)."
+      , "Find the derivative of f(x) = sqrt(cos(e^(3x)))."
+      , "Find the derivative of g(t) = e^(2t)sin(ln(t)) / (cos^3(t) + 1)."
+      , "Find the derivative of y(x) = (tan^3(x) + e^(sin^2(x))) / ln(2x^2 + 1)."
+      , "Find the derivative of h(x) = sqrt(e^(2x) + cos^2(x)) / ln(1 + e^x)."
+      , "Find the derivative of p(t) = e^tan(t) / (sin^2(t) + cos(t))."
+      , "Find the derivative of y(x) = e^(sqrt(ln^2(x) + cos(2x)))."
+      , "Find the derivative of f(t) = e^(2t) / sqrt(sin^2(t) + 1)."
+      , "Find the derivative of g(x) = e^(2x)cos(ln(x)) / (sin^3(x) + 1)."
+      , "Find the derivative of y(t) = sqrt((e^(3t) + ln(t^2 + 1)) / (cos^2(t) + 1))."
+      , "Find the derivative of h(x) = e^tan(e^x)cos(ln(2x + 1))."
+      , "Find the derivative of p(t) = sqrt(ln(t) + 1) / (e^(2t) - sin^2(t))."
+      , "Find the derivative of y(x) = e^(sin(x)) / sqrt(cos^2(x) + e^x)."
+      , "Find the derivative of f(t) = e^(2t)cos(sin(t)) / sqrt(cos(t) + 1)."
+      , "Find the derivative of g(x) = sqrt(ln(e^(2x) + sqrt(x)))."
+      , "Find the derivative of h(t) = e^(sin^2(t))cos(t)."
+      , "Find the derivative of y(x) = e^(cos(x)) / sqrt(sin^2(x) + ln^2(x))."
+      , "Find the derivative of p(t) = (e^(3t) - cos(t)) / sqrt(cos(e^t) + sqrt(t))."
+      , "Find the derivative of y(x) = tan(e^x) + sqrt((e^(2x) + 1) / (cos(x) + 1))."
+      , "Find the derivative of f(t) = ln^2(t) / (e^t + cos(t))."
+      , "Find the derivative of g(x) = e^(sqrt(sin^2(x) + 1))."
+      , "Find the derivative of h(t) = e^(2t)sin(t) / (cos^3(t) + 1)."
+      , "Find the derivative of p(x) = tan(e^(2x)) + sqrt(cos^2(x) + e^(2x))."
+      , "Find the derivative of y(t) = e^(sin(t))cos(t)."
+      , "Find the derivative of f(x) = ln(x) / sqrt(e^x + 1)."]
+      
+      
+          qrieman = ["Find the left Riemann sum of f(x) = x^2 on the interval [0, 1], with n = 4."
+      , "Find the left Riemann sum of f(x) = 2x on the interval [1, 3], with n = 3."
+      , "Find the left Riemann sum of f(x) = sqrt(x) on the interval [0, 4], with n = 2."
+      , "Find the left Riemann sum of f(x) = 3 - x on the interval [1, 4], with n = 3."
+      , "Find the left Riemann sum of f(x) = x^3 on the interval [0, 2], with n = 4."
+      , "Find the left Riemann sum of f(x) = sin(x) on the interval [0, π], with n = 3."
+      , "Find the left Riemann sum of f(x) = 2x + 1 on the interval [1, 2], with n = 2."
+      , "Find the left Riemann sum of f(x) = e^x on the interval [0, 1], with n = 4."
+      , "Find the left Riemann sum of f(x) = 1/x on the interval [1, 3], with n = 3."
+      , "Find the left Riemann sum of f(x) = x^2 - 2x on the interval [0, 3], with n = 3."
+      , "Find the left Riemann sum of f(x) = 4 - x^2 on the interval [0, 2], with n = 4."
+      , "Find the left Riemann sum of f(x) = sqrt(x) on the interval [1, 4], with n = 3."
+      , "Find the left Riemann sum of f(x) = cos(x) on the interval [0, π], with n = 4."
+      , "Find the left Riemann sum of f(x) = x^3 + 2x^2 on the interval [1, 2], with n = 2."
+      , "Find the left Riemann sum of f(x) = ln(x) on the interval [1, 2], with n = 3."
+      , "Find the left Riemann sum of f(x) = 2 - x on the interval [1, 3], with n = 4."
+      , "Find the left Riemann sum of f(x) = x^2 + 3x on the interval [0, 2], with n = 3."
+      , "Find the left Riemann sum of f(x) = e^(-x) on the interval [0, 2], with n = 2."
+      , "Find the left Riemann sum of f(x) = 1/x^2 on the interval [1, 2], with n = 3."
+      , "Find the left Riemann sum of f(x) = cos(2x) on the interval [0, π], with n = 4."
+      , "Find the left Riemann sum of f(x) = ln(x + 1) on the interval [0, 2], with n = 3."
+      , "Find the left Riemann sum of f(x) = 4x - x^2 on the interval [0, 4], with n = 4."
+      , "Find the left Riemann sum of f(x) = sqrt(1 + x) on the interval [0, 3], with n = 3."
+      , "Find the left Riemann sum of f(x) = 1 - e^(-x) on the interval [0, 1], with n = 4."
+      , "Find the left Riemann sum of f(x) = sin(x) + cos(x) on the interval [0, π], with n =3."
+      , "Find the right Riemann sum of f(x) = x^2 on the interval [0, 1] with n = 4."
+      , "Find the right Riemann sum of f(x) = 2x on the interval [1, 3] with n = 3."
+      , "Find the right Riemann sum of f(x) = sqrt(x) on the interval [0, 4] with n = 2."
+      , "Find the right Riemann sum of f(x) = 3 - x on the interval [1, 4] with n = 3."
+      , "Find the right Riemann sum of f(x) = x^3 on the interval [0, 2] with n = 4."
+      , "Find the right Riemann sum of f(x) = sin(x) on the interval [0, π] with n = 3."
+      , "Find the right Riemann sum of f(x) = 2x + 1 on the interval [1, 2] with n = 2."
+      , "Find the right Riemann sum of f(x) = e^x on the interval [0, 1] with n = 4."
+      , "Find the right Riemann sum of f(x) = 1/x on the interval [1, 3] with n = 3."
+      , "Find the right Riemann sum of f(x) = x^2 - 2x on the interval [0, 3] with n = 3."
+      , "Find the right Riemann sum of f(x) = 4 - x^2 on the interval [0, 2] with n = 4."
+      , "Find the right Riemann sum of f(x) = sqrt(x) on the interval [1, 4] with n = 3."
+      , "Find the right Riemann sum of f(x) = cos(x) on the interval [0, π] with n = 4."
+      , "Find the right Riemann sum of f(x) = x^3 + 2x^2 on the interval [1, 2] with n = 2."
+      , "Find the right Riemann sum of f(x) = ln(x) on the interval [1, 2] with n = 3."
+      , "Find the right Riemann sum of f(x) = 2 - x on the interval [1, 3] with n = 4."
+      , "Find the right Riemann sum of f(x) = x^2 + 3x on the interval [0, 2] with n = 3."
+      , "Find the right Riemann sum of f(x) = e^(-x) on the interval [0, 2] with n = 2."
+      , "Find the right Riemann sum of f(x) = 1/x^2 on the interval [1, 2] with n = 3."
+      , "Find the right Riemann sum of f(x) = cos(2x) on the interval [0, π] with n = 4."
+      , "Find the right Riemann sum of f(x) = ln(x + 1) on the interval [0, 2] with n = 3."
+      , "Find the right Riemann sum of f(x) = 4x - x^2 on the interval [0, 4] with n = 4."
+      , "Find the right Riemann sum of f(x) = sqrt(1 + x) on the interval [0, 3] with n = 3."
+      , "Find the right Riemann sum of f(x) = 1 - e^(-x) on the interval [0, 1] with n = 4."
+      , "Find the right Riemann sum of f(x) = sin(x) + cos(x) on the interval [0, π] with n = 3."
+      , "Find the left Riemann sum of f(x) = x^2 - 2x on the interval [0, 2] with n = 4."
+      , "Find the left Riemann sum of f(x) = e^(-x) on the interval [0, 1] with n = 3."
+      , "Find the left Riemann sum of f(x) = sin(2x) on the interval [0, π] with n = 5."
+      , "Find the left Riemann sum of f(x) = ln(x) on the interval [1, 3] with n = 4."
+      , "Find the left Riemann sum of f(x) = 3x^2 on the interval [1, 2] with n = 3."
+      , "Find the left Riemann sum of f(x) = 1/x on the interval [1, 4] with n = 4."
+      , "Find the left Riemann sum of f(x) = cos(x) on the interval [0, π] with n = 3."
+      , "Find the left Riemann sum of f(x) = 2 + x on the interval [1, 3] with n = 5."
+      , "Find the left Riemann sum of f(x) = sqrt(x) on the interval [0, 1] with n = 2."
+      , "Find the left Riemann sum of f(x) = 4 - x on the interval [0, 4] with n = 4."
+      , "Find the left Riemann sum of f(x) = x^3 + 2x^2 on the interval [0, 3] with n = 3."
+      , "Find the left Riemann sum of f(x) = e^x on the interval [1, 2] with n = 4."
+      , "Find the left Riemann sum of f(x) = 1 - e^(-x) on the interval [0, 2] with n = 2."
+      , "Find the left Riemann sum of f(x) = x^2 + 3x on the interval [0, 3] with n = 3."
+      , "Find the left Riemann sum of f(x) = 2x - x^2 on the interval [0, 2] with n = 4."
+      , "Find the left Riemann sum of f(x) = sqrt(1 + x) on the interval [1, 2] with n = 3."
+      , "Find the left Riemann sum of f(x) = ln(x + 1) on the interval [0, 1] with n = 4."
+      , "Find the left Riemann sum of f(x) = 3 - 2x on the interval [0, 2] with n = 4."
+      , "Find the left Riemann sum of f(x) = sin(x) + cos(x) on the interval [0, π] with n = 5."
+      , "Find the left Riemann sum of f(x) = x^3 - 2x^2 on the interval [0, 1] with n = 3."
+      , "Find the left Riemann sum of f(x) = 2 - e^(-x) on the interval [1, 2] with n = 4."
+      , "Find the left Riemann sum of f(x) = 1/x^2 on the interval [1, 3] with n = 3."
+      , "Find the left Riemann sum of f(x) = 4x - x^2 on the interval [0, 1] with n = 2."
+      , "Find the left Riemann sum of f(x) = cos(2x) on the interval [0, π] with n = 4."
+      , "Find the left Riemann sum of f(x) = x^2 on the interval [1, 4] with n = 5."
+      , "Find the right Riemann sum of f(x) = 2 - e^(-x) on the interval [1, 2] with n = 4."
+      , "Find the right Riemann sum of f(x) = 1/x^2 on the interval [1, 3] with n = 3."
+      , "Find the right Riemann sum of f(x) = 4x - x^2 on the interval [0, 1] with n = 2."
+      , "Find the right Riemann sum of f(x) = cos(2x) on the interval [0, π] with n = 4."
+      , "Find the right Riemann sum of f(x) = x^2 on the interval [1, 4] with n = 5."
+      , "Find the right Riemann sum of f(x) = 3 - 2x on the interval [0, 2] with n = 4."
+      , "Find the right Riemann sum of f(x) = sin(x) + cos(x) on the interval [0, π] with n = 5."
+      , "Find the right Riemann sum of f(x) = x^3 - 2x^2 on the interval [0, 1] with n = 3."
+      , "Find the right Riemann sum of f(x) = 2 + x on the interval [1, 3] with n = 5."
+      , "Find the right Riemann sum of f(x) = sqrt(x) on the interval [0, 1] with n = 2."
+      , "Find the right Riemann sum of f(x) = 4 - x on the interval [0, 4] with n = 4."
+      , "Find the right Riemann sum of f(x) = x^3 + 2x^2 on the interval [0, 3] with n = 3."
+      , "Find the right Riemann sum of f(x) = e^x on the interval [1, 2] with n = 4."
+      , "Find the right Riemann sum of f(x) = 1 - e^(-x) on the interval [0, 2] with n = 2."
+      , "Find the right Riemann sum of f(x) = x^2 + 3x on the interval [0, 3] with n = 3."
+      , "Find the right Riemann sum of f(x) = 2x - x^2 on the interval [0, 2] with n = 4."
+      , "Find the right Riemann sum of f(x) = sqrt(1 + x) on the interval [1, 2] with n = 3."
+      , "Find the right Riemann sum of f(x) = ln(x + 1) on the interval [0, 1] with n = 4."
+      , "Find the right Riemann sum of f(x) = x^2 - 2x on the interval [0, 2] with n = 4."
+      , "Find the right Riemann sum of f(x) = e^(-x) on the interval [0, 1] with n = 3."
+      , "Find the right Riemann sum of f(x) = sin(2x) on the interval [0, π] with n = 5."
+      , "Find the right Riemann sum of f(x) = ln(x) on the interval [1, 3] with n = 4."
+      , "Find the right Riemann sum of f(x) = 3x^2 on the interval [1, 2] with n = 3."
+      , "Find the right Riemann sum of f(x) = 1/x on the interval [1, 4] with n = 4."
+      , "Find the right Riemann sum of f(x) = cos(x) on the interval [0, π] with n = 3."]
+      
+      
+          qinteg = ["Integrate x^2 dx"
+      , "Evaluate the integral of (3x + 2) dx"
+      , "Find the integral of (4 - 2x) dx"
+      , "Calculate the integral of (5x^3 + 2) dx"
+      , "Integrate 2e^x dx"
+      , "Evaluate the integral of (1/x) dx"
+      , "Find the integral of (3sin(x) + 4cos(x)) dx"
+      , "Calculate the integral of (x + 1/x) dx"
+      , "Integrate 5 ln(x) dx"
+      , "Evaluate the integral of (2/x^2) dx"
+      , "Find the integral of (e^x + 1) dx"
+      , "Calculate the integral of (2sin(x) - 3cos(x)) dx"
+      , "Integrate x^4 dx"
+      , "Evaluate the integral of (1 + 2x + 3x^2) dx"
+      , "Find the integral of (1/(2x)) dx"
+      , "Calculate the integral of (4e^x - 2) dx"
+      , "Integrate cos(x) dx"
+      , "Evaluate the integral of (1/(x^2 + 1)) dx"
+      , "Find the integral of (e^x - e^(-x)) dx"
+      , "Calculate the integral of (sin(x) + cos(x)) dx"
+      , "Integrate 1/x dx"
+      , "Evaluate the integral of (3/x^3) dx"
+      , "Find the integral of (5e^x + 2/x) dx"
+      , "Calculate the integral of (2sin(x) + 3cos(x)) dx"
+      , "Integrate e^(2x) dx"
+      , "Integrate e^(x^2) dx"
+      , "Evaluate x^2 e^x dx"
+      , "Find ln(x) / x dx"
+      , "Calculate sin^2(x) + cos^2(x) dx"
+      , "Integrate x^2 ln(x) dx"
+      , "Evaluate e^x sin(x) dx"
+      , "Find 1 / (x^2 + 1) dx"
+      , "Calculate sqrt(1 - x^2) dx"
+      , "Integrate (tan(x) + sec(x))^2 dx"
+      , "Evaluate e^(2x) cos(3x) dx"
+      , "Find x^2 / (x^4 + 1) dx"
+      , "Calculate ln(x) / sqrt(x) dx"
+      , "Integrate (1 + e^x) / (1 + e^(2x)) dx"
+      , "Evaluate x e^x ln(x) dx"
+      , "Find 1 / (x^3 + x^2) dx"
+      , "Calculate sqrt(e^x + 1) / e^x dx"
+      , "Integrate (cos(x))^2 / (sin(x) + 1) dx"
+      , "Evaluate x^2 / sqrt(1 - x^2) dx"
+      , "Find (e^x + e^(-x)) / (e^x - e^(-x)) dx"
+      , "Calculate sec^3(x) dx"
+      , "Integrate e^(-x^2) / x dx"
+      , "Evaluate sin^2(2x) dx"
+      , "Find (ln(x))^2 / x dx"
+      , "Calculate sqrt(x) / (1 + sqrt(x)) dx"
+      , "Integrate (1 + tan(x))^2 / cos(x) dx"
+      , "Find the integral of e^(x^2)cos(x) dx"
+      , "Find the integral of x^3 ln(x) dx"
+      , "Find the integral of (sin^2(x) + cos^2(x))^2 dx"
+      , "Find the integral of x^2 e^(x^3) dx"
+      , "Find the integral of ln(x)/(1 + x) dx"
+      , "Find the integral of e^(-x)sin(x) dx"
+      , "Find the integral of sqrt(1 - x^2)cos(x) dx"
+      , "Find the integral of (tan(x) + sec(x))^3 dx"
+      , "Find the integral of e^x / (e^x + 1) dx"
+      , "Find the integral of x^2 / sqrt(1 - x^2) dx"
+      , "Find the integral of e^x sin^2(x) dx"
+      , "Find the integral of x^2 / (1 + x^4) dx"
+      , "Find the integral of (ln(x))^3 / x dx"
+      , "Find the integral of e^(2x)sin(3x) dx"
+      , "Find the integral of sqrt(1 + e^x) dx"
+      , "Find the integral of cos(x) / (1 - sin(x)) dx"
+      , "Find the integral of x^2 / (e^x + 1)^2 dx"
+      , "Find the integral of e^(2x)cos^2(x) dx"
+      , "Find the integral of x^2 / (x^4 + 1) dx"
+      , "Find the integral of (1 - e^x)^2 dx"
+      , "Find the integral of ln^2(x) / x dx"
+      , "Find the integral of e^(-x^2)sin(x) dx"
+      , "Find the integral of (1 + e^x)^2 / (1 + e^(2x)) dx"
+      , "Find the integral of x^2 / (1 + x^2)^2 dx"
+      , "Find the integral of e^(2x) / sqrt(e^2x - 1) dx"
+      , "Find the integral of e^(x^3)cos(x) dx"
+      , "Find the integral of x^4 ln(x) dx"
+      , "Find the integral of (sin^2(x) + cos^2(x))^3 dx"
+      , "Find the integral of x^3 e^(x^4) dx"
+      , "Find the integral of ln(x^2 + 1)/(x + 1) dx"
+      , "Find the integral of e^(-x)cos(2x) dx"
+      , "Find the integral of sqrt(1 - x^2)sin(x) dx"
+      , "Find the integral of (tan(x) + sec(x))^4 dx"
+      , "Find the integral of e^x / (e^x + 1)^2 dx"
+      , "Find the integral of x^3 / sqrt(1 - x^2) dx"
+      , "Find the integral of e^x sin^3(x) dx"
+      , "Find the integral of x^3 / (1 + x^4) dx"
+      , "Find the integral of (ln(x))^4 / x dx"
+      , "Find the integral of e^(2x)sin(4x) dx"
+      , "Find the integral of sqrt(1 + e^x + e^(2x)) dx"
+      , "Find the integral of cos^2(x) / (1 - sin(x)) dx"
+      , "Find the integral of x^3 / (e^x + 1)^3 dx"
+      , "Find the integral of e^(2x)cos^3(x) dx"
+      , "Find the integral of x^3 / (x^4 + 1) dx"
+      , "Find the integral of (1 - e^x)^3 dx"
+      , "Find the integral of (ln(x))^3 / x^2 dx"
+      , "Find the integral of e^(-x^2)sin(2x) dx"
+      , "Find the integral of (1 + e^x)^3 / (1 + e^(2x)) dx"
+      , "Find the integral of x^3 / (1 + x^2)^3 dx"
+      , "Find the integral of e^(2x) / sqrt(e^2x - 1) dx"]
+      
+      
+          
+          anslim = ["11", "0", "0", "20", "0", "10", "infinity", "2", "5", "0", "0", "8"
+                    , "0", "2", "3", "infinity", "0", "0", "infinity", "0", "-4", "0", "0"
+                    , "9", "0", "1", "1", "1", "3/4", "0", "1/2", "1", "0", "1", "0", "0"
+                    , "0", "-1", "3", "1", "-1/2", "0", "0", "2/3", "-1", "0", "0", "0"
+                    , "1", "1", "1", "0", "3", "2/3", "1/2", "1/2", "1", "0", "1/3", "0"
+                    , "0", "0", "-1", "0", "1", "-1", "0", "0", "0", "-1", "0", "0", "0"
+                    , "-1", "0", "1", "0", "2", "2", "1", "0", "0", "3", "0", "1", "3/2"
+                    , "2", "1/2", "0", "1/2", "1", "1", "0", "2", "1", "0", "1", "0", "2"
+                    , "1/2"]
+          
+      
+          ansderiv = ["12x^2 + 4x - 7"
+      , "30x^5 - 12x^3 + 4x"
+      , "-6x^(-3) + 6x^(-4) - 5x^(-2)"
+      , "4x^3 - 4x"
+      , "e^t * (4t^3 + 3t^2)"
+      , "-1/x^4"
+      , "5/2 * x^(-1/2)"
+      , "-18t^(-4) + 4t"
+      , "-5x^(-6)"
+      , "-t^(-4/3)"
+      , "8x^3 - 10x"
+      , "2e^t * t^2 + e^t * 2t"
+      , "12x^5 - 12x^3 + 14x"
+      , "-1/2 * x^(-3/2)"
+      , "3/2 * x^(1/2) - 1"
+      , "8t^(-3) - 6t^2"
+      , "-6x^(-7)"
+      , "2t^(-1/2)"
+      , "15x^4 - 6x^2"
+      , "3e^t * t^2 + e^t * 3t^2 - 2t"
+      , "-7x^(-8)"
+      , "-1/2 * t^(-3/2) - 3/2 * t^(-5/2)"
+      , "14x^6 - 5x^4 + 9x^2"
+      , "5e^t * t^4 + e^t * 5t^4 - 4t"
+      , "20x^(-5) - 6x^(-3)"
+      , "(12x^2 + 4x - 7) / (4x + 2)^2"
+      , "(30x^5 - 12x^3 + 4x) / (2x + 1)^2"
+      , "((4x - 2) - (2x^2 + 1)) / (x - 1)^2"
+      , "(4x^3 - 4x) / (x^2 + 1)^2"
+      , "((e^t + 2t^2 - 1)(2e^t + 1) - (e^t - t^2 + 3)(2e^t)) / (2e^t + 1)^2"
+      , "((sin(x) + 2)(sin(x) + 2) - (cos(x) + 1)(cos(x) + 1)) / (sin(x) + 2)^2"
+      , "((3x + 1)(ln(x) - 1) - (ln(x) + 2)(1)) / (3x + 1)^2"
+      , "((12t^2 - 4t)(t^2 - 2) - (4t^3 - 2t^2 + 1)(2t)) / (t^2 - 2)^2"
+      , "((2x + 1) - (1/x)(2)) / (2x + 1)^2"
+      , "((2)(sqrt(t) + 1) - (sqrt(t) + 1)(1)) / (3 - t)^2"
+      , "((4x + 2)(2x^2 - 5x + 4) - (2x^2 - 5x + 4)(2)) / (x^2 + 3x - 2)^2"
+      , "((2e^t - 1)(e^t + t^2 - 1) - (e^t + t^2 - 1)(2e^t)) / (2e^t - 1)^2"
+      , "((4x^2 + 2x + 1)(2x^3 - 3x^2 + 1) - (2x^2 - 5x + 4)(12x^2 + 4x - 7)) / (4x^2 + 2x + 1)^2"
+      , "((cos(x) + 1)(cos(x) + 1) - (tan(x) + 2)(-sin(x))) / (cos(x) + 1)^2"
+      , "((x^2 + x + 2)(ln(x) - 1) - (2ln(x) - 3)(2x + 1)) / (x^2 + x + 2)^2"
+      , "((e^t + 2)(3t^2 - 2t + 1) - (3t^2 - 2t + 1)(e^t + 2)) / (e^t + 2)^2"
+      , "((3x + 1)(1/x^2 - 2) - (1/x)(6x)) / (3x + 1)^2"
+      , "((sqrt(t) + 2)(sqrt(t) + 2) - (e^t - 1)(1/(2sqrt(t)))) / (sqrt(t) + 2)^2"
+      , "((x^3 + x + 2)(4x^2 - 3x + 1) - (4x^2 - 3x + 1)(3x^2 + x)) / (x^3 + x + 2)^2"
+      , "((t^2 - 1)(e^t + 2t) - (e^t + 2t)(2t)) / (t^2 - 1)^2"
+      , "((2/x + 1)(3x^2 - 4x + 1) - (3x^2 - 4x + 1)(-2/x^2)) / (2/x + 1)^2"
+      , "((cos(t) + 2)(cos(t) + 2) - (sin(t) + 1)(-sin(t))) / (cos(t) + 2)^2"
+      , "((4x + 1)(2ln(x) - 3) - (2)(2x + 1)) / (4x + 1)^2"
+      , "((3e^t - 2)(e^t - t^2 + 1) - (e^t - t^2 + 1)(3e^t)) / (3e^t - 2)^2"
+      , "((2x^2 + 1)(5x^3 - 2x^2 + 3x) - (5x^3 - 2x^2 + 3x)(4x)) / (2x^2 + 1)^2"
+      , "2(2x^3 - 5x^2 + 1)(6x^2 - 10x)"
+      , "6te^(3t^2 - 1)"
+      , "sin(2x)(2)"
+      , "(8x - 3) / (4x^2 - 3x + 1)"
+      , "cos(t)e^(sin(t))"
+      , "3(x^2 + 1)^2(2x)"
+      , "e^(2t) * (2cos(t) + sin(t))"
+      , "-tan(x)csc(x)"
+      , "(3) / (2sqrt(3t + 1))"
+      , "e^(2x) * (2cos(3x) - 3sin(3x))"
+      , "(2) / (2t + 1)"
+      , "3sec^2(3x + 1)"
+      , "e^(4t^2 - 1)(8t^2 + cos(t))"
+      , "-x / sqrt(1 - x^2)"
+      , "(2e^(2t) + e^(2t)ln(t))"
+      , "-4cos(2x)sin(2x)"
+      , "(2) / (e^(2t) + 1)"
+      , "e^(x^2) * (2x + tan(x)sec^2(x))"
+      , "e^(3t^2)(6tcos(2t) + sin(2t))"
+      , "cos(ln(x)) / x"
+      , "(8t) / sqrt(4t^2 + 1)"
+      , "2e^(sin(2x))cos(2x)"
+      , "-e^(e^t + 1)sin(e^t + 1)"
+      , "2 / (e^(2x) + 1)"
+      , "e^tsec^2(e^t)"
+      , "-2e^(2x)sin(cos(e^(2x))) - 2x(2x^2 - 5x + 1)e^(2x)cos(cos(e^(2x)))"
+      , "(e^x / (2sqrt{e^x + ln(x)})) + (1 / (x(e^x + ln(x))))"
+      , "(2e^(2t) + 2tsin(t)cos(ln(t))) / (cos(ln(t)) - (e^(2t) + sin^2(t))sin(ln(t)))"
+      , "6tan(3x)sec^2(3x) + e^sin(x)cos(x)"
+      , "(2x - 1) / (x^2 + 1)^2 - (e^(2x) + sqrt(x))ln(x) / (e^(2x) + sqrt(x))^2"
+      , "(3e^(3t) - cos(t)) / (cos^2(t) + 1)^2 - 2(e^(3t) - sin(t))sin(t) / (cos^2(t) + 1)^2"
+      , "-sin(e^x) / sqrt(1 + e^(2x)) - (e^(2x)cos(e^x)) / (2sqrt(1 + e^(2x))(1 + e^(2x)))"
+      , "(2ln(t)) / (t(2t + 1)) + 2te^(t^2)"
+      , "(2e^(2x)cos(e^x)(sin^2(x) + 1) - (e^(2x) + sin(x))(2sin(x)cos(x) + 2sin(x)e^xcos(e^x))) / (sin^2(x) + 1)^2"
+      , "(2e^(2t) + ln^2(t)) / (2sqrt(e^(2t) + ln^2(t)))"
+      , "3e^(3x)tan(e^x) + e^(3x)sec^2(e^x)"
+      , "((e^t + 1) / (2sqrt(e^t + 1)) - sin(t)(e^t - cos^2(t))) / (e^t - cos^2(t))^2"
+      , "(e^(2x) + sin(x))(2cos(e^x) - e^(2x)sin(x)) / (cos(e^x) + 1)^2"
+      , "2e^(2t)sin^2(t) + 2te^(2t)sin(t)cos(t)"
+      , "1 / (e^(2x) + sqrt(x)) + ln(e^(2x) + sqrt(x)) / (2e^(2x) + 1)"
+      , "e^(sin^2(t) + sin(t))cos(t) - 2e^(sin^2(t))sin(t)"
+      , "-2cos^2(x)sin(x) / (e^(2x) + ln(x))^2"
+      , "(3e^(3t) - cos(t))(cos(e^t) + sqrt(t)) / (cos^2(e^t) + sqrt(t))^2 - 1 / (2sqrt(t))"
+      , "e^xsec^2(e^x) + e^(2x)cos(e^x) / sqrt(e^(2x) + 1)"
+      , "(2ln(t)) / (t(e^t + cos(t))) - ln^2(t)(e^t + cos(t)) / (e^t + cos(t))^2"
+      , "(e^(x)sin(x) + sin(x)cos^2(x)) / sqrt(e^x + sin^2(x))"
+      , "(2e^(2t)sin(t)(cos^2(t) + 1) - (e^(2t) + sin(t))2sin(t)cos(t)) / (cos^2(t) + 1)^2"
+      , "sec^2(e^(2x)) + 2e^(2x) / sqrt(1 + e^(2x))"
+      , "e^(sin(t) + sin^2(t))cos(t) - e^(sin(t))sin(t)"
+      , "(1 / (x(sqrt(e^x + 1)))) - (ln(x) / (2(e^x + 1)^(3/2)))"]
+          
+      
+          ansrieman = ["0.875", "12.0", "2.0", "6.0", "3.5", "1.673", "8.0", "7.788", "1.833"
+                       , "-8.0", "5.778", "4.732", "0.0", "15.0", "1.792", "-12.0", "12.0"
+                       , "1.367", "1.361", "-2.072", "1.792", "30.0", "4.732", "2.197", "1.673"
+                       , "0.5625", "18.0", "2.0", "5.25", "4.375", "1.673", "9.0", "8.533"
+                       , "0.833", "-5.0", "6.778", "4.732", "-0.354", "18.0", "2.301", "-4.0"
+                       , "18.0", "1.632", "0.861", "-1.072", "2.301", "18.0", "4.732", "1.802"
+                       , "1.673", "-3.5", "1.0", "0.0", "0.693", "7.333", "1.708", "1.0", "10.0"
+                       , "0.5", "8.0", "4.732", "9.788", "0.367", "12.0", "2.0", "1.732", "0.693"
+                       , "5.0", "1.673", "-1.75", "5.105", "1.361", "-0.5", "-2.072", "5.875""5.105"
+                       , "1.361", "1.0", "-2.072", "5.875", "-1.75", "1.673", "-2.75", "12.0", "0.5"
+                       , "8.0", "4.732", "9.788", "0.367", "12.0", "2.0", "1.732", "0.693", "-3.5"
+                       , "1.0", "0.0", "0.693", "7.333", "1.708", "0.833"]
+          
+          
+          ansinteg = ["(1/3)x^3 + C"
+      , "(3/2)x^2 + 2x + C"
+      , "4x - x^2 + C"
+      , "(5/4)x^4 + 2x + C"
+      , "2e^x + C"
+      , "ln(|x|) + C"
+      , "-3cos(x) + 4sin(x) + C"
+      , "(1/2)x^2 + ln(|x|) + C"
+      , "5x ln(x) - 5x + C"
+      , "-2/x + C"
+      , "e^x + x + C"
+      , "-2cos(x) - 3sin(x) + C"
+      , "(1/5)x^5 + C"
+      , "x + x^2 + x^3 + C"
+      , "ln(|2x|) + C"
+      , "4e^x - 2x + C"
+      , "sin(x) + C"
+      , "arctan(x) + C"
+      , "e^x - e^(-x) + C"
+      , "-cos(x) + sin(x) + C"
+      , "ln(|x|) + C"
+      , "-3/(2x^2) + C"
+      , "5e^x + 2ln(|x|) + C"
+      , "-2cos(x) + 3sin(x) + C"
+      , "(1/2)e^(2x) + C"
+      , "1/2 sqrt(pi) erf(x) + C"
+      , "(x^2 - 2x + 2)e^x + C"
+      , "(ln(x))^2 / 2 + C"
+      , "x + C"
+      , "(1/3)x^3 ln(x) - (1/9)x^3 + C"
+      , "(1/2)e^x(sin(x) - cos(x)) + C"
+      , "arctan(x) + C"
+      , "(1/2)arcsin(x) + (1/2)x sqrt(1 - x^2) + C"
+      , "tan(x) + C"
+      , "(1/13)e^(2x)(2sin(3x) - 3cos(3x)) + C"
+      , "(1/5)x^5 / (x^4 + 1) + arctan(x^2) + C"
+      , "-2sqrt(x)(ln(x) + 2) + C"
+      , "ln(1 + e^x) + C"
+      , "(x^2 - 2)x e^x + C"
+      , "ln(x + 1) + C"
+      , "-sqrt(e^x + 1) + C"
+      , "x - cos(x) + sin(x) - C"
+      , "(1/2)arcsin(x) + x sqrt(1 - x^2) + C"
+      , "2arctan(e^x) + C"
+      , "(1/2)tan(x)sec(x) + C"
+      , "Ei(-x^2) / 2 + C"
+      , "(1/4)(2x - sin(4x)) + C"
+      , "(x - ln(x) - 2) ln(x) + C"
+      , "2sqrt(x) - 2ln(1 + sqrt(x)) + C"
+      , "(1/2)ln|cos(x)| + (1/2)tan(x) + C"
+      , "(1/2) sqrt(pi) erf(x) + C"
+      , "(x^4 / 4 - x^3 / 9) ln(x) + C"
+      , "(x - sin(x)cos(x)) / 2 + C"
+      , "(e^(x^3) / 3) + C"
+      , "x ln(x) - x + C"
+      , "-e^(-x)cos(x) - e^(-x)sin(x) + C"
+      , "(x / 2) sqrt(1 - x^2) + (1 / 2) arcsin(x) + C"
+      , "(1 / 2) tan(x) sec(x) - (1 / 2) ln|sec(x) + tan(x)| + C"
+      , "ln(e^x + 1) + C"
+      , "(1/2) arcsin(x) + (1/2) x sqrt(1 - x^2) + C"
+      , "(e^x sin^3(x)) / 3 + C"
+      , "(x / 2) - (1 / 4) ln(1 + x^4) + C"
+      , "(1/4) (ln(x))^4 + C"
+      , "(1 / 13) e^(2x) (3sin(3x) - cos(3x)) + C"
+      , "(2/3) (1 + e^x)^(3/2) + C"
+      , "ln|1 - sin(x)| + C"
+      , "-1 / (e^x + 1) + 1 / (e^x + 1)^2 - ln(e^x + 1) + C"
+      , "(1 / 4) e^(2x) (sin(2x) + 2) + C"
+      , "(x / 2) - (1 / 4) ln(1 + x^4) + C"
+      , "x - 2e^x + e^(2x) / 2 + C"
+      , "-ln^3(x) + 6ln^2(x) + 12ln(x) - 24x + C"
+      , "-e^(-x^2)cos(x) + C"
+      , "(1 / 2) e^x (e^x - 1) + C"
+      , "(x^2 / 2) - (1 / 2) arctan(x) - (1 / 4) x / (1 + x^2) + C"
+      , "-arctan(sqrt(e^2x - 1)) + C"
+      , "(1/4) sqrt(pi) erf(x) e^(x^3) + C"
+      , "(x^5 / 5 - x^4 / 16) ln(x) + C"
+      , "(x / 2) - (sin(2x)sin^2(x) + cos(2x)cos^2(x)) / 2 + C"
+      , "(e^(x^4) / 4) + C"
+      , "(x ln(x^2 + 1) - x) / 2 + atan(x) + C"
+      , "(1 / 5) e^(-x)(cos(2x) - 2sin(2x)) + C"
+      , "-sqrt(1 - x^2)cos(x) + C"
+      , "(1 / 4) tan(x) sec(x) - (1 / 4) ln|sec(x) + tan(x)| + (1 / 32) tan(x) sec^3(x) - (1 / 64) ln|sec(x) + tan(x)| sec^2(x) + C"
+      , "e^x / (e^x + 1) + 1 / (e^x + 1) + ln(e^x + 1) - 1 / 2ln|e^x + 1| + C"
+      , "(1/2) arcsin(x) + (1/2) x sqrt(1 - x^2) + (1/8) sqrt(1 - x^2) x (3x^2 - 1) + C"
+      , "(1 / 32) e^x (8sin(x) - 12sin(3x) + sin(5x)) + C"
+      , "(x / 4) - (1 / 16) ln(1 + x^4) + (1 / 32) arctan(x^2) - (1 / 64) ln|1 + x^4| + C"
+      , "(1/5) (ln(x))^5 - (2/3) (ln(x))^3 + 2ln(x) - (8/15) x^(-2) + C"
+      , "(1 / 130) e^(2x) (65sin(4x) - 12sin(6x) - 36cos(4x) - 108cos(6x)) + C"
+      , "(2/3) (1 + e^x + e^(2x))^(3/2) - 2 / sqrt(1 + e^x + e^(2x)) + C"
+      , "-ln|1 - sin(x)| - 2atan(sqrt(1 - sin(x))) + C"
+      , "-1 / (e^x + 1) + 1 / (e^x + 1)^2 - 1 / 2ln(e^x + 1) + 1 / 4(e^x + 1)^(-2) + C"
+      , "(1 / 160) e^(2x) (40sin(2x) + 120sin(4x) - 45sin(6x) - 5sin(8x)) + C"
+      , "(x / 4) - (1 / 16) ln(1 + x^4) + (1 / 32) arctan(x^2) - (1 / 64) ln|1 + x^4| + C"
+      , "(1 / 4) e^x (e^x - 1)^4 + C"
+      , "(ln(x))^4 / 4 - (3/2) (ln(x))^3 + 6ln(x) - 24x + C"
+      , "(1 / 2) e^(-x^2) cos(2x) + C"
+      , "(1 / 2) e^x (e^x + 1)^3 - 3 / 2 ln(e^x + 1) + 3 / 4(e^x + 1)^(-2) + C"
+      , "(x / 4) - (1 / 16) ln(1 + x^4) + (1 / 32) arctan(x^2) - (1 / 64) ln|1 + x^4| + C"
+      , "-arctan(sqrt(e^2x - 1)) + C"]
+      
+          numq = 10
+          array = int ( input ( " What topic would you like to do: " ) )
+          count = 0
+          difficulty = int( input (" Enter difficulty from 1 to 4: " ) )
+          if array == 1 :
+              topic = "Calculus 1 - Limits"
+          elif array == 2 :
+              topic = "Calculus 1 - Reimann Sums"
+          elif array == 3 :
+              topic = "Calculus 1 - Derivatives"
+          else :
+              topic = "Calculus 1 - Integrals"
+          if array == 1 :
+              print( " We will now begin testing you on Calculus 1 Limits: " )
+              for i in range(0, numq-1):
+                  if difficulty == 1 :
+                      a = random.randint(0,25)
+                  elif difficulty == 2 :
+                      a = random.randint(25,50)
+                  elif difficulty == 3 :
+                      a = random.randint(50,75)
+                  elif difficulty == 4 :
+                      a = random.randint(75,100)
+                  
+                  userans = str(input(print(qlim[a], " = ")))
+                  ans = anslim[a]
+      
+                  if ans == userans :
+                      print(" Congratulations!! your answer is correct.\n")
+                      count = count + 1
+                  else :
+                      print( " Your answer is wrong!!\n", " The correct answer is ", ans)
+              return count, difficulty
+                  
+          elif array == 2 :
+              print(" We will now begin testing you on Calculus 1 Riemann sums: " )
+              for i in range(0, numq-1):
+                  if difficulty == 1 :
+                      a = random.randint(0,25)
+                  elif difficulty == 2 :
+                      a = random.randint(25,50)
+                  elif difficulty == 3 :
+                      a = random.randint(50,75)
+                  elif difficulty == 4 :
+                      a = random.randint(75,100)
+                  xyz = qrieman[a]
+                  userans = str(input(print(qrieman[a], " = ")))
+                  ans = ansrieman[a]
+                  
+                  if ans == userans :
+                      print(" Congratulations!! your answer is correct.\n")
+                      count = count + 1
+                  else :
+                      print( " Your answer is wrong!!\n", " The correct answer is ", ans)
+              return count, difficulty
+      
+          elif array == 3 :
+              print(" We will now begin testing you on Calculus 1 Derivatives: " )
+              for i in range(0, numq-1):
+      
+                  if difficulty == 1 :
+                      a = random.randint(0,25)
+                  elif difficulty == 2 :
+                      a = random.randint(25,50)
+                  elif difficulty == 3 :
+                      a = random.randint(50,75)
+                  elif difficulty == 4 :
+                      a = random.randint(75,100)
+                  xyz = qderiv[a]
+                  userans = str(input(print(qderiv[a], " = ")))
+                  ans = ansderiv[a]
+                  if ans == userans :
+                      print(" Congratulations!! your answer is correct.\n")
+                      count = count + 1
+                  else :
+                      print( " Your answer is wrong!!\n", " The correct answer is ", ans )
+              return count, difficulty
+      
+          elif array == 4 :
+              print(" We will now begin testing you on Calculus 1 Integrals: " )
+              for i in range(0, numq-1):
+      
+                  if difficulty == 1 :
+                      a = random.randint(0,25)
+                  elif difficulty == 2 :
+                      a = random.randint(25,50)
+                  elif difficulty == 3 :
+                      a = random.randint(50,75)
+                  elif difficulty == 4 :
+                      a = random.randint(75,100)
+      
+                  userans = str(input(print(qinteg[a], " = ")))
+                  ans = ansinteg[a]
+                  if ans == userans :
+                      print(" Congratulations!! your answer is correct.\n")
+                      count = count + 1
+                  else :
+                      print( " Your answer is wrong!!\n", " The correct answer is ", ans)
+              return count, difficulty
+      
+      def main():
+          repeat = "yes"
+          points = 0
+          while repeat == "yes" :
+              quest()
+              points = count * difficulty
+              if difficulty == 1 :
+                  if points == 10 :
+                      print("Congratulations, you have acheived a perfect score on Basic Difficulty, your current level is BASIC GOLD")
+                      print("You have ", count, " correct questions out of 10. ")
+                  elif 10 > points >= 7 :
+                      print("Congratulations, you have achieved a high score on Basic Difficulty, your current level is BASIC SILVER")
+                      print("You have ", count, " correct questions out of 10. ")
+                  elif 7 > points >=5 :
+                      print("Well Done, you have completed the quiz, your current level is BASIC BRONZE")
+                      print("You have ", count, " correct questions out of 10. ")
+                  else :
+                      print("You have ", count, " correct questions. Please try again...")
+      
+              elif difficulty == 2 :
+                  if points == 20 :
+                      print("Congratulations, you have acheived a perfect score on intermediate Difficulty, your current level is INTERMEDIATE GOLD")
+                      print("You have ", count, " correct questions out of 10. ")
+                  elif 20 > points >= 16 :
+                      print("Congratulations, you have achieved a high score on intermediate Difficulty, your current level is INTERMEDIATE SILVER")
+                      print("You have ", count, " correct questions out of 10. ")
+                  elif 16 > points >=10 :
+                      print("Well Done, you have completed the quiz, your current level is INTERMEDIATE BRONZE")
+                      print("You have ", count, " correct questions out of 10. ")
+                  else :
+                      print("You have ", count, " correct questions. Please try again...")
+              
+              elif difficulty == 3 :
+                  if points == 30 :
+                      print("Congratulations, you have acheived a perfect score on advanced Difficulty, your current level is ADVANCED GOLD")
+                      print("You have ", count, " correct questions out of 10. ")
+                  elif 30 > points >= 24 :
+                      print("Congratulations, you have achieved a high score on advanced Difficulty, your current level is ADVANCED SILVER")
+                      print("You have ", count, " correct questions out of 10. ")
+                  elif 24 > points >=15 :
+                      print("Well Done, you have completed the quiz, your current level is ADVANCED BRONZE")
+                      print("You have ", count, " correct questions out of 10. ")
+                  else :
+                      print("You have ", count, " correct questions. Please try again...")
+      
+              elif difficulty == 4 :
+                  if points == 40 :
+                      print("Amazing, you have attained a perfect score on the challenge level.\n","You have achieved mastery over this topic, hence your current level in ", topic, " is PLATINUM :)\n")
+                  elif  40 > points >= 32 :
+                      print("Congratulations, you have achived a high level in the challenge level, your level is CHALLENGER GOLD")
+                      print("You got ", count, " correct questions correct out of 10.")
+                  elif 32 > points >= 24 :
+                      print("Well done, you have achieved a good understanding of the topic, your level is CHALLENGER SILVER")
+                      print("You got ", count, " correct questions correct out of 10.")
+                  elif 24 > points >= 16 :
+                      print("You have completed the challenge level, your current level is CHALLENGER BRONZE")
+                      print("You got ", count, " correct questions out of 10.")
+                  else :
+                      print("You have ", count, " correct questions out of 10, please try again...")
+      main()
+          </py-script>
+            <!-- blog section end -->
+            
+            <!-- copyright section start -->
+            <div class="copyright_section">
+               <div class="container">
+                  <p class="copyright_text">© 2020 All Rights Reserved. <a href="https://html.design">Free html  Templates</a></p>
+               </div>
+            </div>
+            <!-- copyright section end -->
+            <!-- Javascript files-->
+            <script src="js/jquery.min.js"></script>
+            <script src="js/popper.min.js"></script>
+            <script src="js/bootstrap.bundle.min.js"></script>
+            <script src="js/jquery-3.0.0.min.js"></script>
+            <script src="js/plugin.js"></script>
+            <!-- sidebar -->
+            <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+            <script src="js/custom.js"></script>
+            <!-- javascript -->
+            <script src="js/owl.carousel.js"></script>
+            <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+         </body>
+      </html>
+      
+      import random
+      def quest() :
+          global count, difficulty, topic
+      
+          qlim = ["Find the limit of (2x + 3) as x approaches 4."
+      , "Calculate the limit of (x^2 - 1) as x approaches -1."
+      , "Determine the limit of (3 - x) as x approaches 3."
+      , "Find the limit of (4x) as x approaches 5."
+      , "Evaluate the limit of (2/x) as x approaches infinity."
+      , "Calculate the limit of (3x^2 + 2x - 1) as x approaches -2."
+      , "Determine the limit of (5 / x) as x approaches 0."
+      , "Find the limit of (x^3 + 2x^2 - 3) as x approaches 1."
+      , "Evaluate the limit of (2x - 1) as x approaches 3."
+      , "Calculate the limit of (1 / x) as x approaches negative infinity."
+      , "Determine the limit of (x^2 - 4) as x approaches 2."
+      , "Find the limit of (3x + 1) as x approaches -1."
+      , "Evaluate the limit of (4 / x) as x approaches infinity."
+      , "Calculate the limit of (x^2 + 2x + 1) as x approaches -1."
+      , "Determine the limit of (2x - 1) as x approaches 2."
+      , "Find the limit of (5 / x^2) as x approaches 0."
+      , "Evaluate the limit of (x - 1) as x approaches 1."
+      , "Calculate the limit of (2x^2 - 3x + 1) as x approaches 1."
+      , "Determine the limit of (1 / x) as x approaches 0 from the right."
+      , "Find the limit of (x^3 - x^2 + x) as x approaches 0."
+      , "Evaluate the limit of (3x + 2) as x approaches -2."
+      , "Calculate the limit of (2 / x) as x approaches negative infinity."
+      , "Determine the limit of (x^2 - 9) as x approaches 3."
+      , "Find the limit of (4x + 1) as x approaches 2."
+      , "Evaluate the limit of (1 / x^2) as x approaches infinity."
+      , "Find the limit of (3x^2 + 2x - 1) / (x^2 - 1) as x approaches 1."
+      , "Calculate the limit of (e^(2x) - 1) / (e^x + 1) as x approaches 0."
+      , "Determine the limit of (sin(x) / x) as x approaches 0."
+      , "Find the limit of (x^3 + 4x^2 - 2x + 1) / (2x^3 - x^2 + 4) as x approaches -2."
+      , "Evaluate the limit of (sqrt(x^2 + 4) - x) / (x^2 + 2) as x approaches  (infinity)."
+      , "Calculate the limit of (1 - cos(x)) / (x) as x approaches 0."
+      , "Determine the limit of (ln(2x + 1) / x) as x approaches 0."
+      , "Find the limit of (2^x - 1) / (3^x - 1) as x approaches (infinity)."
+      , "Evaluate the limit of (tan(x) / x) as x approaches π/2."
+      , "Calculate the limit of (e^(3x) - 1) / (e^(2x) + 2) as x approaches -∞ (negative infinity)."
+      , "Determine the limit of (1/x + 1/(2x) + 1/(3x)) as x approaches ∞ (infinity)."
+      , "Find the limit of (cos(3x) / cos(x)) as x approaches π/6."
+      , "Evaluate the limit of (e^(-2x) - 1) / (e^(-x) - 1) as x approaches ∞ (infinity)."
+      , "Calculate the limit of (4x^2 - 1) / (2x^2 + 3x + 2) as x approaches -1."
+      , "Determine the limit of (tan(x) - sin(x)) / (x - π/3) as x approaches π/3."
+      , "Find the limit of (1/x - 1/(x+2)) as x approaches  (infinity)."
+      , "Evaluate the limit of (e^x - e^(-x)) / (e^x + e^(-x)) as x approaches -∞ (negative infinity)."
+      , "Calculate the limit of (ln(3x + 1) - ln(x)) / ln(x) as x approaches 1."
+      , "Determine the limit of (sin(2x) / x) as x approaches 3π."
+      , "Find the limit of (e^(4x) - e^(2x)) / (e^(3x) + e^(-x)) as x approaches (negative infinity)."
+      , "Evaluate the limit of (x^3 + 3x^2 - 1) / (2x^3 + x^2 - 5) as x approaches -2."
+      , "Calculate the limit of (tan(3x) / sin(4x)) as x approaches 0."
+      , "Determine the limit of (1/x + 1/(2x) + 1/(4x)) as x approaches (negative infinity)."
+      , "Find the limit of (e^(3x) + 1) / (e^x + 1) as x approaches 0."
+      , "Evaluate the limit of (cos(2x) / cos(x)) as x approaches 0."
+      , "Find the limit of (3x^2 + 2x - 1) / (x^2 - 1) as x approaches 1."
+      , "Calculate the limit of (e^(2x) - 1) / (e^x + 1) as x approaches 0."
+      , "Determine the limit of (sin(x) / x) as x approaches 0."
+      , "Find the limit of (x^3 + 4x^2 - 2x + 1) / (2x^3 - x^2 + 4) as x approaches -2."
+      , "Evaluate the limit of (sqrt(x^2 + 4) - x) / (x^2 + 2) as x approaches ∞ (infinity)."
+      , "Calculate the limit of (1 - cos(x)) / (x) as x approaches 0."
+      , "Determine the limit of (ln(2x + 1) / x) as x approaches 0."
+      , "Find the limit of (2^x - 1) / (3^x - 1) as x approaches ∞ (infinity)."
+      , "Evaluate the limit of (tan(x) / x) as x approaches π/2."
+      , "Calculate the limit of (e^(3x) - 1) / (e^(2x) + 2) as x approaches -∞ (negative infinity)."
+      , "Determine the limit of (1/x + 1/(2x) + 1/(3x)) as x approaches ∞ (infinity)."
+      , "Find the limit of (cos(3x) / cos(x)) as x approaches π/6."
+      , "Evaluate the limit of (e^(-2x) - 1) / (e^(-x) - 1) as x approaches ∞ (infinity)."
+      , "Calculate the limit of (4x^2 - 1) / (2x^2 + 3x + 2) as x approaches -1."
+      , "Determine the limit of (tan(x) - sin(x)) / (x - π/3) as x approaches π/3."
+      , "Find the limit of (1/x - 1/(x+2)) as x approaches ∞ (infinity)."
+      , "Evaluate the limit of (e^x - e^(-x)) / (e^x + e^(-x)) as x approaches -∞ (negative infinity)."
+      , "Calculate the limit of (ln(3x + 1) - ln(x)) / ln(x) as x approaches 1."
+      , "Determine the limit of (sin(2x) / x) as x approaches 3π."
+      , "Find the limit of (e^(4x) - e^(2x)) / (e^(3x) + e^(-x)) as x approaches -∞ (negative infinity)."
+      , "Evaluate the limit of (x^3 + 3x^2 - 1) / (2x^3 + x^2 - 5) as x approaches -2."
+      , "Calculate the limit of (tan(3x) / sin(4x)) as x approaches 0."
+      , "Determine the limit of (1/x + 1/(2x) + 1/(4x)) as x approaches -∞ (negative infinity)."
+      , "Find the limit of (e^(3x) + 1) / (e^x + 1) as x approaches 0."
+      , "Evaluate the limit of (cos(2x) / cos(x)) as x approaches 0."
+      , "Find the limit as x approaches 0 of sin(x) / x."
+      , "Evaluate the limit as x approaches infinity of ln(x) / x."
+      , "Determine the limit as x approaches 1 of (x^2 - 1) / ln(x)."
+      , "Find the limit as x approaches 0 of (e^(2x) - 1) / x."
+      , "Calculate the limit as x approaches 0 of tan(x) / x."
+      , "Determine the limit as x approaches infinity of (x^2 + 3x + 2) / e^x."
+      , "Evaluate the limit as x approaches infinity of sqrt(x) / e^x."
+      , "Find the limit as x approaches 0 of (e^(3x) - 1) / (e^(2x) - 1)."
+      , "Calculate the limit as x approaches infinity of (x^3 + 2x^2 + 1) / e^x."
+      , "Determine the limit as x approaches 1 of ln(x) / (x - 1)."
+      , "Find the limit as x approaches 0 of tan(3x) / sin(2x)."
+      , "Evaluate the limit as x approaches infinity of (e^(2x) + 3) / (e^x + 2)."
+      , "Determine the limit as x approaches 0 of (1 - cos(x)) / x^2."
+      , "Find the limit as x approaches infinity of (x^2 + 1) / e^x."
+      , "Calculate the limit as x approaches 0 of (e^(2x) - 2e^x + 1) / x^2."
+      , "Evaluate the limit as x approaches 1 of (x^2 + 2x - 3) / (x^2 + 3x - 4)."
+      , "Determine the limit as x approaches 0 of ln(1 + x) / x."
+      , "Find the limit as x approaches infinity of sin(x) / e^x."
+      , "Calculate the limit as x approaches 0 of (e^(2x) + 2e^x + 1) / sin(x)."
+      , "Determine the limit as x approaches infinity of sqrt(x^2 + 1) / x."
+      , "Find the limit as x approaches infinity of 2^x / e^x."
+      , "Evaluate the limit as x approaches infinity of ln(x + 1) / sqrt(x)."
+      , "Determine the limit as x approaches infinity of e^x / (x^2 + 1)."
+      , "Find the limit as x approaches 0 of tan(2x) / sin(x)."
+      , "Calculate the limit as x approaches 0 of (e^x - 1 - x) / x^2."]
+          
+      
+          qderiv = ["Find the derivative of f(x) = 4x^3 + 2x^2 - 7x + 1."
+      , "Calculate the derivative of g(x) = 5x^6 - 3x^4 + 2x^2."
+      , "Determine the derivative of h(x) = 3x^(-2) - 2x^(-3) + 5x^(-1)."
+      , "Find the derivative of y(x) = x^4 - 2x^2 + 1."
+      , "Calculate the derivative of f(t) = e^t * t^4."
+      , "Determine the derivative of g(x) = 1/x^3."
+      , "Find the derivative of h(x) = sqrt(x^5)."
+      , "Calculate the derivative of y(t) = 6t^(-3) + 2t^2 - 3."
+      , "Determine the derivative of f(x) = 1/x^5."
+      , "Find the derivative of g(t) = 3t^(-1/3)."
+      , "Calculate the derivative of h(x) = 2x^4 - 5x^2 + 4."
+      , "Determine the derivative of y(t) = e^t * t^2."
+      , "Find the derivative of f(x) = 2x^6 - 3x^4 + 7x^2."
+      , "Calculate the derivative of g(x) = 1/sqrt(x)."
+      , "Determine the derivative of h(x) = sqrt(x^3) - x."
+      , "Find the derivative of y(t) = 4t^(-2) - 2t^3 + 1."
+      , "Calculate the derivative of f(x) = 1/x^6."
+      , "Determine the derivative of g(t) = 4t^(1/2)."
+      , "Find the derivative of h(x) = 3x^5 - 2x^3 + 5."
+      , "Calculate the derivative of y(t) = e^t * t^3 - t^2 + 1."
+      , "Determine the derivative of f(x) = 1/x^7."
+      , "Find the derivative of g(t) = 2t^(-1/2) + t^(-3/2)."
+      , "Calculate the derivative of h(x) = 2x^7 - x^5 + 3x^3."
+      , "Determine the derivative of y(t) = e^t * t^5 - 2t^2 + 1."
+      , "Find the derivative of g(x) = 5x^(-4) - 3x^(-2) + 2."
+      , "Find the derivative of f(x) = (3x^2 - 2x + 1) / (4x + 2)."
+      , "Calculate the derivative of g(x) = (5x^3 + 2x^2 - 3x) / (2x + 1)."
+      , "Determine the derivative of h(x) = (2x^2 + 1) / (x - 1)."
+      , "Find the derivative of y(x) = (x^4 - 2x^2 + 1) / (x^2 + 1)."
+      , "Calculate the derivative of f(t) = (e^t - t^2 + 3) / (2e^t + 1)."
+      , "Determine the derivative of g(x) = (cos(x) + 1) / (sin(x) + 2)."
+      , "Find the derivative of h(x) = (ln(x) + 2) / (3x + 1)."
+      , "Calculate the derivative of y(t) = (4t^3 - 2t^2 + 1) / (t^2 - 2)."
+      , "Determine the derivative of f(x) = (1/x) / (2x + 1)."
+      , "Find the derivative of g(t) = (sqrt(t) + 1) / (3 - t)."
+      , "Calculate the derivative of h(x) = (2x^2 - 5x + 4) / (x^2 + 3x - 2)."
+      , "Determine the derivative of y(t) = (e^t + t^2 - 1) / (2e^t - 1)."
+      , "Find the derivative of f(x) = (2x^3 - 3x^2 + 1) / (4x^2 + 2x + 1)."
+      , "Calculate the derivative of g(x) = (tan(x) + 2) / (cos(x) + 1)."
+      , "Determine the derivative of h(x) = (ln(x) - 1) / (x^2 + x + 2)."
+      , "Find the derivative of y(t) = (3t^2 - 2t + 1) / (e^t + 2)."
+      , "Calculate the derivative of f(x) = (1/x^2 - 2) / (3x + 1)."
+      , "Determine the derivative of g(t) = (e^t - 1) / (sqrt(t) + 2)."
+      , "Find the derivative of h(x) = (4x^2 - 3x + 1) / (x^3 + x + 2)."
+      , "Calculate the derivative of y(t) = (e^t + 2t) / (t^2 - 1)."
+      , "Determine the derivative of f(x) = (3x^2 - 4x + 1) / (2/x + 1)."
+      , "Find the derivative of g(t) = (sin(t) + 1) / (cos(t) + 2)."
+      , "Calculate the derivative of h(x) = (2ln(x) - 3) / (4x + 1)."
+      , "Determine the derivative of y(t) = (e^t - t^2 + 1) / (3e^t - 2)."
+      , "Find the derivative of g(x) = (5x^3 - 2x^2 + 3x) / (2x^2 + 1)."
+      , "Find the derivative of the composition: y = (2x^3 - 5x^2 + 1)^2."
+      , "Calculate the derivative of f(t) = e^(3t^2 - 1)."
+      , "Determine the derivative of h(x) = sqrt(cos(2x))."
+      , "Find the derivative of y(x) = ln(4x^2 - 3x + 1)."
+      , "Calculate the derivative of g(t) = e^(sin(t))."
+      , "Determine the derivative of p(x) = (x^2 + 1)^3."
+      , "Find the derivative of y(t) = e^(2t) * sin(t)."
+      , "Calculate the derivative of f(x) = ln(cos(x))."
+      , "Determine the derivative of h(t) = sqrt(3t + 1)^2."
+      , "Find the derivative of y(x) = e^(2x) * cos(3x)."
+      , "Calculate the derivative of g(t) = ln(2t + 1)^2."
+      , "Determine the derivative of p(x) = tan(3x + 1)."
+      , "Find the derivative of y(t) = e^(4t^2 - 1) * sin(t)."
+      , "Calculate the derivative of f(x) = sqrt(1 - x^2)."
+      , "Determine the derivative of h(t) = e^(2t) * ln(t)."
+      , "Find the derivative of y(x) = cos(2x)^2."
+      , "Calculate the derivative of g(t) = ln(e^(2t) + 1))."
+      , "Determine the derivative of p(x) = e^(x^2) * tan(x)."
+      , "Find the derivative of y(t) = e^(3t^2) * cos(2t)."
+      , "Calculate the derivative of f(x) = sin(ln(x))."
+      , "Determine the derivative of h(t) = sqrt(4t^2 + 1)."
+      , "Find the derivative of y(x) = e^(sin(2x))."
+      , "Calculate the derivative of g(t) = cos(e^t + 1)."
+      , "Determine the derivative of p(x) = ln(e^(2x) + 1)."
+      , "Find the derivative of y(t) = tan(e^t)."
+      , "Find the derivative of y = e^(sin(2x)) / ln^2(1 + x^2)."
+      , "Find the derivative of f(x) = sqrt(cos(e^(3x)))."
+      , "Find the derivative of g(t) = e^(2t)sin(ln(t)) / (cos^3(t) + 1)."
+      , "Find the derivative of y(x) = (tan^3(x) + e^(sin^2(x))) / ln(2x^2 + 1)."
+      , "Find the derivative of h(x) = sqrt(e^(2x) + cos^2(x)) / ln(1 + e^x)."
+      , "Find the derivative of p(t) = e^tan(t) / (sin^2(t) + cos(t))."
+      , "Find the derivative of y(x) = e^(sqrt(ln^2(x) + cos(2x)))."
+      , "Find the derivative of f(t) = e^(2t) / sqrt(sin^2(t) + 1)."
+      , "Find the derivative of g(x) = e^(2x)cos(ln(x)) / (sin^3(x) + 1)."
+      , "Find the derivative of y(t) = sqrt((e^(3t) + ln(t^2 + 1)) / (cos^2(t) + 1))."
+      , "Find the derivative of h(x) = e^tan(e^x)cos(ln(2x + 1))."
+      , "Find the derivative of p(t) = sqrt(ln(t) + 1) / (e^(2t) - sin^2(t))."
+      , "Find the derivative of y(x) = e^(sin(x)) / sqrt(cos^2(x) + e^x)."
+      , "Find the derivative of f(t) = e^(2t)cos(sin(t)) / sqrt(cos(t) + 1)."
+      , "Find the derivative of g(x) = sqrt(ln(e^(2x) + sqrt(x)))."
+      , "Find the derivative of h(t) = e^(sin^2(t))cos(t)."
+      , "Find the derivative of y(x) = e^(cos(x)) / sqrt(sin^2(x) + ln^2(x))."
+      , "Find the derivative of p(t) = (e^(3t) - cos(t)) / sqrt(cos(e^t) + sqrt(t))."
+      , "Find the derivative of y(x) = tan(e^x) + sqrt((e^(2x) + 1) / (cos(x) + 1))."
+      , "Find the derivative of f(t) = ln^2(t) / (e^t + cos(t))."
+      , "Find the derivative of g(x) = e^(sqrt(sin^2(x) + 1))."
+      , "Find the derivative of h(t) = e^(2t)sin(t) / (cos^3(t) + 1)."
+      , "Find the derivative of p(x) = tan(e^(2x)) + sqrt(cos^2(x) + e^(2x))."
+      , "Find the derivative of y(t) = e^(sin(t))cos(t)."
+      , "Find the derivative of f(x) = ln(x) / sqrt(e^x + 1)."]
+      
+      
+          qrieman = ["Find the left Riemann sum of f(x) = x^2 on the interval [0, 1], with n = 4."
+      , "Find the left Riemann sum of f(x) = 2x on the interval [1, 3], with n = 3."
+      , "Find the left Riemann sum of f(x) = sqrt(x) on the interval [0, 4], with n = 2."
+      , "Find the left Riemann sum of f(x) = 3 - x on the interval [1, 4], with n = 3."
+      , "Find the left Riemann sum of f(x) = x^3 on the interval [0, 2], with n = 4."
+      , "Find the left Riemann sum of f(x) = sin(x) on the interval [0, π], with n = 3."
+      , "Find the left Riemann sum of f(x) = 2x + 1 on the interval [1, 2], with n = 2."
+      , "Find the left Riemann sum of f(x) = e^x on the interval [0, 1], with n = 4."
+      , "Find the left Riemann sum of f(x) = 1/x on the interval [1, 3], with n = 3."
+      , "Find the left Riemann sum of f(x) = x^2 - 2x on the interval [0, 3], with n = 3."
+      , "Find the left Riemann sum of f(x) = 4 - x^2 on the interval [0, 2], with n = 4."
+      , "Find the left Riemann sum of f(x) = sqrt(x) on the interval [1, 4], with n = 3."
+      , "Find the left Riemann sum of f(x) = cos(x) on the interval [0, π], with n = 4."
+      , "Find the left Riemann sum of f(x) = x^3 + 2x^2 on the interval [1, 2], with n = 2."
+      , "Find the left Riemann sum of f(x) = ln(x) on the interval [1, 2], with n = 3."
+      , "Find the left Riemann sum of f(x) = 2 - x on the interval [1, 3], with n = 4."
+      , "Find the left Riemann sum of f(x) = x^2 + 3x on the interval [0, 2], with n = 3."
+      , "Find the left Riemann sum of f(x) = e^(-x) on the interval [0, 2], with n = 2."
+      , "Find the left Riemann sum of f(x) = 1/x^2 on the interval [1, 2], with n = 3."
+      , "Find the left Riemann sum of f(x) = cos(2x) on the interval [0, π], with n = 4."
+      , "Find the left Riemann sum of f(x) = ln(x + 1) on the interval [0, 2], with n = 3."
+      , "Find the left Riemann sum of f(x) = 4x - x^2 on the interval [0, 4], with n = 4."
+      , "Find the left Riemann sum of f(x) = sqrt(1 + x) on the interval [0, 3], with n = 3."
+      , "Find the left Riemann sum of f(x) = 1 - e^(-x) on the interval [0, 1], with n = 4."
+      , "Find the left Riemann sum of f(x) = sin(x) + cos(x) on the interval [0, π], with n =3."
+      , "Find the right Riemann sum of f(x) = x^2 on the interval [0, 1] with n = 4."
+      , "Find the right Riemann sum of f(x) = 2x on the interval [1, 3] with n = 3."
+      , "Find the right Riemann sum of f(x) = sqrt(x) on the interval [0, 4] with n = 2."
+      , "Find the right Riemann sum of f(x) = 3 - x on the interval [1, 4] with n = 3."
+      , "Find the right Riemann sum of f(x) = x^3 on the interval [0, 2] with n = 4."
+      , "Find the right Riemann sum of f(x) = sin(x) on the interval [0, π] with n = 3."
+      , "Find the right Riemann sum of f(x) = 2x + 1 on the interval [1, 2] with n = 2."
+      , "Find the right Riemann sum of f(x) = e^x on the interval [0, 1] with n = 4."
+      , "Find the right Riemann sum of f(x) = 1/x on the interval [1, 3] with n = 3."
+      , "Find the right Riemann sum of f(x) = x^2 - 2x on the interval [0, 3] with n = 3."
+      , "Find the right Riemann sum of f(x) = 4 - x^2 on the interval [0, 2] with n = 4."
+      , "Find the right Riemann sum of f(x) = sqrt(x) on the interval [1, 4] with n = 3."
+      , "Find the right Riemann sum of f(x) = cos(x) on the interval [0, π] with n = 4."
+      , "Find the right Riemann sum of f(x) = x^3 + 2x^2 on the interval [1, 2] with n = 2."
+      , "Find the right Riemann sum of f(x) = ln(x) on the interval [1, 2] with n = 3."
+      , "Find the right Riemann sum of f(x) = 2 - x on the interval [1, 3] with n = 4."
+      , "Find the right Riemann sum of f(x) = x^2 + 3x on the interval [0, 2] with n = 3."
+      , "Find the right Riemann sum of f(x) = e^(-x) on the interval [0, 2] with n = 2."
+      , "Find the right Riemann sum of f(x) = 1/x^2 on the interval [1, 2] with n = 3."
+      , "Find the right Riemann sum of f(x) = cos(2x) on the interval [0, π] with n = 4."
+      , "Find the right Riemann sum of f(x) = ln(x + 1) on the interval [0, 2] with n = 3."
+      , "Find the right Riemann sum of f(x) = 4x - x^2 on the interval [0, 4] with n = 4."
+      , "Find the right Riemann sum of f(x) = sqrt(1 + x) on the interval [0, 3] with n = 3."
+      , "Find the right Riemann sum of f(x) = 1 - e^(-x) on the interval [0, 1] with n = 4."
+      , "Find the right Riemann sum of f(x) = sin(x) + cos(x) on the interval [0, π] with n = 3."
+      , "Find the left Riemann sum of f(x) = x^2 - 2x on the interval [0, 2] with n = 4."
+      , "Find the left Riemann sum of f(x) = e^(-x) on the interval [0, 1] with n = 3."
+      , "Find the left Riemann sum of f(x) = sin(2x) on the interval [0, π] with n = 5."
+      , "Find the left Riemann sum of f(x) = ln(x) on the interval [1, 3] with n = 4."
+      , "Find the left Riemann sum of f(x) = 3x^2 on the interval [1, 2] with n = 3."
+      , "Find the left Riemann sum of f(x) = 1/x on the interval [1, 4] with n = 4."
+      , "Find the left Riemann sum of f(x) = cos(x) on the interval [0, π] with n = 3."
+      , "Find the left Riemann sum of f(x) = 2 + x on the interval [1, 3] with n = 5."
+      , "Find the left Riemann sum of f(x) = sqrt(x) on the interval [0, 1] with n = 2."
+      , "Find the left Riemann sum of f(x) = 4 - x on the interval [0, 4] with n = 4."
+      , "Find the left Riemann sum of f(x) = x^3 + 2x^2 on the interval [0, 3] with n = 3."
+      , "Find the left Riemann sum of f(x) = e^x on the interval [1, 2] with n = 4."
+      , "Find the left Riemann sum of f(x) = 1 - e^(-x) on the interval [0, 2] with n = 2."
+      , "Find the left Riemann sum of f(x) = x^2 + 3x on the interval [0, 3] with n = 3."
+      , "Find the left Riemann sum of f(x) = 2x - x^2 on the interval [0, 2] with n = 4."
+      , "Find the left Riemann sum of f(x) = sqrt(1 + x) on the interval [1, 2] with n = 3."
+      , "Find the left Riemann sum of f(x) = ln(x + 1) on the interval [0, 1] with n = 4."
+      , "Find the left Riemann sum of f(x) = 3 - 2x on the interval [0, 2] with n = 4."
+      , "Find the left Riemann sum of f(x) = sin(x) + cos(x) on the interval [0, π] with n = 5."
+      , "Find the left Riemann sum of f(x) = x^3 - 2x^2 on the interval [0, 1] with n = 3."
+      , "Find the left Riemann sum of f(x) = 2 - e^(-x) on the interval [1, 2] with n = 4."
+      , "Find the left Riemann sum of f(x) = 1/x^2 on the interval [1, 3] with n = 3."
+      , "Find the left Riemann sum of f(x) = 4x - x^2 on the interval [0, 1] with n = 2."
+      , "Find the left Riemann sum of f(x) = cos(2x) on the interval [0, π] with n = 4."
+      , "Find the left Riemann sum of f(x) = x^2 on the interval [1, 4] with n = 5."
+      , "Find the right Riemann sum of f(x) = 2 - e^(-x) on the interval [1, 2] with n = 4."
+      , "Find the right Riemann sum of f(x) = 1/x^2 on the interval [1, 3] with n = 3."
+      , "Find the right Riemann sum of f(x) = 4x - x^2 on the interval [0, 1] with n = 2."
+      , "Find the right Riemann sum of f(x) = cos(2x) on the interval [0, π] with n = 4."
+      , "Find the right Riemann sum of f(x) = x^2 on the interval [1, 4] with n = 5."
+      , "Find the right Riemann sum of f(x) = 3 - 2x on the interval [0, 2] with n = 4."
+      , "Find the right Riemann sum of f(x) = sin(x) + cos(x) on the interval [0, π] with n = 5."
+      , "Find the right Riemann sum of f(x) = x^3 - 2x^2 on the interval [0, 1] with n = 3."
+      , "Find the right Riemann sum of f(x) = 2 + x on the interval [1, 3] with n = 5."
+      , "Find the right Riemann sum of f(x) = sqrt(x) on the interval [0, 1] with n = 2."
+      , "Find the right Riemann sum of f(x) = 4 - x on the interval [0, 4] with n = 4."
+      , "Find the right Riemann sum of f(x) = x^3 + 2x^2 on the interval [0, 3] with n = 3."
+      , "Find the right Riemann sum of f(x) = e^x on the interval [1, 2] with n = 4."
+      , "Find the right Riemann sum of f(x) = 1 - e^(-x) on the interval [0, 2] with n = 2."
+      , "Find the right Riemann sum of f(x) = x^2 + 3x on the interval [0, 3] with n = 3."
+      , "Find the right Riemann sum of f(x) = 2x - x^2 on the interval [0, 2] with n = 4."
+      , "Find the right Riemann sum of f(x) = sqrt(1 + x) on the interval [1, 2] with n = 3."
+      , "Find the right Riemann sum of f(x) = ln(x + 1) on the interval [0, 1] with n = 4."
+      , "Find the right Riemann sum of f(x) = x^2 - 2x on the interval [0, 2] with n = 4."
+      , "Find the right Riemann sum of f(x) = e^(-x) on the interval [0, 1] with n = 3."
+      , "Find the right Riemann sum of f(x) = sin(2x) on the interval [0, π] with n = 5."
+      , "Find the right Riemann sum of f(x) = ln(x) on the interval [1, 3] with n = 4."
+      , "Find the right Riemann sum of f(x) = 3x^2 on the interval [1, 2] with n = 3."
+      , "Find the right Riemann sum of f(x) = 1/x on the interval [1, 4] with n = 4."
+      , "Find the right Riemann sum of f(x) = cos(x) on the interval [0, π] with n = 3."]
+      
+      
+          qinteg = ["Integrate x^2 dx"
+      , "Evaluate the integral of (3x + 2) dx"
+      , "Find the integral of (4 - 2x) dx"
+      , "Calculate the integral of (5x^3 + 2) dx"
+      , "Integrate 2e^x dx"
+      , "Evaluate the integral of (1/x) dx"
+      , "Find the integral of (3sin(x) + 4cos(x)) dx"
+      , "Calculate the integral of (x + 1/x) dx"
+      , "Integrate 5 ln(x) dx"
+      , "Evaluate the integral of (2/x^2) dx"
+      , "Find the integral of (e^x + 1) dx"
+      , "Calculate the integral of (2sin(x) - 3cos(x)) dx"
+      , "Integrate x^4 dx"
+      , "Evaluate the integral of (1 + 2x + 3x^2) dx"
+      , "Find the integral of (1/(2x)) dx"
+      , "Calculate the integral of (4e^x - 2) dx"
+      , "Integrate cos(x) dx"
+      , "Evaluate the integral of (1/(x^2 + 1)) dx"
+      , "Find the integral of (e^x - e^(-x)) dx"
+      , "Calculate the integral of (sin(x) + cos(x)) dx"
+      , "Integrate 1/x dx"
+      , "Evaluate the integral of (3/x^3) dx"
+      , "Find the integral of (5e^x + 2/x) dx"
+      , "Calculate the integral of (2sin(x) + 3cos(x)) dx"
+      , "Integrate e^(2x) dx"
+      , "Integrate e^(x^2) dx"
+      , "Evaluate x^2 e^x dx"
+      , "Find ln(x) / x dx"
+      , "Calculate sin^2(x) + cos^2(x) dx"
+      , "Integrate x^2 ln(x) dx"
+      , "Evaluate e^x sin(x) dx"
+      , "Find 1 / (x^2 + 1) dx"
+      , "Calculate sqrt(1 - x^2) dx"
+      , "Integrate (tan(x) + sec(x))^2 dx"
+      , "Evaluate e^(2x) cos(3x) dx"
+      , "Find x^2 / (x^4 + 1) dx"
+      , "Calculate ln(x) / sqrt(x) dx"
+      , "Integrate (1 + e^x) / (1 + e^(2x)) dx"
+      , "Evaluate x e^x ln(x) dx"
+      , "Find 1 / (x^3 + x^2) dx"
+      , "Calculate sqrt(e^x + 1) / e^x dx"
+      , "Integrate (cos(x))^2 / (sin(x) + 1) dx"
+      , "Evaluate x^2 / sqrt(1 - x^2) dx"
+      , "Find (e^x + e^(-x)) / (e^x - e^(-x)) dx"
+      , "Calculate sec^3(x) dx"
+      , "Integrate e^(-x^2) / x dx"
+      , "Evaluate sin^2(2x) dx"
+      , "Find (ln(x))^2 / x dx"
+      , "Calculate sqrt(x) / (1 + sqrt(x)) dx"
+      , "Integrate (1 + tan(x))^2 / cos(x) dx"
+      , "Find the integral of e^(x^2)cos(x) dx"
+      , "Find the integral of x^3 ln(x) dx"
+      , "Find the integral of (sin^2(x) + cos^2(x))^2 dx"
+      , "Find the integral of x^2 e^(x^3) dx"
+      , "Find the integral of ln(x)/(1 + x) dx"
+      , "Find the integral of e^(-x)sin(x) dx"
+      , "Find the integral of sqrt(1 - x^2)cos(x) dx"
+      , "Find the integral of (tan(x) + sec(x))^3 dx"
+      , "Find the integral of e^x / (e^x + 1) dx"
+      , "Find the integral of x^2 / sqrt(1 - x^2) dx"
+      , "Find the integral of e^x sin^2(x) dx"
+      , "Find the integral of x^2 / (1 + x^4) dx"
+      , "Find the integral of (ln(x))^3 / x dx"
+      , "Find the integral of e^(2x)sin(3x) dx"
+      , "Find the integral of sqrt(1 + e^x) dx"
+      , "Find the integral of cos(x) / (1 - sin(x)) dx"
+      , "Find the integral of x^2 / (e^x + 1)^2 dx"
+      , "Find the integral of e^(2x)cos^2(x) dx"
+      , "Find the integral of x^2 / (x^4 + 1) dx"
+      , "Find the integral of (1 - e^x)^2 dx"
+      , "Find the integral of ln^2(x) / x dx"
+      , "Find the integral of e^(-x^2)sin(x) dx"
+      , "Find the integral of (1 + e^x)^2 / (1 + e^(2x)) dx"
+      , "Find the integral of x^2 / (1 + x^2)^2 dx"
+      , "Find the integral of e^(2x) / sqrt(e^2x - 1) dx"
+      , "Find the integral of e^(x^3)cos(x) dx"
+      , "Find the integral of x^4 ln(x) dx"
+      , "Find the integral of (sin^2(x) + cos^2(x))^3 dx"
+      , "Find the integral of x^3 e^(x^4) dx"
+      , "Find the integral of ln(x^2 + 1)/(x + 1) dx"
+      , "Find the integral of e^(-x)cos(2x) dx"
+      , "Find the integral of sqrt(1 - x^2)sin(x) dx"
+      , "Find the integral of (tan(x) + sec(x))^4 dx"
+      , "Find the integral of e^x / (e^x + 1)^2 dx"
+      , "Find the integral of x^3 / sqrt(1 - x^2) dx"
+      , "Find the integral of e^x sin^3(x) dx"
+      , "Find the integral of x^3 / (1 + x^4) dx"
+      , "Find the integral of (ln(x))^4 / x dx"
+      , "Find the integral of e^(2x)sin(4x) dx"
+      , "Find the integral of sqrt(1 + e^x + e^(2x)) dx"
+      , "Find the integral of cos^2(x) / (1 - sin(x)) dx"
+      , "Find the integral of x^3 / (e^x + 1)^3 dx"
+      , "Find the integral of e^(2x)cos^3(x) dx"
+      , "Find the integral of x^3 / (x^4 + 1) dx"
+      , "Find the integral of (1 - e^x)^3 dx"
+      , "Find the integral of (ln(x))^3 / x^2 dx"
+      , "Find the integral of e^(-x^2)sin(2x) dx"
+      , "Find the integral of (1 + e^x)^3 / (1 + e^(2x)) dx"
+      , "Find the integral of x^3 / (1 + x^2)^3 dx"
+      , "Find the integral of e^(2x) / sqrt(e^2x - 1) dx"]
+      
+      
+          
+          anslim = ["11", "0", "0", "20", "0", "10", "infinity", "2", "5", "0", "0", "8"
+                    , "0", "2", "3", "infinity", "0", "0", "infinity", "0", "-4", "0", "0"
+                    , "9", "0", "1", "1", "1", "3/4", "0", "1/2", "1", "0", "1", "0", "0"
+                    , "0", "-1", "3", "1", "-1/2", "0", "0", "2/3", "-1", "0", "0", "0"
+                    , "1", "1", "1", "0", "3", "2/3", "1/2", "1/2", "1", "0", "1/3", "0"
+                    , "0", "0", "-1", "0", "1", "-1", "0", "0", "0", "-1", "0", "0", "0"
+                    , "-1", "0", "1", "0", "2", "2", "1", "0", "0", "3", "0", "1", "3/2"
+                    , "2", "1/2", "0", "1/2", "1", "1", "0", "2", "1", "0", "1", "0", "2"
+                    , "1/2"]
+          
+      
+          ansderiv = ["12x^2 + 4x - 7"
+      , "30x^5 - 12x^3 + 4x"
+      , "-6x^(-3) + 6x^(-4) - 5x^(-2)"
+      , "4x^3 - 4x"
+      , "e^t * (4t^3 + 3t^2)"
+      , "-1/x^4"
+      , "5/2 * x^(-1/2)"
+      , "-18t^(-4) + 4t"
+      , "-5x^(-6)"
+      , "-t^(-4/3)"
+      , "8x^3 - 10x"
+      , "2e^t * t^2 + e^t * 2t"
+      , "12x^5 - 12x^3 + 14x"
+      , "-1/2 * x^(-3/2)"
+      , "3/2 * x^(1/2) - 1"
+      , "8t^(-3) - 6t^2"
+      , "-6x^(-7)"
+      , "2t^(-1/2)"
+      , "15x^4 - 6x^2"
+      , "3e^t * t^2 + e^t * 3t^2 - 2t"
+      , "-7x^(-8)"
+      , "-1/2 * t^(-3/2) - 3/2 * t^(-5/2)"
+      , "14x^6 - 5x^4 + 9x^2"
+      , "5e^t * t^4 + e^t * 5t^4 - 4t"
+      , "20x^(-5) - 6x^(-3)"
+      , "(12x^2 + 4x - 7) / (4x + 2)^2"
+      , "(30x^5 - 12x^3 + 4x) / (2x + 1)^2"
+      , "((4x - 2) - (2x^2 + 1)) / (x - 1)^2"
+      , "(4x^3 - 4x) / (x^2 + 1)^2"
+      , "((e^t + 2t^2 - 1)(2e^t + 1) - (e^t - t^2 + 3)(2e^t)) / (2e^t + 1)^2"
+      , "((sin(x) + 2)(sin(x) + 2) - (cos(x) + 1)(cos(x) + 1)) / (sin(x) + 2)^2"
+      , "((3x + 1)(ln(x) - 1) - (ln(x) + 2)(1)) / (3x + 1)^2"
+      , "((12t^2 - 4t)(t^2 - 2) - (4t^3 - 2t^2 + 1)(2t)) / (t^2 - 2)^2"
+      , "((2x + 1) - (1/x)(2)) / (2x + 1)^2"
+      , "((2)(sqrt(t) + 1) - (sqrt(t) + 1)(1)) / (3 - t)^2"
+      , "((4x + 2)(2x^2 - 5x + 4) - (2x^2 - 5x + 4)(2)) / (x^2 + 3x - 2)^2"
+      , "((2e^t - 1)(e^t + t^2 - 1) - (e^t + t^2 - 1)(2e^t)) / (2e^t - 1)^2"
+      , "((4x^2 + 2x + 1)(2x^3 - 3x^2 + 1) - (2x^2 - 5x + 4)(12x^2 + 4x - 7)) / (4x^2 + 2x + 1)^2"
+      , "((cos(x) + 1)(cos(x) + 1) - (tan(x) + 2)(-sin(x))) / (cos(x) + 1)^2"
+      , "((x^2 + x + 2)(ln(x) - 1) - (2ln(x) - 3)(2x + 1)) / (x^2 + x + 2)^2"
+      , "((e^t + 2)(3t^2 - 2t + 1) - (3t^2 - 2t + 1)(e^t + 2)) / (e^t + 2)^2"
+      , "((3x + 1)(1/x^2 - 2) - (1/x)(6x)) / (3x + 1)^2"
+      , "((sqrt(t) + 2)(sqrt(t) + 2) - (e^t - 1)(1/(2sqrt(t)))) / (sqrt(t) + 2)^2"
+      , "((x^3 + x + 2)(4x^2 - 3x + 1) - (4x^2 - 3x + 1)(3x^2 + x)) / (x^3 + x + 2)^2"
+      , "((t^2 - 1)(e^t + 2t) - (e^t + 2t)(2t)) / (t^2 - 1)^2"
+      , "((2/x + 1)(3x^2 - 4x + 1) - (3x^2 - 4x + 1)(-2/x^2)) / (2/x + 1)^2"
+      , "((cos(t) + 2)(cos(t) + 2) - (sin(t) + 1)(-sin(t))) / (cos(t) + 2)^2"
+      , "((4x + 1)(2ln(x) - 3) - (2)(2x + 1)) / (4x + 1)^2"
+      , "((3e^t - 2)(e^t - t^2 + 1) - (e^t - t^2 + 1)(3e^t)) / (3e^t - 2)^2"
+      , "((2x^2 + 1)(5x^3 - 2x^2 + 3x) - (5x^3 - 2x^2 + 3x)(4x)) / (2x^2 + 1)^2"
+      , "2(2x^3 - 5x^2 + 1)(6x^2 - 10x)"
+      , "6te^(3t^2 - 1)"
+      , "sin(2x)(2)"
+      , "(8x - 3) / (4x^2 - 3x + 1)"
+      , "cos(t)e^(sin(t))"
+      , "3(x^2 + 1)^2(2x)"
+      , "e^(2t) * (2cos(t) + sin(t))"
+      , "-tan(x)csc(x)"
+      , "(3) / (2sqrt(3t + 1))"
+      , "e^(2x) * (2cos(3x) - 3sin(3x))"
+      , "(2) / (2t + 1)"
+      , "3sec^2(3x + 1)"
+      , "e^(4t^2 - 1)(8t^2 + cos(t))"
+      , "-x / sqrt(1 - x^2)"
+      , "(2e^(2t) + e^(2t)ln(t))"
+      , "-4cos(2x)sin(2x)"
+      , "(2) / (e^(2t) + 1)"
+      , "e^(x^2) * (2x + tan(x)sec^2(x))"
+      , "e^(3t^2)(6tcos(2t) + sin(2t))"
+      , "cos(ln(x)) / x"
+      , "(8t) / sqrt(4t^2 + 1)"
+      , "2e^(sin(2x))cos(2x)"
+      , "-e^(e^t + 1)sin(e^t + 1)"
+      , "2 / (e^(2x) + 1)"
+      , "e^tsec^2(e^t)"
+      , "-2e^(2x)sin(cos(e^(2x))) - 2x(2x^2 - 5x + 1)e^(2x)cos(cos(e^(2x)))"
+      , "(e^x / (2sqrt{e^x + ln(x)})) + (1 / (x(e^x + ln(x))))"
+      , "(2e^(2t) + 2tsin(t)cos(ln(t))) / (cos(ln(t)) - (e^(2t) + sin^2(t))sin(ln(t)))"
+      , "6tan(3x)sec^2(3x) + e^sin(x)cos(x)"
+      , "(2x - 1) / (x^2 + 1)^2 - (e^(2x) + sqrt(x))ln(x) / (e^(2x) + sqrt(x))^2"
+      , "(3e^(3t) - cos(t)) / (cos^2(t) + 1)^2 - 2(e^(3t) - sin(t))sin(t) / (cos^2(t) + 1)^2"
+      , "-sin(e^x) / sqrt(1 + e^(2x)) - (e^(2x)cos(e^x)) / (2sqrt(1 + e^(2x))(1 + e^(2x)))"
+      , "(2ln(t)) / (t(2t + 1)) + 2te^(t^2)"
+      , "(2e^(2x)cos(e^x)(sin^2(x) + 1) - (e^(2x) + sin(x))(2sin(x)cos(x) + 2sin(x)e^xcos(e^x))) / (sin^2(x) + 1)^2"
+      , "(2e^(2t) + ln^2(t)) / (2sqrt(e^(2t) + ln^2(t)))"
+      , "3e^(3x)tan(e^x) + e^(3x)sec^2(e^x)"
+      , "((e^t + 1) / (2sqrt(e^t + 1)) - sin(t)(e^t - cos^2(t))) / (e^t - cos^2(t))^2"
+      , "(e^(2x) + sin(x))(2cos(e^x) - e^(2x)sin(x)) / (cos(e^x) + 1)^2"
+      , "2e^(2t)sin^2(t) + 2te^(2t)sin(t)cos(t)"
+      , "1 / (e^(2x) + sqrt(x)) + ln(e^(2x) + sqrt(x)) / (2e^(2x) + 1)"
+      , "e^(sin^2(t) + sin(t))cos(t) - 2e^(sin^2(t))sin(t)"
+      , "-2cos^2(x)sin(x) / (e^(2x) + ln(x))^2"
+      , "(3e^(3t) - cos(t))(cos(e^t) + sqrt(t)) / (cos^2(e^t) + sqrt(t))^2 - 1 / (2sqrt(t))"
+      , "e^xsec^2(e^x) + e^(2x)cos(e^x) / sqrt(e^(2x) + 1)"
+      , "(2ln(t)) / (t(e^t + cos(t))) - ln^2(t)(e^t + cos(t)) / (e^t + cos(t))^2"
+      , "(e^(x)sin(x) + sin(x)cos^2(x)) / sqrt(e^x + sin^2(x))"
+      , "(2e^(2t)sin(t)(cos^2(t) + 1) - (e^(2t) + sin(t))2sin(t)cos(t)) / (cos^2(t) + 1)^2"
+      , "sec^2(e^(2x)) + 2e^(2x) / sqrt(1 + e^(2x))"
+      , "e^(sin(t) + sin^2(t))cos(t) - e^(sin(t))sin(t)"
+      , "(1 / (x(sqrt(e^x + 1)))) - (ln(x) / (2(e^x + 1)^(3/2)))"]
+          
+      
+          ansrieman = ["0.875", "12.0", "2.0", "6.0", "3.5", "1.673", "8.0", "7.788", "1.833"
+                       , "-8.0", "5.778", "4.732", "0.0", "15.0", "1.792", "-12.0", "12.0"
+                       , "1.367", "1.361", "-2.072", "1.792", "30.0", "4.732", "2.197", "1.673"
+                       , "0.5625", "18.0", "2.0", "5.25", "4.375", "1.673", "9.0", "8.533"
+                       , "0.833", "-5.0", "6.778", "4.732", "-0.354", "18.0", "2.301", "-4.0"
+                       , "18.0", "1.632", "0.861", "-1.072", "2.301", "18.0", "4.732", "1.802"
+                       , "1.673", "-3.5", "1.0", "0.0", "0.693", "7.333", "1.708", "1.0", "10.0"
+                       , "0.5", "8.0", "4.732", "9.788", "0.367", "12.0", "2.0", "1.732", "0.693"
+                       , "5.0", "1.673", "-1.75", "5.105", "1.361", "-0.5", "-2.072", "5.875""5.105"
+                       , "1.361", "1.0", "-2.072", "5.875", "-1.75", "1.673", "-2.75", "12.0", "0.5"
+                       , "8.0", "4.732", "9.788", "0.367", "12.0", "2.0", "1.732", "0.693", "-3.5"
+                       , "1.0", "0.0", "0.693", "7.333", "1.708", "0.833"]
+          
+          
+          ansinteg = ["(1/3)x^3 + C"
+      , "(3/2)x^2 + 2x + C"
+      , "4x - x^2 + C"
+      , "(5/4)x^4 + 2x + C"
+      , "2e^x + C"
+      , "ln(|x|) + C"
+      , "-3cos(x) + 4sin(x) + C"
+      , "(1/2)x^2 + ln(|x|) + C"
+      , "5x ln(x) - 5x + C"
+      , "-2/x + C"
+      , "e^x + x + C"
+      , "-2cos(x) - 3sin(x) + C"
+      , "(1/5)x^5 + C"
+      , "x + x^2 + x^3 + C"
+      , "ln(|2x|) + C"
+      , "4e^x - 2x + C"
+      , "sin(x) + C"
+      , "arctan(x) + C"
+      , "e^x - e^(-x) + C"
+      , "-cos(x) + sin(x) + C"
+      , "ln(|x|) + C"
+      , "-3/(2x^2) + C"
+      , "5e^x + 2ln(|x|) + C"
+      , "-2cos(x) + 3sin(x) + C"
+      , "(1/2)e^(2x) + C"
+      , "1/2 sqrt(pi) erf(x) + C"
+      , "(x^2 - 2x + 2)e^x + C"
+      , "(ln(x))^2 / 2 + C"
+      , "x + C"
+      , "(1/3)x^3 ln(x) - (1/9)x^3 + C"
+      , "(1/2)e^x(sin(x) - cos(x)) + C"
+      , "arctan(x) + C"
+      , "(1/2)arcsin(x) + (1/2)x sqrt(1 - x^2) + C"
+      , "tan(x) + C"
+      , "(1/13)e^(2x)(2sin(3x) - 3cos(3x)) + C"
+      , "(1/5)x^5 / (x^4 + 1) + arctan(x^2) + C"
+      , "-2sqrt(x)(ln(x) + 2) + C"
+      , "ln(1 + e^x) + C"
+      , "(x^2 - 2)x e^x + C"
+      , "ln(x + 1) + C"
+      , "-sqrt(e^x + 1) + C"
+      , "x - cos(x) + sin(x) - C"
+      , "(1/2)arcsin(x) + x sqrt(1 - x^2) + C"
+      , "2arctan(e^x) + C"
+      , "(1/2)tan(x)sec(x) + C"
+      , "Ei(-x^2) / 2 + C"
+      , "(1/4)(2x - sin(4x)) + C"
+      , "(x - ln(x) - 2) ln(x) + C"
+      , "2sqrt(x) - 2ln(1 + sqrt(x)) + C"
+      , "(1/2)ln|cos(x)| + (1/2)tan(x) + C"
+      , "(1/2) sqrt(pi) erf(x) + C"
+      , "(x^4 / 4 - x^3 / 9) ln(x) + C"
+      , "(x - sin(x)cos(x)) / 2 + C"
+      , "(e^(x^3) / 3) + C"
+      , "x ln(x) - x + C"
+      , "-e^(-x)cos(x) - e^(-x)sin(x) + C"
+      , "(x / 2) sqrt(1 - x^2) + (1 / 2) arcsin(x) + C"
+      , "(1 / 2) tan(x) sec(x) - (1 / 2) ln|sec(x) + tan(x)| + C"
+      , "ln(e^x + 1) + C"
+      , "(1/2) arcsin(x) + (1/2) x sqrt(1 - x^2) + C"
+      , "(e^x sin^3(x)) / 3 + C"
+      , "(x / 2) - (1 / 4) ln(1 + x^4) + C"
+      , "(1/4) (ln(x))^4 + C"
+      , "(1 / 13) e^(2x) (3sin(3x) - cos(3x)) + C"
+      , "(2/3) (1 + e^x)^(3/2) + C"
+      , "ln|1 - sin(x)| + C"
+      , "-1 / (e^x + 1) + 1 / (e^x + 1)^2 - ln(e^x + 1) + C"
+      , "(1 / 4) e^(2x) (sin(2x) + 2) + C"
+      , "(x / 2) - (1 / 4) ln(1 + x^4) + C"
+      , "x - 2e^x + e^(2x) / 2 + C"
+      , "-ln^3(x) + 6ln^2(x) + 12ln(x) - 24x + C"
+      , "-e^(-x^2)cos(x) + C"
+      , "(1 / 2) e^x (e^x - 1) + C"
+      , "(x^2 / 2) - (1 / 2) arctan(x) - (1 / 4) x / (1 + x^2) + C"
+      , "-arctan(sqrt(e^2x - 1)) + C"
+      , "(1/4) sqrt(pi) erf(x) e^(x^3) + C"
+      , "(x^5 / 5 - x^4 / 16) ln(x) + C"
+      , "(x / 2) - (sin(2x)sin^2(x) + cos(2x)cos^2(x)) / 2 + C"
+      , "(e^(x^4) / 4) + C"
+      , "(x ln(x^2 + 1) - x) / 2 + atan(x) + C"
+      , "(1 / 5) e^(-x)(cos(2x) - 2sin(2x)) + C"
+      , "-sqrt(1 - x^2)cos(x) + C"
+      , "(1 / 4) tan(x) sec(x) - (1 / 4) ln|sec(x) + tan(x)| + (1 / 32) tan(x) sec^3(x) - (1 / 64) ln|sec(x) + tan(x)| sec^2(x) + C"
+      , "e^x / (e^x + 1) + 1 / (e^x + 1) + ln(e^x + 1) - 1 / 2ln|e^x + 1| + C"
+      , "(1/2) arcsin(x) + (1/2) x sqrt(1 - x^2) + (1/8) sqrt(1 - x^2) x (3x^2 - 1) + C"
+      , "(1 / 32) e^x (8sin(x) - 12sin(3x) + sin(5x)) + C"
+      , "(x / 4) - (1 / 16) ln(1 + x^4) + (1 / 32) arctan(x^2) - (1 / 64) ln|1 + x^4| + C"
+      , "(1/5) (ln(x))^5 - (2/3) (ln(x))^3 + 2ln(x) - (8/15) x^(-2) + C"
+      , "(1 / 130) e^(2x) (65sin(4x) - 12sin(6x) - 36cos(4x) - 108cos(6x)) + C"
+      , "(2/3) (1 + e^x + e^(2x))^(3/2) - 2 / sqrt(1 + e^x + e^(2x)) + C"
+      , "-ln|1 - sin(x)| - 2atan(sqrt(1 - sin(x))) + C"
+      , "-1 / (e^x + 1) + 1 / (e^x + 1)^2 - 1 / 2ln(e^x + 1) + 1 / 4(e^x + 1)^(-2) + C"
+      , "(1 / 160) e^(2x) (40sin(2x) + 120sin(4x) - 45sin(6x) - 5sin(8x)) + C"
+      , "(x / 4) - (1 / 16) ln(1 + x^4) + (1 / 32) arctan(x^2) - (1 / 64) ln|1 + x^4| + C"
+      , "(1 / 4) e^x (e^x - 1)^4 + C"
+      , "(ln(x))^4 / 4 - (3/2) (ln(x))^3 + 6ln(x) - 24x + C"
+      , "(1 / 2) e^(-x^2) cos(2x) + C"
+      , "(1 / 2) e^x (e^x + 1)^3 - 3 / 2 ln(e^x + 1) + 3 / 4(e^x + 1)^(-2) + C"
+      , "(x / 4) - (1 / 16) ln(1 + x^4) + (1 / 32) arctan(x^2) - (1 / 64) ln|1 + x^4| + C"
+      , "-arctan(sqrt(e^2x - 1)) + C"]
+      
+          numq = 10
+          array = int ( input ( " What topic would you like to do: " ) )
+          count = 0
+          difficulty = int( input (" Enter difficulty from 1 to 4: " ) )
+          if array == 1 :
+              topic = "Calculus 1 - Limits"
+          elif array == 2 :
+              topic = "Calculus 1 - Reimann Sums"
+          elif array == 3 :
+              topic = "Calculus 1 - Derivatives"
+          else :
+              topic = "Calculus 1 - Integrals"
+          if array == 1 :
+              print( " We will now begin testing you on Calculus 1 Limits: " )
+              for i in range(0, numq-1):
+                  if difficulty == 1 :
+                      a = random.randint(0,25)
+                  elif difficulty == 2 :
+                      a = random.randint(25,50)
+                  elif difficulty == 3 :
+                      a = random.randint(50,75)
+                  elif difficulty == 4 :
+                      a = random.randint(75,100)
+                  
+                  userans = str(input(print(qlim[a], " = ")))
+                  ans = anslim[a]
+      
+                  if ans == userans :
+                      print(" Congratulations!! your answer is correct.\n")
+                      count = count + 1
+                  else :
+                      print( " Your answer is wrong!!\n", " The correct answer is ", ans)
+              return count, difficulty
+                  
+          elif array == 2 :
+              print(" We will now begin testing you on Calculus 1 Riemann sums: " )
+              for i in range(0, numq-1):
+                  if difficulty == 1 :
+                      a = random.randint(0,25)
+                  elif difficulty == 2 :
+                      a = random.randint(25,50)
+                  elif difficulty == 3 :
+                      a = random.randint(50,75)
+                  elif difficulty == 4 :
+                      a = random.randint(75,100)
+                  xyz = qrieman[a]
+                  userans = str(input(print(qrieman[a], " = ")))
+                  ans = ansrieman[a]
+                  
+                  if ans == userans :
+                      print(" Congratulations!! your answer is correct.\n")
+                      count = count + 1
+                  else :
+                      print( " Your answer is wrong!!\n", " The correct answer is ", ans)
+              return count, difficulty
+      
+          elif array == 3 :
+              print(" We will now begin testing you on Calculus 1 Derivatives: " )
+              for i in range(0, numq-1):
+      
+                  if difficulty == 1 :
+                      a = random.randint(0,25)
+                  elif difficulty == 2 :
+                      a = random.randint(25,50)
+                  elif difficulty == 3 :
+                      a = random.randint(50,75)
+                  elif difficulty == 4 :
+                      a = random.randint(75,100)
+                  xyz = qderiv[a]
+                  userans = str(input(print(qderiv[a], " = ")))
+                  ans = ansderiv[a]
+                  if ans == userans :
+                      print(" Congratulations!! your answer is correct.\n")
+                      count = count + 1
+                  else :
+                      print( " Your answer is wrong!!\n", " The correct answer is ", ans )
+              return count, difficulty
+      
+          elif array == 4 :
+              print(" We will now begin testing you on Calculus 1 Integrals: " )
+              for i in range(0, numq-1):
+      
+                  if difficulty == 1 :
+                      a = random.randint(0,25)
+                  elif difficulty == 2 :
+                      a = random.randint(25,50)
+                  elif difficulty == 3 :
+                      a = random.randint(50,75)
+                  elif difficulty == 4 :
+                      a = random.randint(75,100)
+      
+                  userans = str(input(print(qinteg[a], " = ")))
+                  ans = ansinteg[a]
+                  if ans == userans :
+                      print(" Congratulations!! your answer is correct.\n")
+                      count = count + 1
+                  else :
+                      print( " Your answer is wrong!!\n", " The correct answer is ", ans)
+              return count, difficulty
+      
+      def main():
+          repeat = "yes"
+          points = 0
+          while repeat == "yes" :
+              quest()
+              points = count * difficulty
+              if difficulty == 1 :
+                  if points == 10 :
+                      print("Congratulations, you have acheived a perfect score on Basic Difficulty, your current level is BASIC GOLD")
+                      print("You have ", count, " correct questions out of 10. ")
+                  elif 10 > points >= 7 :
+                      print("Congratulations, you have achieved a high score on Basic Difficulty, your current level is BASIC SILVER")
+                      print("You have ", count, " correct questions out of 10. ")
+                  elif 7 > points >=5 :
+                      print("Well Done, you have completed the quiz, your current level is BASIC BRONZE")
+                      print("You have ", count, " correct questions out of 10. ")
+                  else :
+                      print("You have ", count, " correct questions. Please try again...")
+      
+              elif difficulty == 2 :
+                  if points == 20 :
+                      print("Congratulations, you have acheived a perfect score on intermediate Difficulty, your current level is INTERMEDIATE GOLD")
+                      print("You have ", count, " correct questions out of 10. ")
+                  elif 20 > points >= 16 :
+                      print("Congratulations, you have achieved a high score on intermediate Difficulty, your current level is INTERMEDIATE SILVER")
+                      print("You have ", count, " correct questions out of 10. ")
+                  elif 16 > points >=10 :
+                      print("Well Done, you have completed the quiz, your current level is INTERMEDIATE BRONZE")
+                      print("You have ", count, " correct questions out of 10. ")
+                  else :
+                      print("You have ", count, " correct questions. Please try again...")
+              
+              elif difficulty == 3 :
+                  if points == 30 :
+                      print("Congratulations, you have acheived a perfect score on advanced Difficulty, your current level is ADVANCED GOLD")
+                      print("You have ", count, " correct questions out of 10. ")
+                  elif 30 > points >= 24 :
+                      print("Congratulations, you have achieved a high score on advanced Difficulty, your current level is ADVANCED SILVER")
+                      print("You have ", count, " correct questions out of 10. ")
+                  elif 24 > points >=15 :
+                      print("Well Done, you have completed the quiz, your current level is ADVANCED BRONZE")
+                      print("You have ", count, " correct questions out of 10. ")
+                  else :
+                      print("You have ", count, " correct questions. Please try again...")
+      
+              elif difficulty == 4 :
+                  if points == 40 :
+                      print("Amazing, you have attained a perfect score on the challenge level.\n","You have achieved mastery over this topic, hence your current level in ", topic, " is PLATINUM :)\n")
+                  elif  40 > points >= 32 :
+                      print("Congratulations, you have achived a high level in the challenge level, your level is CHALLENGER GOLD")
+                      print("You got ", count, " correct questions correct out of 10.")
+                  elif 32 > points >= 24 :
+                      print("Well done, you have achieved a good understanding of the topic, your level is CHALLENGER SILVER")
+                      print("You got ", count, " correct questions correct out of 10.")
+                  elif 24 > points >= 16 :
+                      print("You have completed the challenge level, your current level is CHALLENGER BRONZE")
+                      print("You got ", count, " correct questions out of 10.")
+                  else :
+                      print("You have ", count, " correct questions out of 10, please try again...")
+      main()
+          </py-script>
+            <!-- blog section end -->
+            
+            <!-- copyright section start -->
+            <div class="copyright_section">
+               <div class="container">
+                  <p class="copyright_text">© 2020 All Rights Reserved. <a href="https://html.design">Free html  Templates</a></p>
+               </div>
+            </div>
+            <!-- copyright section end -->
+            <!-- Javascript files-->
+            <script src="js/jquery.min.js"></script>
+            <script src="js/popper.min.js"></script>
+            <script src="js/bootstrap.bundle.min.js"></script>
+            <script src="js/jquery-3.0.0.min.js"></script>
+            <script src="js/plugin.js"></script>
+            <!-- sidebar -->
+            <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+            <script src="js/custom.js"></script>
+            <!-- javascript -->
+            <script src="js/owl.carousel.js"></script>
+            <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+         </body>
+      </html>
+      
+      import random
+      def quest() :
+          global count, difficulty, topic
+      
+          qlim = ["Find the limit of (2x + 3) as x approaches 4."
+      , "Calculate the limit of (x^2 - 1) as x approaches -1."
+      , "Determine the limit of (3 - x) as x approaches 3."
+      , "Find the limit of (4x) as x approaches 5."
+      , "Evaluate the limit of (2/x) as x approaches infinity."
+      , "Calculate the limit of (3x^2 + 2x - 1) as x approaches -2."
+      , "Determine the limit of (5 / x) as x approaches 0."
+      , "Find the limit of (x^3 + 2x^2 - 3) as x approaches 1."
+      , "Evaluate the limit of (2x - 1) as x approaches 3."
+      , "Calculate the limit of (1 / x) as x approaches negative infinity."
+      , "Determine the limit of (x^2 - 4) as x approaches 2."
+      , "Find the limit of (3x + 1) as x approaches -1."
+      , "Evaluate the limit of (4 / x) as x approaches infinity."
+      , "Calculate the limit of (x^2 + 2x + 1) as x approaches -1."
+      , "Determine the limit of (2x - 1) as x approaches 2."
+      , "Find the limit of (5 / x^2) as x approaches 0."
+      , "Evaluate the limit of (x - 1) as x approaches 1."
+      , "Calculate the limit of (2x^2 - 3x + 1) as x approaches 1."
+      , "Determine the limit of (1 / x) as x approaches 0 from the right."
+      , "Find the limit of (x^3 - x^2 + x) as x approaches 0."
+      , "Evaluate the limit of (3x + 2) as x approaches -2."
+      , "Calculate the limit of (2 / x) as x approaches negative infinity."
+      , "Determine the limit of (x^2 - 9) as x approaches 3."
+      , "Find the limit of (4x + 1) as x approaches 2."
+      , "Evaluate the limit of (1 / x^2) as x approaches infinity."
+      , "Find the limit of (3x^2 + 2x - 1) / (x^2 - 1) as x approaches 1."
+      , "Calculate the limit of (e^(2x) - 1) / (e^x + 1) as x approaches 0."
+      , "Determine the limit of (sin(x) / x) as x approaches 0."
+      , "Find the limit of (x^3 + 4x^2 - 2x + 1) / (2x^3 - x^2 + 4) as x approaches -2."
+      , "Evaluate the limit of (sqrt(x^2 + 4) - x) / (x^2 + 2) as x approaches  (infinity)."
+      , "Calculate the limit of (1 - cos(x)) / (x) as x approaches 0."
+      , "Determine the limit of (ln(2x + 1) / x) as x approaches 0."
+      , "Find the limit of (2^x - 1) / (3^x - 1) as x approaches (infinity)."
+      , "Evaluate the limit of (tan(x) / x) as x approaches π/2."
+      , "Calculate the limit of (e^(3x) - 1) / (e^(2x) + 2) as x approaches -∞ (negative infinity)."
+      , "Determine the limit of (1/x + 1/(2x) + 1/(3x)) as x approaches ∞ (infinity)."
+      , "Find the limit of (cos(3x) / cos(x)) as x approaches π/6."
+      , "Evaluate the limit of (e^(-2x) - 1) / (e^(-x) - 1) as x approaches ∞ (infinity)."
+      , "Calculate the limit of (4x^2 - 1) / (2x^2 + 3x + 2) as x approaches -1."
+      , "Determine the limit of (tan(x) - sin(x)) / (x - π/3) as x approaches π/3."
+      , "Find the limit of (1/x - 1/(x+2)) as x approaches  (infinity)."
+      , "Evaluate the limit of (e^x - e^(-x)) / (e^x + e^(-x)) as x approaches -∞ (negative infinity)."
+      , "Calculate the limit of (ln(3x + 1) - ln(x)) / ln(x) as x approaches 1."
+      , "Determine the limit of (sin(2x) / x) as x approaches 3π."
+      , "Find the limit of (e^(4x) - e^(2x)) / (e^(3x) + e^(-x)) as x approaches (negative infinity)."
+      , "Evaluate the limit of (x^3 + 3x^2 - 1) / (2x^3 + x^2 - 5) as x approaches -2."
+      , "Calculate the limit of (tan(3x) / sin(4x)) as x approaches 0."
+      , "Determine the limit of (1/x + 1/(2x) + 1/(4x)) as x approaches (negative infinity)."
+      , "Find the limit of (e^(3x) + 1) / (e^x + 1) as x approaches 0."
+      , "Evaluate the limit of (cos(2x) / cos(x)) as x approaches 0."
+      , "Find the limit of (3x^2 + 2x - 1) / (x^2 - 1) as x approaches 1."
+      , "Calculate the limit of (e^(2x) - 1) / (e^x + 1) as x approaches 0."
+      , "Determine the limit of (sin(x) / x) as x approaches 0."
+      , "Find the limit of (x^3 + 4x^2 - 2x + 1) / (2x^3 - x^2 + 4) as x approaches -2."
+      , "Evaluate the limit of (sqrt(x^2 + 4) - x) / (x^2 + 2) as x approaches ∞ (infinity)."
+      , "Calculate the limit of (1 - cos(x)) / (x) as x approaches 0."
+      , "Determine the limit of (ln(2x + 1) / x) as x approaches 0."
+      , "Find the limit of (2^x - 1) / (3^x - 1) as x approaches ∞ (infinity)."
+      , "Evaluate the limit of (tan(x) / x) as x approaches π/2."
+      , "Calculate the limit of (e^(3x) - 1) / (e^(2x) + 2) as x approaches -∞ (negative infinity)."
+      , "Determine the limit of (1/x + 1/(2x) + 1/(3x)) as x approaches ∞ (infinity)."
+      , "Find the limit of (cos(3x) / cos(x)) as x approaches π/6."
+      , "Evaluate the limit of (e^(-2x) - 1) / (e^(-x) - 1) as x approaches ∞ (infinity)."
+      , "Calculate the limit of (4x^2 - 1) / (2x^2 + 3x + 2) as x approaches -1."
+      , "Determine the limit of (tan(x) - sin(x)) / (x - π/3) as x approaches π/3."
+      , "Find the limit of (1/x - 1/(x+2)) as x approaches ∞ (infinity)."
+      , "Evaluate the limit of (e^x - e^(-x)) / (e^x + e^(-x)) as x approaches -∞ (negative infinity)."
+      , "Calculate the limit of (ln(3x + 1) - ln(x)) / ln(x) as x approaches 1."
+      , "Determine the limit of (sin(2x) / x) as x approaches 3π."
+      , "Find the limit of (e^(4x) - e^(2x)) / (e^(3x) + e^(-x)) as x approaches -∞ (negative infinity)."
+      , "Evaluate the limit of (x^3 + 3x^2 - 1) / (2x^3 + x^2 - 5) as x approaches -2."
+      , "Calculate the limit of (tan(3x) / sin(4x)) as x approaches 0."
+      , "Determine the limit of (1/x + 1/(2x) + 1/(4x)) as x approaches -∞ (negative infinity)."
+      , "Find the limit of (e^(3x) + 1) / (e^x + 1) as x approaches 0."
+      , "Evaluate the limit of (cos(2x) / cos(x)) as x approaches 0."
+      , "Find the limit as x approaches 0 of sin(x) / x."
+      , "Evaluate the limit as x approaches infinity of ln(x) / x."
+      , "Determine the limit as x approaches 1 of (x^2 - 1) / ln(x)."
+      , "Find the limit as x approaches 0 of (e^(2x) - 1) / x."
+      , "Calculate the limit as x approaches 0 of tan(x) / x."
+      , "Determine the limit as x approaches infinity of (x^2 + 3x + 2) / e^x."
+      , "Evaluate the limit as x approaches infinity of sqrt(x) / e^x."
+      , "Find the limit as x approaches 0 of (e^(3x) - 1) / (e^(2x) - 1)."
+      , "Calculate the limit as x approaches infinity of (x^3 + 2x^2 + 1) / e^x."
+      , "Determine the limit as x approaches 1 of ln(x) / (x - 1)."
+      , "Find the limit as x approaches 0 of tan(3x) / sin(2x)."
+      , "Evaluate the limit as x approaches infinity of (e^(2x) + 3) / (e^x + 2)."
+      , "Determine the limit as x approaches 0 of (1 - cos(x)) / x^2."
+      , "Find the limit as x approaches infinity of (x^2 + 1) / e^x."
+      , "Calculate the limit as x approaches 0 of (e^(2x) - 2e^x + 1) / x^2."
+      , "Evaluate the limit as x approaches 1 of (x^2 + 2x - 3) / (x^2 + 3x - 4)."
+      , "Determine the limit as x approaches 0 of ln(1 + x) / x."
+      , "Find the limit as x approaches infinity of sin(x) / e^x."
+      , "Calculate the limit as x approaches 0 of (e^(2x) + 2e^x + 1) / sin(x)."
+      , "Determine the limit as x approaches infinity of sqrt(x^2 + 1) / x."
+      , "Find the limit as x approaches infinity of 2^x / e^x."
+      , "Evaluate the limit as x approaches infinity of ln(x + 1) / sqrt(x)."
+      , "Determine the limit as x approaches infinity of e^x / (x^2 + 1)."
+      , "Find the limit as x approaches 0 of tan(2x) / sin(x)."
+      , "Calculate the limit as x approaches 0 of (e^x - 1 - x) / x^2."]
+          
+      
+          qderiv = ["Find the derivative of f(x) = 4x^3 + 2x^2 - 7x + 1."
+      , "Calculate the derivative of g(x) = 5x^6 - 3x^4 + 2x^2."
+      , "Determine the derivative of h(x) = 3x^(-2) - 2x^(-3) + 5x^(-1)."
+      , "Find the derivative of y(x) = x^4 - 2x^2 + 1."
+      , "Calculate the derivative of f(t) = e^t * t^4."
+      , "Determine the derivative of g(x) = 1/x^3."
+      , "Find the derivative of h(x) = sqrt(x^5)."
+      , "Calculate the derivative of y(t) = 6t^(-3) + 2t^2 - 3."
+      , "Determine the derivative of f(x) = 1/x^5."
+      , "Find the derivative of g(t) = 3t^(-1/3)."
+      , "Calculate the derivative of h(x) = 2x^4 - 5x^2 + 4."
+      , "Determine the derivative of y(t) = e^t * t^2."
+      , "Find the derivative of f(x) = 2x^6 - 3x^4 + 7x^2."
+      , "Calculate the derivative of g(x) = 1/sqrt(x)."
+      , "Determine the derivative of h(x) = sqrt(x^3) - x."
+      , "Find the derivative of y(t) = 4t^(-2) - 2t^3 + 1."
+      , "Calculate the derivative of f(x) = 1/x^6."
+      , "Determine the derivative of g(t) = 4t^(1/2)."
+      , "Find the derivative of h(x) = 3x^5 - 2x^3 + 5."
+      , "Calculate the derivative of y(t) = e^t * t^3 - t^2 + 1."
+      , "Determine the derivative of f(x) = 1/x^7."
+      , "Find the derivative of g(t) = 2t^(-1/2) + t^(-3/2)."
+      , "Calculate the derivative of h(x) = 2x^7 - x^5 + 3x^3."
+      , "Determine the derivative of y(t) = e^t * t^5 - 2t^2 + 1."
+      , "Find the derivative of g(x) = 5x^(-4) - 3x^(-2) + 2."
+      , "Find the derivative of f(x) = (3x^2 - 2x + 1) / (4x + 2)."
+      , "Calculate the derivative of g(x) = (5x^3 + 2x^2 - 3x) / (2x + 1)."
+      , "Determine the derivative of h(x) = (2x^2 + 1) / (x - 1)."
+      , "Find the derivative of y(x) = (x^4 - 2x^2 + 1) / (x^2 + 1)."
+      , "Calculate the derivative of f(t) = (e^t - t^2 + 3) / (2e^t + 1)."
+      , "Determine the derivative of g(x) = (cos(x) + 1) / (sin(x) + 2)."
+      , "Find the derivative of h(x) = (ln(x) + 2) / (3x + 1)."
+      , "Calculate the derivative of y(t) = (4t^3 - 2t^2 + 1) / (t^2 - 2)."
+      , "Determine the derivative of f(x) = (1/x) / (2x + 1)."
+      , "Find the derivative of g(t) = (sqrt(t) + 1) / (3 - t)."
+      , "Calculate the derivative of h(x) = (2x^2 - 5x + 4) / (x^2 + 3x - 2)."
+      , "Determine the derivative of y(t) = (e^t + t^2 - 1) / (2e^t - 1)."
+      , "Find the derivative of f(x) = (2x^3 - 3x^2 + 1) / (4x^2 + 2x + 1)."
+      , "Calculate the derivative of g(x) = (tan(x) + 2) / (cos(x) + 1)."
+      , "Determine the derivative of h(x) = (ln(x) - 1) / (x^2 + x + 2)."
+      , "Find the derivative of y(t) = (3t^2 - 2t + 1) / (e^t + 2)."
+      , "Calculate the derivative of f(x) = (1/x^2 - 2) / (3x + 1)."
+      , "Determine the derivative of g(t) = (e^t - 1) / (sqrt(t) + 2)."
+      , "Find the derivative of h(x) = (4x^2 - 3x + 1) / (x^3 + x + 2)."
+      , "Calculate the derivative of y(t) = (e^t + 2t) / (t^2 - 1)."
+      , "Determine the derivative of f(x) = (3x^2 - 4x + 1) / (2/x + 1)."
+      , "Find the derivative of g(t) = (sin(t) + 1) / (cos(t) + 2)."
+      , "Calculate the derivative of h(x) = (2ln(x) - 3) / (4x + 1)."
+      , "Determine the derivative of y(t) = (e^t - t^2 + 1) / (3e^t - 2)."
+      , "Find the derivative of g(x) = (5x^3 - 2x^2 + 3x) / (2x^2 + 1)."
+      , "Find the derivative of the composition: y = (2x^3 - 5x^2 + 1)^2."
+      , "Calculate the derivative of f(t) = e^(3t^2 - 1)."
+      , "Determine the derivative of h(x) = sqrt(cos(2x))."
+      , "Find the derivative of y(x) = ln(4x^2 - 3x + 1)."
+      , "Calculate the derivative of g(t) = e^(sin(t))."
+      , "Determine the derivative of p(x) = (x^2 + 1)^3."
+      , "Find the derivative of y(t) = e^(2t) * sin(t)."
+      , "Calculate the derivative of f(x) = ln(cos(x))."
+      , "Determine the derivative of h(t) = sqrt(3t + 1)^2."
+      , "Find the derivative of y(x) = e^(2x) * cos(3x)."
+      , "Calculate the derivative of g(t) = ln(2t + 1)^2."
+      , "Determine the derivative of p(x) = tan(3x + 1)."
+      , "Find the derivative of y(t) = e^(4t^2 - 1) * sin(t)."
+      , "Calculate the derivative of f(x) = sqrt(1 - x^2)."
+      , "Determine the derivative of h(t) = e^(2t) * ln(t)."
+      , "Find the derivative of y(x) = cos(2x)^2."
+      , "Calculate the derivative of g(t) = ln(e^(2t) + 1))."
+      , "Determine the derivative of p(x) = e^(x^2) * tan(x)."
+      , "Find the derivative of y(t) = e^(3t^2) * cos(2t)."
+      , "Calculate the derivative of f(x) = sin(ln(x))."
+      , "Determine the derivative of h(t) = sqrt(4t^2 + 1)."
+      , "Find the derivative of y(x) = e^(sin(2x))."
+      , "Calculate the derivative of g(t) = cos(e^t + 1)."
+      , "Determine the derivative of p(x) = ln(e^(2x) + 1)."
+      , "Find the derivative of y(t) = tan(e^t)."
+      , "Find the derivative of y = e^(sin(2x)) / ln^2(1 + x^2)."
+      , "Find the derivative of f(x) = sqrt(cos(e^(3x)))."
+      , "Find the derivative of g(t) = e^(2t)sin(ln(t)) / (cos^3(t) + 1)."
+      , "Find the derivative of y(x) = (tan^3(x) + e^(sin^2(x))) / ln(2x^2 + 1)."
+      , "Find the derivative of h(x) = sqrt(e^(2x) + cos^2(x)) / ln(1 + e^x)."
+      , "Find the derivative of p(t) = e^tan(t) / (sin^2(t) + cos(t))."
+      , "Find the derivative of y(x) = e^(sqrt(ln^2(x) + cos(2x)))."
+      , "Find the derivative of f(t) = e^(2t) / sqrt(sin^2(t) + 1)."
+      , "Find the derivative of g(x) = e^(2x)cos(ln(x)) / (sin^3(x) + 1)."
+      , "Find the derivative of y(t) = sqrt((e^(3t) + ln(t^2 + 1)) / (cos^2(t) + 1))."
+      , "Find the derivative of h(x) = e^tan(e^x)cos(ln(2x + 1))."
+      , "Find the derivative of p(t) = sqrt(ln(t) + 1) / (e^(2t) - sin^2(t))."
+      , "Find the derivative of y(x) = e^(sin(x)) / sqrt(cos^2(x) + e^x)."
+      , "Find the derivative of f(t) = e^(2t)cos(sin(t)) / sqrt(cos(t) + 1)."
+      , "Find the derivative of g(x) = sqrt(ln(e^(2x) + sqrt(x)))."
+      , "Find the derivative of h(t) = e^(sin^2(t))cos(t)."
+      , "Find the derivative of y(x) = e^(cos(x)) / sqrt(sin^2(x) + ln^2(x))."
+      , "Find the derivative of p(t) = (e^(3t) - cos(t)) / sqrt(cos(e^t) + sqrt(t))."
+      , "Find the derivative of y(x) = tan(e^x) + sqrt((e^(2x) + 1) / (cos(x) + 1))."
+      , "Find the derivative of f(t) = ln^2(t) / (e^t + cos(t))."
+      , "Find the derivative of g(x) = e^(sqrt(sin^2(x) + 1))."
+      , "Find the derivative of h(t) = e^(2t)sin(t) / (cos^3(t) + 1)."
+      , "Find the derivative of p(x) = tan(e^(2x)) + sqrt(cos^2(x) + e^(2x))."
+      , "Find the derivative of y(t) = e^(sin(t))cos(t)."
+      , "Find the derivative of f(x) = ln(x) / sqrt(e^x + 1)."]
+      
+      
+          qrieman = ["Find the left Riemann sum of f(x) = x^2 on the interval [0, 1], with n = 4."
+      , "Find the left Riemann sum of f(x) = 2x on the interval [1, 3], with n = 3."
+      , "Find the left Riemann sum of f(x) = sqrt(x) on the interval [0, 4], with n = 2."
+      , "Find the left Riemann sum of f(x) = 3 - x on the interval [1, 4], with n = 3."
+      , "Find the left Riemann sum of f(x) = x^3 on the interval [0, 2], with n = 4."
+      , "Find the left Riemann sum of f(x) = sin(x) on the interval [0, π], with n = 3."
+      , "Find the left Riemann sum of f(x) = 2x + 1 on the interval [1, 2], with n = 2."
+      , "Find the left Riemann sum of f(x) = e^x on the interval [0, 1], with n = 4."
+      , "Find the left Riemann sum of f(x) = 1/x on the interval [1, 3], with n = 3."
+      , "Find the left Riemann sum of f(x) = x^2 - 2x on the interval [0, 3], with n = 3."
+      , "Find the left Riemann sum of f(x) = 4 - x^2 on the interval [0, 2], with n = 4."
+      , "Find the left Riemann sum of f(x) = sqrt(x) on the interval [1, 4], with n = 3."
+      , "Find the left Riemann sum of f(x) = cos(x) on the interval [0, π], with n = 4."
+      , "Find the left Riemann sum of f(x) = x^3 + 2x^2 on the interval [1, 2], with n = 2."
+      , "Find the left Riemann sum of f(x) = ln(x) on the interval [1, 2], with n = 3."
+      , "Find the left Riemann sum of f(x) = 2 - x on the interval [1, 3], with n = 4."
+      , "Find the left Riemann sum of f(x) = x^2 + 3x on the interval [0, 2], with n = 3."
+      , "Find the left Riemann sum of f(x) = e^(-x) on the interval [0, 2], with n = 2."
+      , "Find the left Riemann sum of f(x) = 1/x^2 on the interval [1, 2], with n = 3."
+      , "Find the left Riemann sum of f(x) = cos(2x) on the interval [0, π], with n = 4."
+      , "Find the left Riemann sum of f(x) = ln(x + 1) on the interval [0, 2], with n = 3."
+      , "Find the left Riemann sum of f(x) = 4x - x^2 on the interval [0, 4], with n = 4."
+      , "Find the left Riemann sum of f(x) = sqrt(1 + x) on the interval [0, 3], with n = 3."
+      , "Find the left Riemann sum of f(x) = 1 - e^(-x) on the interval [0, 1], with n = 4."
+      , "Find the left Riemann sum of f(x) = sin(x) + cos(x) on the interval [0, π], with n =3."
+      , "Find the right Riemann sum of f(x) = x^2 on the interval [0, 1] with n = 4."
+      , "Find the right Riemann sum of f(x) = 2x on the interval [1, 3] with n = 3."
+      , "Find the right Riemann sum of f(x) = sqrt(x) on the interval [0, 4] with n = 2."
+      , "Find the right Riemann sum of f(x) = 3 - x on the interval [1, 4] with n = 3."
+      , "Find the right Riemann sum of f(x) = x^3 on the interval [0, 2] with n = 4."
+      , "Find the right Riemann sum of f(x) = sin(x) on the interval [0, π] with n = 3."
+      , "Find the right Riemann sum of f(x) = 2x + 1 on the interval [1, 2] with n = 2."
+      , "Find the right Riemann sum of f(x) = e^x on the interval [0, 1] with n = 4."
+      , "Find the right Riemann sum of f(x) = 1/x on the interval [1, 3] with n = 3."
+      , "Find the right Riemann sum of f(x) = x^2 - 2x on the interval [0, 3] with n = 3."
+      , "Find the right Riemann sum of f(x) = 4 - x^2 on the interval [0, 2] with n = 4."
+      , "Find the right Riemann sum of f(x) = sqrt(x) on the interval [1, 4] with n = 3."
+      , "Find the right Riemann sum of f(x) = cos(x) on the interval [0, π] with n = 4."
+      , "Find the right Riemann sum of f(x) = x^3 + 2x^2 on the interval [1, 2] with n = 2."
+      , "Find the right Riemann sum of f(x) = ln(x) on the interval [1, 2] with n = 3."
+      , "Find the right Riemann sum of f(x) = 2 - x on the interval [1, 3] with n = 4."
+      , "Find the right Riemann sum of f(x) = x^2 + 3x on the interval [0, 2] with n = 3."
+      , "Find the right Riemann sum of f(x) = e^(-x) on the interval [0, 2] with n = 2."
+      , "Find the right Riemann sum of f(x) = 1/x^2 on the interval [1, 2] with n = 3."
+      , "Find the right Riemann sum of f(x) = cos(2x) on the interval [0, π] with n = 4."
+      , "Find the right Riemann sum of f(x) = ln(x + 1) on the interval [0, 2] with n = 3."
+      , "Find the right Riemann sum of f(x) = 4x - x^2 on the interval [0, 4] with n = 4."
+      , "Find the right Riemann sum of f(x) = sqrt(1 + x) on the interval [0, 3] with n = 3."
+      , "Find the right Riemann sum of f(x) = 1 - e^(-x) on the interval [0, 1] with n = 4."
+      , "Find the right Riemann sum of f(x) = sin(x) + cos(x) on the interval [0, π] with n = 3."
+      , "Find the left Riemann sum of f(x) = x^2 - 2x on the interval [0, 2] with n = 4."
+      , "Find the left Riemann sum of f(x) = e^(-x) on the interval [0, 1] with n = 3."
+      , "Find the left Riemann sum of f(x) = sin(2x) on the interval [0, π] with n = 5."
+      , "Find the left Riemann sum of f(x) = ln(x) on the interval [1, 3] with n = 4."
+      , "Find the left Riemann sum of f(x) = 3x^2 on the interval [1, 2] with n = 3."
+      , "Find the left Riemann sum of f(x) = 1/x on the interval [1, 4] with n = 4."
+      , "Find the left Riemann sum of f(x) = cos(x) on the interval [0, π] with n = 3."
+      , "Find the left Riemann sum of f(x) = 2 + x on the interval [1, 3] with n = 5."
+      , "Find the left Riemann sum of f(x) = sqrt(x) on the interval [0, 1] with n = 2."
+      , "Find the left Riemann sum of f(x) = 4 - x on the interval [0, 4] with n = 4."
+      , "Find the left Riemann sum of f(x) = x^3 + 2x^2 on the interval [0, 3] with n = 3."
+      , "Find the left Riemann sum of f(x) = e^x on the interval [1, 2] with n = 4."
+      , "Find the left Riemann sum of f(x) = 1 - e^(-x) on the interval [0, 2] with n = 2."
+      , "Find the left Riemann sum of f(x) = x^2 + 3x on the interval [0, 3] with n = 3."
+      , "Find the left Riemann sum of f(x) = 2x - x^2 on the interval [0, 2] with n = 4."
+      , "Find the left Riemann sum of f(x) = sqrt(1 + x) on the interval [1, 2] with n = 3."
+      , "Find the left Riemann sum of f(x) = ln(x + 1) on the interval [0, 1] with n = 4."
+      , "Find the left Riemann sum of f(x) = 3 - 2x on the interval [0, 2] with n = 4."
+      , "Find the left Riemann sum of f(x) = sin(x) + cos(x) on the interval [0, π] with n = 5."
+      , "Find the left Riemann sum of f(x) = x^3 - 2x^2 on the interval [0, 1] with n = 3."
+      , "Find the left Riemann sum of f(x) = 2 - e^(-x) on the interval [1, 2] with n = 4."
+      , "Find the left Riemann sum of f(x) = 1/x^2 on the interval [1, 3] with n = 3."
+      , "Find the left Riemann sum of f(x) = 4x - x^2 on the interval [0, 1] with n = 2."
+      , "Find the left Riemann sum of f(x) = cos(2x) on the interval [0, π] with n = 4."
+      , "Find the left Riemann sum of f(x) = x^2 on the interval [1, 4] with n = 5."
+      , "Find the right Riemann sum of f(x) = 2 - e^(-x) on the interval [1, 2] with n = 4."
+      , "Find the right Riemann sum of f(x) = 1/x^2 on the interval [1, 3] with n = 3."
+      , "Find the right Riemann sum of f(x) = 4x - x^2 on the interval [0, 1] with n = 2."
+      , "Find the right Riemann sum of f(x) = cos(2x) on the interval [0, π] with n = 4."
+      , "Find the right Riemann sum of f(x) = x^2 on the interval [1, 4] with n = 5."
+      , "Find the right Riemann sum of f(x) = 3 - 2x on the interval [0, 2] with n = 4."
+      , "Find the right Riemann sum of f(x) = sin(x) + cos(x) on the interval [0, π] with n = 5."
+      , "Find the right Riemann sum of f(x) = x^3 - 2x^2 on the interval [0, 1] with n = 3."
+      , "Find the right Riemann sum of f(x) = 2 + x on the interval [1, 3] with n = 5."
+      , "Find the right Riemann sum of f(x) = sqrt(x) on the interval [0, 1] with n = 2."
+      , "Find the right Riemann sum of f(x) = 4 - x on the interval [0, 4] with n = 4."
+      , "Find the right Riemann sum of f(x) = x^3 + 2x^2 on the interval [0, 3] with n = 3."
+      , "Find the right Riemann sum of f(x) = e^x on the interval [1, 2] with n = 4."
+      , "Find the right Riemann sum of f(x) = 1 - e^(-x) on the interval [0, 2] with n = 2."
+      , "Find the right Riemann sum of f(x) = x^2 + 3x on the interval [0, 3] with n = 3."
+      , "Find the right Riemann sum of f(x) = 2x - x^2 on the interval [0, 2] with n = 4."
+      , "Find the right Riemann sum of f(x) = sqrt(1 + x) on the interval [1, 2] with n = 3."
+      , "Find the right Riemann sum of f(x) = ln(x + 1) on the interval [0, 1] with n = 4."
+      , "Find the right Riemann sum of f(x) = x^2 - 2x on the interval [0, 2] with n = 4."
+      , "Find the right Riemann sum of f(x) = e^(-x) on the interval [0, 1] with n = 3."
+      , "Find the right Riemann sum of f(x) = sin(2x) on the interval [0, π] with n = 5."
+      , "Find the right Riemann sum of f(x) = ln(x) on the interval [1, 3] with n = 4."
+      , "Find the right Riemann sum of f(x) = 3x^2 on the interval [1, 2] with n = 3."
+      , "Find the right Riemann sum of f(x) = 1/x on the interval [1, 4] with n = 4."
+      , "Find the right Riemann sum of f(x) = cos(x) on the interval [0, π] with n = 3."]
+      
+      
+          qinteg = ["Integrate x^2 dx"
+      , "Evaluate the integral of (3x + 2) dx"
+      , "Find the integral of (4 - 2x) dx"
+      , "Calculate the integral of (5x^3 + 2) dx"
+      , "Integrate 2e^x dx"
+      , "Evaluate the integral of (1/x) dx"
+      , "Find the integral of (3sin(x) + 4cos(x)) dx"
+      , "Calculate the integral of (x + 1/x) dx"
+      , "Integrate 5 ln(x) dx"
+      , "Evaluate the integral of (2/x^2) dx"
+      , "Find the integral of (e^x + 1) dx"
+      , "Calculate the integral of (2sin(x) - 3cos(x)) dx"
+      , "Integrate x^4 dx"
+      , "Evaluate the integral of (1 + 2x + 3x^2) dx"
+      , "Find the integral of (1/(2x)) dx"
+      , "Calculate the integral of (4e^x - 2) dx"
+      , "Integrate cos(x) dx"
+      , "Evaluate the integral of (1/(x^2 + 1)) dx"
+      , "Find the integral of (e^x - e^(-x)) dx"
+      , "Calculate the integral of (sin(x) + cos(x)) dx"
+      , "Integrate 1/x dx"
+      , "Evaluate the integral of (3/x^3) dx"
+      , "Find the integral of (5e^x + 2/x) dx"
+      , "Calculate the integral of (2sin(x) + 3cos(x)) dx"
+      , "Integrate e^(2x) dx"
+      , "Integrate e^(x^2) dx"
+      , "Evaluate x^2 e^x dx"
+      , "Find ln(x) / x dx"
+      , "Calculate sin^2(x) + cos^2(x) dx"
+      , "Integrate x^2 ln(x) dx"
+      , "Evaluate e^x sin(x) dx"
+      , "Find 1 / (x^2 + 1) dx"
+      , "Calculate sqrt(1 - x^2) dx"
+      , "Integrate (tan(x) + sec(x))^2 dx"
+      , "Evaluate e^(2x) cos(3x) dx"
+      , "Find x^2 / (x^4 + 1) dx"
+      , "Calculate ln(x) / sqrt(x) dx"
+      , "Integrate (1 + e^x) / (1 + e^(2x)) dx"
+      , "Evaluate x e^x ln(x) dx"
+      , "Find 1 / (x^3 + x^2) dx"
+      , "Calculate sqrt(e^x + 1) / e^x dx"
+      , "Integrate (cos(x))^2 / (sin(x) + 1) dx"
+      , "Evaluate x^2 / sqrt(1 - x^2) dx"
+      , "Find (e^x + e^(-x)) / (e^x - e^(-x)) dx"
+      , "Calculate sec^3(x) dx"
+      , "Integrate e^(-x^2) / x dx"
+      , "Evaluate sin^2(2x) dx"
+      , "Find (ln(x))^2 / x dx"
+      , "Calculate sqrt(x) / (1 + sqrt(x)) dx"
+      , "Integrate (1 + tan(x))^2 / cos(x) dx"
+      , "Find the integral of e^(x^2)cos(x) dx"
+      , "Find the integral of x^3 ln(x) dx"
+      , "Find the integral of (sin^2(x) + cos^2(x))^2 dx"
+      , "Find the integral of x^2 e^(x^3) dx"
+      , "Find the integral of ln(x)/(1 + x) dx"
+      , "Find the integral of e^(-x)sin(x) dx"
+      , "Find the integral of sqrt(1 - x^2)cos(x) dx"
+      , "Find the integral of (tan(x) + sec(x))^3 dx"
+      , "Find the integral of e^x / (e^x + 1) dx"
+      , "Find the integral of x^2 / sqrt(1 - x^2) dx"
+      , "Find the integral of e^x sin^2(x) dx"
+      , "Find the integral of x^2 / (1 + x^4) dx"
+      , "Find the integral of (ln(x))^3 / x dx"
+      , "Find the integral of e^(2x)sin(3x) dx"
+      , "Find the integral of sqrt(1 + e^x) dx"
+      , "Find the integral of cos(x) / (1 - sin(x)) dx"
+      , "Find the integral of x^2 / (e^x + 1)^2 dx"
+      , "Find the integral of e^(2x)cos^2(x) dx"
+      , "Find the integral of x^2 / (x^4 + 1) dx"
+      , "Find the integral of (1 - e^x)^2 dx"
+      , "Find the integral of ln^2(x) / x dx"
+      , "Find the integral of e^(-x^2)sin(x) dx"
+      , "Find the integral of (1 + e^x)^2 / (1 + e^(2x)) dx"
+      , "Find the integral of x^2 / (1 + x^2)^2 dx"
+      , "Find the integral of e^(2x) / sqrt(e^2x - 1) dx"
+      , "Find the integral of e^(x^3)cos(x) dx"
+      , "Find the integral of x^4 ln(x) dx"
+      , "Find the integral of (sin^2(x) + cos^2(x))^3 dx"
+      , "Find the integral of x^3 e^(x^4) dx"
+      , "Find the integral of ln(x^2 + 1)/(x + 1) dx"
+      , "Find the integral of e^(-x)cos(2x) dx"
+      , "Find the integral of sqrt(1 - x^2)sin(x) dx"
+      , "Find the integral of (tan(x) + sec(x))^4 dx"
+      , "Find the integral of e^x / (e^x + 1)^2 dx"
+      , "Find the integral of x^3 / sqrt(1 - x^2) dx"
+      , "Find the integral of e^x sin^3(x) dx"
+      , "Find the integral of x^3 / (1 + x^4) dx"
+      , "Find the integral of (ln(x))^4 / x dx"
+      , "Find the integral of e^(2x)sin(4x) dx"
+      , "Find the integral of sqrt(1 + e^x + e^(2x)) dx"
+      , "Find the integral of cos^2(x) / (1 - sin(x)) dx"
+      , "Find the integral of x^3 / (e^x + 1)^3 dx"
+      , "Find the integral of e^(2x)cos^3(x) dx"
+      , "Find the integral of x^3 / (x^4 + 1) dx"
+      , "Find the integral of (1 - e^x)^3 dx"
+      , "Find the integral of (ln(x))^3 / x^2 dx"
+      , "Find the integral of e^(-x^2)sin(2x) dx"
+      , "Find the integral of (1 + e^x)^3 / (1 + e^(2x)) dx"
+      , "Find the integral of x^3 / (1 + x^2)^3 dx"
+      , "Find the integral of e^(2x) / sqrt(e^2x - 1) dx"]
+      
+      
+          
+          anslim = ["11", "0", "0", "20", "0", "10", "infinity", "2", "5", "0", "0", "8"
+                    , "0", "2", "3", "infinity", "0", "0", "infinity", "0", "-4", "0", "0"
+                    , "9", "0", "1", "1", "1", "3/4", "0", "1/2", "1", "0", "1", "0", "0"
+                    , "0", "-1", "3", "1", "-1/2", "0", "0", "2/3", "-1", "0", "0", "0"
+                    , "1", "1", "1", "0", "3", "2/3", "1/2", "1/2", "1", "0", "1/3", "0"
+                    , "0", "0", "-1", "0", "1", "-1", "0", "0", "0", "-1", "0", "0", "0"
+                    , "-1", "0", "1", "0", "2", "2", "1", "0", "0", "3", "0", "1", "3/2"
+                    , "2", "1/2", "0", "1/2", "1", "1", "0", "2", "1", "0", "1", "0", "2"
+                    , "1/2"]
+          
+      
+          ansderiv = ["12x^2 + 4x - 7"
+      , "30x^5 - 12x^3 + 4x"
+      , "-6x^(-3) + 6x^(-4) - 5x^(-2)"
+      , "4x^3 - 4x"
+      , "e^t * (4t^3 + 3t^2)"
+      , "-1/x^4"
+      , "5/2 * x^(-1/2)"
+      , "-18t^(-4) + 4t"
+      , "-5x^(-6)"
+      , "-t^(-4/3)"
+      , "8x^3 - 10x"
+      , "2e^t * t^2 + e^t * 2t"
+      , "12x^5 - 12x^3 + 14x"
+      , "-1/2 * x^(-3/2)"
+      , "3/2 * x^(1/2) - 1"
+      , "8t^(-3) - 6t^2"
+      , "-6x^(-7)"
+      , "2t^(-1/2)"
+      , "15x^4 - 6x^2"
+      , "3e^t * t^2 + e^t * 3t^2 - 2t"
+      , "-7x^(-8)"
+      , "-1/2 * t^(-3/2) - 3/2 * t^(-5/2)"
+      , "14x^6 - 5x^4 + 9x^2"
+      , "5e^t * t^4 + e^t * 5t^4 - 4t"
+      , "20x^(-5) - 6x^(-3)"
+      , "(12x^2 + 4x - 7) / (4x + 2)^2"
+      , "(30x^5 - 12x^3 + 4x) / (2x + 1)^2"
+      , "((4x - 2) - (2x^2 + 1)) / (x - 1)^2"
+      , "(4x^3 - 4x) / (x^2 + 1)^2"
+      , "((e^t + 2t^2 - 1)(2e^t + 1) - (e^t - t^2 + 3)(2e^t)) / (2e^t + 1)^2"
+      , "((sin(x) + 2)(sin(x) + 2) - (cos(x) + 1)(cos(x) + 1)) / (sin(x) + 2)^2"
+      , "((3x + 1)(ln(x) - 1) - (ln(x) + 2)(1)) / (3x + 1)^2"
+      , "((12t^2 - 4t)(t^2 - 2) - (4t^3 - 2t^2 + 1)(2t)) / (t^2 - 2)^2"
+      , "((2x + 1) - (1/x)(2)) / (2x + 1)^2"
+      , "((2)(sqrt(t) + 1) - (sqrt(t) + 1)(1)) / (3 - t)^2"
+      , "((4x + 2)(2x^2 - 5x + 4) - (2x^2 - 5x + 4)(2)) / (x^2 + 3x - 2)^2"
+      , "((2e^t - 1)(e^t + t^2 - 1) - (e^t + t^2 - 1)(2e^t)) / (2e^t - 1)^2"
+      , "((4x^2 + 2x + 1)(2x^3 - 3x^2 + 1) - (2x^2 - 5x + 4)(12x^2 + 4x - 7)) / (4x^2 + 2x + 1)^2"
+      , "((cos(x) + 1)(cos(x) + 1) - (tan(x) + 2)(-sin(x))) / (cos(x) + 1)^2"
+      , "((x^2 + x + 2)(ln(x) - 1) - (2ln(x) - 3)(2x + 1)) / (x^2 + x + 2)^2"
+      , "((e^t + 2)(3t^2 - 2t + 1) - (3t^2 - 2t + 1)(e^t + 2)) / (e^t + 2)^2"
+      , "((3x + 1)(1/x^2 - 2) - (1/x)(6x)) / (3x + 1)^2"
+      , "((sqrt(t) + 2)(sqrt(t) + 2) - (e^t - 1)(1/(2sqrt(t)))) / (sqrt(t) + 2)^2"
+      , "((x^3 + x + 2)(4x^2 - 3x + 1) - (4x^2 - 3x + 1)(3x^2 + x)) / (x^3 + x + 2)^2"
+      , "((t^2 - 1)(e^t + 2t) - (e^t + 2t)(2t)) / (t^2 - 1)^2"
+      , "((2/x + 1)(3x^2 - 4x + 1) - (3x^2 - 4x + 1)(-2/x^2)) / (2/x + 1)^2"
+      , "((cos(t) + 2)(cos(t) + 2) - (sin(t) + 1)(-sin(t))) / (cos(t) + 2)^2"
+      , "((4x + 1)(2ln(x) - 3) - (2)(2x + 1)) / (4x + 1)^2"
+      , "((3e^t - 2)(e^t - t^2 + 1) - (e^t - t^2 + 1)(3e^t)) / (3e^t - 2)^2"
+      , "((2x^2 + 1)(5x^3 - 2x^2 + 3x) - (5x^3 - 2x^2 + 3x)(4x)) / (2x^2 + 1)^2"
+      , "2(2x^3 - 5x^2 + 1)(6x^2 - 10x)"
+      , "6te^(3t^2 - 1)"
+      , "sin(2x)(2)"
+      , "(8x - 3) / (4x^2 - 3x + 1)"
+      , "cos(t)e^(sin(t))"
+      , "3(x^2 + 1)^2(2x)"
+      , "e^(2t) * (2cos(t) + sin(t))"
+      , "-tan(x)csc(x)"
+      , "(3) / (2sqrt(3t + 1))"
+      , "e^(2x) * (2cos(3x) - 3sin(3x))"
+      , "(2) / (2t + 1)"
+      , "3sec^2(3x + 1)"
+      , "e^(4t^2 - 1)(8t^2 + cos(t))"
+      , "-x / sqrt(1 - x^2)"
+      , "(2e^(2t) + e^(2t)ln(t))"
+      , "-4cos(2x)sin(2x)"
+      , "(2) / (e^(2t) + 1)"
+      , "e^(x^2) * (2x + tan(x)sec^2(x))"
+      , "e^(3t^2)(6tcos(2t) + sin(2t))"
+      , "cos(ln(x)) / x"
+      , "(8t) / sqrt(4t^2 + 1)"
+      , "2e^(sin(2x))cos(2x)"
+      , "-e^(e^t + 1)sin(e^t + 1)"
+      , "2 / (e^(2x) + 1)"
+      , "e^tsec^2(e^t)"
+      , "-2e^(2x)sin(cos(e^(2x))) - 2x(2x^2 - 5x + 1)e^(2x)cos(cos(e^(2x)))"
+      , "(e^x / (2sqrt{e^x + ln(x)})) + (1 / (x(e^x + ln(x))))"
+      , "(2e^(2t) + 2tsin(t)cos(ln(t))) / (cos(ln(t)) - (e^(2t) + sin^2(t))sin(ln(t)))"
+      , "6tan(3x)sec^2(3x) + e^sin(x)cos(x)"
+      , "(2x - 1) / (x^2 + 1)^2 - (e^(2x) + sqrt(x))ln(x) / (e^(2x) + sqrt(x))^2"
+      , "(3e^(3t) - cos(t)) / (cos^2(t) + 1)^2 - 2(e^(3t) - sin(t))sin(t) / (cos^2(t) + 1)^2"
+      , "-sin(e^x) / sqrt(1 + e^(2x)) - (e^(2x)cos(e^x)) / (2sqrt(1 + e^(2x))(1 + e^(2x)))"
+      , "(2ln(t)) / (t(2t + 1)) + 2te^(t^2)"
+      , "(2e^(2x)cos(e^x)(sin^2(x) + 1) - (e^(2x) + sin(x))(2sin(x)cos(x) + 2sin(x)e^xcos(e^x))) / (sin^2(x) + 1)^2"
+      , "(2e^(2t) + ln^2(t)) / (2sqrt(e^(2t) + ln^2(t)))"
+      , "3e^(3x)tan(e^x) + e^(3x)sec^2(e^x)"
+      , "((e^t + 1) / (2sqrt(e^t + 1)) - sin(t)(e^t - cos^2(t))) / (e^t - cos^2(t))^2"
+      , "(e^(2x) + sin(x))(2cos(e^x) - e^(2x)sin(x)) / (cos(e^x) + 1)^2"
+      , "2e^(2t)sin^2(t) + 2te^(2t)sin(t)cos(t)"
+      , "1 / (e^(2x) + sqrt(x)) + ln(e^(2x) + sqrt(x)) / (2e^(2x) + 1)"
+      , "e^(sin^2(t) + sin(t))cos(t) - 2e^(sin^2(t))sin(t)"
+      , "-2cos^2(x)sin(x) / (e^(2x) + ln(x))^2"
+      , "(3e^(3t) - cos(t))(cos(e^t) + sqrt(t)) / (cos^2(e^t) + sqrt(t))^2 - 1 / (2sqrt(t))"
+      , "e^xsec^2(e^x) + e^(2x)cos(e^x) / sqrt(e^(2x) + 1)"
+      , "(2ln(t)) / (t(e^t + cos(t))) - ln^2(t)(e^t + cos(t)) / (e^t + cos(t))^2"
+      , "(e^(x)sin(x) + sin(x)cos^2(x)) / sqrt(e^x + sin^2(x))"
+      , "(2e^(2t)sin(t)(cos^2(t) + 1) - (e^(2t) + sin(t))2sin(t)cos(t)) / (cos^2(t) + 1)^2"
+      , "sec^2(e^(2x)) + 2e^(2x) / sqrt(1 + e^(2x))"
+      , "e^(sin(t) + sin^2(t))cos(t) - e^(sin(t))sin(t)"
+      , "(1 / (x(sqrt(e^x + 1)))) - (ln(x) / (2(e^x + 1)^(3/2)))"]
+          
+      
+          ansrieman = ["0.875", "12.0", "2.0", "6.0", "3.5", "1.673", "8.0", "7.788", "1.833"
+                       , "-8.0", "5.778", "4.732", "0.0", "15.0", "1.792", "-12.0", "12.0"
+                       , "1.367", "1.361", "-2.072", "1.792", "30.0", "4.732", "2.197", "1.673"
+                       , "0.5625", "18.0", "2.0", "5.25", "4.375", "1.673", "9.0", "8.533"
+                       , "0.833", "-5.0", "6.778", "4.732", "-0.354", "18.0", "2.301", "-4.0"
+                       , "18.0", "1.632", "0.861", "-1.072", "2.301", "18.0", "4.732", "1.802"
+                       , "1.673", "-3.5", "1.0", "0.0", "0.693", "7.333", "1.708", "1.0", "10.0"
+                       , "0.5", "8.0", "4.732", "9.788", "0.367", "12.0", "2.0", "1.732", "0.693"
+                       , "5.0", "1.673", "-1.75", "5.105", "1.361", "-0.5", "-2.072", "5.875""5.105"
+                       , "1.361", "1.0", "-2.072", "5.875", "-1.75", "1.673", "-2.75", "12.0", "0.5"
+                       , "8.0", "4.732", "9.788", "0.367", "12.0", "2.0", "1.732", "0.693", "-3.5"
+                       , "1.0", "0.0", "0.693", "7.333", "1.708", "0.833"]
+          
+          
+          ansinteg = ["(1/3)x^3 + C"
+      , "(3/2)x^2 + 2x + C"
+      , "4x - x^2 + C"
+      , "(5/4)x^4 + 2x + C"
+      , "2e^x + C"
+      , "ln(|x|) + C"
+      , "-3cos(x) + 4sin(x) + C"
+      , "(1/2)x^2 + ln(|x|) + C"
+      , "5x ln(x) - 5x + C"
+      , "-2/x + C"
+      , "e^x + x + C"
+      , "-2cos(x) - 3sin(x) + C"
+      , "(1/5)x^5 + C"
+      , "x + x^2 + x^3 + C"
+      , "ln(|2x|) + C"
+      , "4e^x - 2x + C"
+      , "sin(x) + C"
+      , "arctan(x) + C"
+      , "e^x - e^(-x) + C"
+      , "-cos(x) + sin(x) + C"
+      , "ln(|x|) + C"
+      , "-3/(2x^2) + C"
+      , "5e^x + 2ln(|x|) + C"
+      , "-2cos(x) + 3sin(x) + C"
+      , "(1/2)e^(2x) + C"
+      , "1/2 sqrt(pi) erf(x) + C"
+      , "(x^2 - 2x + 2)e^x + C"
+      , "(ln(x))^2 / 2 + C"
+      , "x + C"
+      , "(1/3)x^3 ln(x) - (1/9)x^3 + C"
+      , "(1/2)e^x(sin(x) - cos(x)) + C"
+      , "arctan(x) + C"
+      , "(1/2)arcsin(x) + (1/2)x sqrt(1 - x^2) + C"
+      , "tan(x) + C"
+      , "(1/13)e^(2x)(2sin(3x) - 3cos(3x)) + C"
+      , "(1/5)x^5 / (x^4 + 1) + arctan(x^2) + C"
+      , "-2sqrt(x)(ln(x) + 2) + C"
+      , "ln(1 + e^x) + C"
+      , "(x^2 - 2)x e^x + C"
+      , "ln(x + 1) + C"
+      , "-sqrt(e^x + 1) + C"
+      , "x - cos(x) + sin(x) - C"
+      , "(1/2)arcsin(x) + x sqrt(1 - x^2) + C"
+      , "2arctan(e^x) + C"
+      , "(1/2)tan(x)sec(x) + C"
+      , "Ei(-x^2) / 2 + C"
+      , "(1/4)(2x - sin(4x)) + C"
+      , "(x - ln(x) - 2) ln(x) + C"
+      , "2sqrt(x) - 2ln(1 + sqrt(x)) + C"
+      , "(1/2)ln|cos(x)| + (1/2)tan(x) + C"
+      , "(1/2) sqrt(pi) erf(x) + C"
+      , "(x^4 / 4 - x^3 / 9) ln(x) + C"
+      , "(x - sin(x)cos(x)) / 2 + C"
+      , "(e^(x^3) / 3) + C"
+      , "x ln(x) - x + C"
+      , "-e^(-x)cos(x) - e^(-x)sin(x) + C"
+      , "(x / 2) sqrt(1 - x^2) + (1 / 2) arcsin(x) + C"
+      , "(1 / 2) tan(x) sec(x) - (1 / 2) ln|sec(x) + tan(x)| + C"
+      , "ln(e^x + 1) + C"
+      , "(1/2) arcsin(x) + (1/2) x sqrt(1 - x^2) + C"
+      , "(e^x sin^3(x)) / 3 + C"
+      , "(x / 2) - (1 / 4) ln(1 + x^4) + C"
+      , "(1/4) (ln(x))^4 + C"
+      , "(1 / 13) e^(2x) (3sin(3x) - cos(3x)) + C"
+      , "(2/3) (1 + e^x)^(3/2) + C"
+      , "ln|1 - sin(x)| + C"
+      , "-1 / (e^x + 1) + 1 / (e^x + 1)^2 - ln(e^x + 1) + C"
+      , "(1 / 4) e^(2x) (sin(2x) + 2) + C"
+      , "(x / 2) - (1 / 4) ln(1 + x^4) + C"
+      , "x - 2e^x + e^(2x) / 2 + C"
+      , "-ln^3(x) + 6ln^2(x) + 12ln(x) - 24x + C"
+      , "-e^(-x^2)cos(x) + C"
+      , "(1 / 2) e^x (e^x - 1) + C"
+      , "(x^2 / 2) - (1 / 2) arctan(x) - (1 / 4) x / (1 + x^2) + C"
+      , "-arctan(sqrt(e^2x - 1)) + C"
+      , "(1/4) sqrt(pi) erf(x) e^(x^3) + C"
+      , "(x^5 / 5 - x^4 / 16) ln(x) + C"
+      , "(x / 2) - (sin(2x)sin^2(x) + cos(2x)cos^2(x)) / 2 + C"
+      , "(e^(x^4) / 4) + C"
+      , "(x ln(x^2 + 1) - x) / 2 + atan(x) + C"
+      , "(1 / 5) e^(-x)(cos(2x) - 2sin(2x)) + C"
+      , "-sqrt(1 - x^2)cos(x) + C"
+      , "(1 / 4) tan(x) sec(x) - (1 / 4) ln|sec(x) + tan(x)| + (1 / 32) tan(x) sec^3(x) - (1 / 64) ln|sec(x) + tan(x)| sec^2(x) + C"
+      , "e^x / (e^x + 1) + 1 / (e^x + 1) + ln(e^x + 1) - 1 / 2ln|e^x + 1| + C"
+      , "(1/2) arcsin(x) + (1/2) x sqrt(1 - x^2) + (1/8) sqrt(1 - x^2) x (3x^2 - 1) + C"
+      , "(1 / 32) e^x (8sin(x) - 12sin(3x) + sin(5x)) + C"
+      , "(x / 4) - (1 / 16) ln(1 + x^4) + (1 / 32) arctan(x^2) - (1 / 64) ln|1 + x^4| + C"
+      , "(1/5) (ln(x))^5 - (2/3) (ln(x))^3 + 2ln(x) - (8/15) x^(-2) + C"
+      , "(1 / 130) e^(2x) (65sin(4x) - 12sin(6x) - 36cos(4x) - 108cos(6x)) + C"
+      , "(2/3) (1 + e^x + e^(2x))^(3/2) - 2 / sqrt(1 + e^x + e^(2x)) + C"
+      , "-ln|1 - sin(x)| - 2atan(sqrt(1 - sin(x))) + C"
+      , "-1 / (e^x + 1) + 1 / (e^x + 1)^2 - 1 / 2ln(e^x + 1) + 1 / 4(e^x + 1)^(-2) + C"
+      , "(1 / 160) e^(2x) (40sin(2x) + 120sin(4x) - 45sin(6x) - 5sin(8x)) + C"
+      , "(x / 4) - (1 / 16) ln(1 + x^4) + (1 / 32) arctan(x^2) - (1 / 64) ln|1 + x^4| + C"
+      , "(1 / 4) e^x (e^x - 1)^4 + C"
+      , "(ln(x))^4 / 4 - (3/2) (ln(x))^3 + 6ln(x) - 24x + C"
+      , "(1 / 2) e^(-x^2) cos(2x) + C"
+      , "(1 / 2) e^x (e^x + 1)^3 - 3 / 2 ln(e^x + 1) + 3 / 4(e^x + 1)^(-2) + C"
+      , "(x / 4) - (1 / 16) ln(1 + x^4) + (1 / 32) arctan(x^2) - (1 / 64) ln|1 + x^4| + C"
+      , "-arctan(sqrt(e^2x - 1)) + C"]
+      
+          numq = 10
+          array = int ( input ( " What topic would you like to do: " ) )
+          count = 0
+          difficulty = int( input (" Enter difficulty from 1 to 4: " ) )
+          if array == 1 :
+              topic = "Calculus 1 - Limits"
+          elif array == 2 :
+              topic = "Calculus 1 - Reimann Sums"
+          elif array == 3 :
+              topic = "Calculus 1 - Derivatives"
+          else :
+              topic = "Calculus 1 - Integrals"
+          if array == 1 :
+              print( " We will now begin testing you on Calculus 1 Limits: " )
+              for i in range(0, numq-1):
+                  if difficulty == 1 :
+                      a = random.randint(0,25)
+                  elif difficulty == 2 :
+                      a = random.randint(25,50)
+                  elif difficulty == 3 :
+                      a = random.randint(50,75)
+                  elif difficulty == 4 :
+                      a = random.randint(75,100)
+                  
+                  userans = str(input(print(qlim[a], " = ")))
+                  ans = anslim[a]
+      
+                  if ans == userans :
+                      print(" Congratulations!! your answer is correct.\n")
+                      count = count + 1
+                  else :
+                      print( " Your answer is wrong!!\n", " The correct answer is ", ans)
+              return count, difficulty
+                  
+          elif array == 2 :
+              print(" We will now begin testing you on Calculus 1 Riemann sums: " )
+              for i in range(0, numq-1):
+                  if difficulty == 1 :
+                      a = random.randint(0,25)
+                  elif difficulty == 2 :
+                      a = random.randint(25,50)
+                  elif difficulty == 3 :
+                      a = random.randint(50,75)
+                  elif difficulty == 4 :
+                      a = random.randint(75,100)
+                  xyz = qrieman[a]
+                  userans = str(input(print(qrieman[a], " = ")))
+                  ans = ansrieman[a]
+                  
+                  if ans == userans :
+                      print(" Congratulations!! your answer is correct.\n")
+                      count = count + 1
+                  else :
+                      print( " Your answer is wrong!!\n", " The correct answer is ", ans)
+              return count, difficulty
+      
+          elif array == 3 :
+              print(" We will now begin testing you on Calculus 1 Derivatives: " )
+              for i in range(0, numq-1):
+      
+                  if difficulty == 1 :
+                      a = random.randint(0,25)
+                  elif difficulty == 2 :
+                      a = random.randint(25,50)
+                  elif difficulty == 3 :
+                      a = random.randint(50,75)
+                  elif difficulty == 4 :
+                      a = random.randint(75,100)
+                  xyz = qderiv[a]
+                  userans = str(input(print(qderiv[a], " = ")))
+                  ans = ansderiv[a]
+                  if ans == userans :
+                      print(" Congratulations!! your answer is correct.\n")
+                      count = count + 1
+                  else :
+                      print( " Your answer is wrong!!\n", " The correct answer is ", ans )
+              return count, difficulty
+      
+          elif array == 4 :
+              print(" We will now begin testing you on Calculus 1 Integrals: " )
+              for i in range(0, numq-1):
+      
+                  if difficulty == 1 :
+                      a = random.randint(0,25)
+                  elif difficulty == 2 :
+                      a = random.randint(25,50)
+                  elif difficulty == 3 :
+                      a = random.randint(50,75)
+                  elif difficulty == 4 :
+                      a = random.randint(75,100)
+      
+                  userans = str(input(print(qinteg[a], " = ")))
+                  ans = ansinteg[a]
+                  if ans == userans :
+                      print(" Congratulations!! your answer is correct.\n")
+                      count = count + 1
+                  else :
+                      print( " Your answer is wrong!!\n", " The correct answer is ", ans)
+              return count, difficulty
+      
+      def main():
+          repeat = "yes"
+          points = 0
+          while repeat == "yes" :
+              quest()
+              points = count * difficulty
+              if difficulty == 1 :
+                  if points == 10 :
+                      print("Congratulations, you have acheived a perfect score on Basic Difficulty, your current level is BASIC GOLD")
+                      print("You have ", count, " correct questions out of 10. ")
+                  elif 10 > points >= 7 :
+                      print("Congratulations, you have achieved a high score on Basic Difficulty, your current level is BASIC SILVER")
+                      print("You have ", count, " correct questions out of 10. ")
+                  elif 7 > points >=5 :
+                      print("Well Done, you have completed the quiz, your current level is BASIC BRONZE")
+                      print("You have ", count, " correct questions out of 10. ")
+                  else :
+                      print("You have ", count, " correct questions. Please try again...")
+      
+              elif difficulty == 2 :
+                  if points == 20 :
+                      print("Congratulations, you have acheived a perfect score on intermediate Difficulty, your current level is INTERMEDIATE GOLD")
+                      print("You have ", count, " correct questions out of 10. ")
+                  elif 20 > points >= 16 :
+                      print("Congratulations, you have achieved a high score on intermediate Difficulty, your current level is INTERMEDIATE SILVER")
+                      print("You have ", count, " correct questions out of 10. ")
+                  elif 16 > points >=10 :
+                      print("Well Done, you have completed the quiz, your current level is INTERMEDIATE BRONZE")
+                      print("You have ", count, " correct questions out of 10. ")
+                  else :
+                      print("You have ", count, " correct questions. Please try again...")
+              
+              elif difficulty == 3 :
+                  if points == 30 :
+                      print("Congratulations, you have acheived a perfect score on advanced Difficulty, your current level is ADVANCED GOLD")
+                      print("You have ", count, " correct questions out of 10. ")
+                  elif 30 > points >= 24 :
+                      print("Congratulations, you have achieved a high score on advanced Difficulty, your current level is ADVANCED SILVER")
+                      print("You have ", count, " correct questions out of 10. ")
+                  elif 24 > points >=15 :
+                      print("Well Done, you have completed the quiz, your current level is ADVANCED BRONZE")
+                      print("You have ", count, " correct questions out of 10. ")
+                  else :
+                      print("You have ", count, " correct questions. Please try again...")
+      
+              elif difficulty == 4 :
+                  if points == 40 :
+                      print("Amazing, you have attained a perfect score on the challenge level.\n","You have achieved mastery over this topic, hence your current level in ", topic, " is PLATINUM :)\n")
+                  elif  40 > points >= 32 :
+                      print("Congratulations, you have achived a high level in the challenge level, your level is CHALLENGER GOLD")
+                      print("You got ", count, " correct questions correct out of 10.")
+                  elif 32 > points >= 24 :
+                      print("Well done, you have achieved a good understanding of the topic, your level is CHALLENGER SILVER")
+                      print("You got ", count, " correct questions correct out of 10.")
+                  elif 24 > points >= 16 :
+                      print("You have completed the challenge level, your current level is CHALLENGER BRONZE")
+                      print("You got ", count, " correct questions out of 10.")
+                  else :
+                      print("You have ", count, " correct questions out of 10, please try again...")
+      main()
+          </py-script>
+            <!-- blog section end -->
+            
+            <!-- copyright section start -->
+            <div class="copyright_section">
+               <div class="container">
+                  <p class="copyright_text">© 2020 All Rights Reserved. <a href="https://html.design">Free html  Templates</a></p>
+               </div>
+            </div>
+            <!-- copyright section end -->
+            <!-- Javascript files-->
+            <script src="js/jquery.min.js"></script>
+            <script src="js/popper.min.js"></script>
+            <script src="js/bootstrap.bundle.min.js"></script>
+            <script src="js/jquery-3.0.0.min.js"></script>
+            <script src="js/plugin.js"></script>
+            <!-- sidebar -->
+            <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+            <script src="js/custom.js"></script>
+            <!-- javascript -->
+            <script src="js/owl.carousel.js"></script>
+            <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+         </body>
+      </html>
+      
+      import random
+      def quest() :
+          global count, difficulty, topic
+      
+          qlim = ["Find the limit of (2x + 3) as x approaches 4."
+      , "Calculate the limit of (x^2 - 1) as x approaches -1."
+      , "Determine the limit of (3 - x) as x approaches 3."
+      , "Find the limit of (4x) as x approaches 5."
+      , "Evaluate the limit of (2/x) as x approaches infinity."
+      , "Calculate the limit of (3x^2 + 2x - 1) as x approaches -2."
+      , "Determine the limit of (5 / x) as x approaches 0."
+      , "Find the limit of (x^3 + 2x^2 - 3) as x approaches 1."
+      , "Evaluate the limit of (2x - 1) as x approaches 3."
+      , "Calculate the limit of (1 / x) as x approaches negative infinity."
+      , "Determine the limit of (x^2 - 4) as x approaches 2."
+      , "Find the limit of (3x + 1) as x approaches -1."
+      , "Evaluate the limit of (4 / x) as x approaches infinity."
+      , "Calculate the limit of (x^2 + 2x + 1) as x approaches -1."
+      , "Determine the limit of (2x - 1) as x approaches 2."
+      , "Find the limit of (5 / x^2) as x approaches 0."
+      , "Evaluate the limit of (x - 1) as x approaches 1."
+      , "Calculate the limit of (2x^2 - 3x + 1) as x approaches 1."
+      , "Determine the limit of (1 / x) as x approaches 0 from the right."
+      , "Find the limit of (x^3 - x^2 + x) as x approaches 0."
+      , "Evaluate the limit of (3x + 2) as x approaches -2."
+      , "Calculate the limit of (2 / x) as x approaches negative infinity."
+      , "Determine the limit of (x^2 - 9) as x approaches 3."
+      , "Find the limit of (4x + 1) as x approaches 2."
+      , "Evaluate the limit of (1 / x^2) as x approaches infinity."
+      , "Find the limit of (3x^2 + 2x - 1) / (x^2 - 1) as x approaches 1."
+      , "Calculate the limit of (e^(2x) - 1) / (e^x + 1) as x approaches 0."
+      , "Determine the limit of (sin(x) / x) as x approaches 0."
+      , "Find the limit of (x^3 + 4x^2 - 2x + 1) / (2x^3 - x^2 + 4) as x approaches -2."
+      , "Evaluate the limit of (sqrt(x^2 + 4) - x) / (x^2 + 2) as x approaches  (infinity)."
+      , "Calculate the limit of (1 - cos(x)) / (x) as x approaches 0."
+      , "Determine the limit of (ln(2x + 1) / x) as x approaches 0."
+      , "Find the limit of (2^x - 1) / (3^x - 1) as x approaches (infinity)."
+      , "Evaluate the limit of (tan(x) / x) as x approaches π/2."
+      , "Calculate the limit of (e^(3x) - 1) / (e^(2x) + 2) as x approaches -∞ (negative infinity)."
+      , "Determine the limit of (1/x + 1/(2x) + 1/(3x)) as x approaches ∞ (infinity)."
+      , "Find the limit of (cos(3x) / cos(x)) as x approaches π/6."
+      , "Evaluate the limit of (e^(-2x) - 1) / (e^(-x) - 1) as x approaches ∞ (infinity)."
+      , "Calculate the limit of (4x^2 - 1) / (2x^2 + 3x + 2) as x approaches -1."
+      , "Determine the limit of (tan(x) - sin(x)) / (x - π/3) as x approaches π/3."
+      , "Find the limit of (1/x - 1/(x+2)) as x approaches  (infinity)."
+      , "Evaluate the limit of (e^x - e^(-x)) / (e^x + e^(-x)) as x approaches -∞ (negative infinity)."
+      , "Calculate the limit of (ln(3x + 1) - ln(x)) / ln(x) as x approaches 1."
+      , "Determine the limit of (sin(2x) / x) as x approaches 3π."
+      , "Find the limit of (e^(4x) - e^(2x)) / (e^(3x) + e^(-x)) as x approaches (negative infinity)."
+      , "Evaluate the limit of (x^3 + 3x^2 - 1) / (2x^3 + x^2 - 5) as x approaches -2."
+      , "Calculate the limit of (tan(3x) / sin(4x)) as x approaches 0."
+      , "Determine the limit of (1/x + 1/(2x) + 1/(4x)) as x approaches (negative infinity)."
+      , "Find the limit of (e^(3x) + 1) / (e^x + 1) as x approaches 0."
+      , "Evaluate the limit of (cos(2x) / cos(x)) as x approaches 0."
+      , "Find the limit of (3x^2 + 2x - 1) / (x^2 - 1) as x approaches 1."
+      , "Calculate the limit of (e^(2x) - 1) / (e^x + 1) as x approaches 0."
+      , "Determine the limit of (sin(x) / x) as x approaches 0."
+      , "Find the limit of (x^3 + 4x^2 - 2x + 1) / (2x^3 - x^2 + 4) as x approaches -2."
+      , "Evaluate the limit of (sqrt(x^2 + 4) - x) / (x^2 + 2) as x approaches ∞ (infinity)."
+      , "Calculate the limit of (1 - cos(x)) / (x) as x approaches 0."
+      , "Determine the limit of (ln(2x + 1) / x) as x approaches 0."
+      , "Find the limit of (2^x - 1) / (3^x - 1) as x approaches ∞ (infinity)."
+      , "Evaluate the limit of (tan(x) / x) as x approaches π/2."
+      , "Calculate the limit of (e^(3x) - 1) / (e^(2x) + 2) as x approaches -∞ (negative infinity)."
+      , "Determine the limit of (1/x + 1/(2x) + 1/(3x)) as x approaches ∞ (infinity)."
+      , "Find the limit of (cos(3x) / cos(x)) as x approaches π/6."
+      , "Evaluate the limit of (e^(-2x) - 1) / (e^(-x) - 1) as x approaches ∞ (infinity)."
+      , "Calculate the limit of (4x^2 - 1) / (2x^2 + 3x + 2) as x approaches -1."
+      , "Determine the limit of (tan(x) - sin(x)) / (x - π/3) as x approaches π/3."
+      , "Find the limit of (1/x - 1/(x+2)) as x approaches ∞ (infinity)."
+      , "Evaluate the limit of (e^x - e^(-x)) / (e^x + e^(-x)) as x approaches -∞ (negative infinity)."
+      , "Calculate the limit of (ln(3x + 1) - ln(x)) / ln(x) as x approaches 1."
+      , "Determine the limit of (sin(2x) / x) as x approaches 3π."
+      , "Find the limit of (e^(4x) - e^(2x)) / (e^(3x) + e^(-x)) as x approaches -∞ (negative infinity)."
+      , "Evaluate the limit of (x^3 + 3x^2 - 1) / (2x^3 + x^2 - 5) as x approaches -2."
+      , "Calculate the limit of (tan(3x) / sin(4x)) as x approaches 0."
+      , "Determine the limit of (1/x + 1/(2x) + 1/(4x)) as x approaches -∞ (negative infinity)."
+      , "Find the limit of (e^(3x) + 1) / (e^x + 1) as x approaches 0."
+      , "Evaluate the limit of (cos(2x) / cos(x)) as x approaches 0."
+      , "Find the limit as x approaches 0 of sin(x) / x."
+      , "Evaluate the limit as x approaches infinity of ln(x) / x."
+      , "Determine the limit as x approaches 1 of (x^2 - 1) / ln(x)."
+      , "Find the limit as x approaches 0 of (e^(2x) - 1) / x."
+      , "Calculate the limit as x approaches 0 of tan(x) / x."
+      , "Determine the limit as x approaches infinity of (x^2 + 3x + 2) / e^x."
+      , "Evaluate the limit as x approaches infinity of sqrt(x) / e^x."
+      , "Find the limit as x approaches 0 of (e^(3x) - 1) / (e^(2x) - 1)."
+      , "Calculate the limit as x approaches infinity of (x^3 + 2x^2 + 1) / e^x."
+      , "Determine the limit as x approaches 1 of ln(x) / (x - 1)."
+      , "Find the limit as x approaches 0 of tan(3x) / sin(2x)."
+      , "Evaluate the limit as x approaches infinity of (e^(2x) + 3) / (e^x + 2)."
+      , "Determine the limit as x approaches 0 of (1 - cos(x)) / x^2."
+      , "Find the limit as x approaches infinity of (x^2 + 1) / e^x."
+      , "Calculate the limit as x approaches 0 of (e^(2x) - 2e^x + 1) / x^2."
+      , "Evaluate the limit as x approaches 1 of (x^2 + 2x - 3) / (x^2 + 3x - 4)."
+      , "Determine the limit as x approaches 0 of ln(1 + x) / x."
+      , "Find the limit as x approaches infinity of sin(x) / e^x."
+      , "Calculate the limit as x approaches 0 of (e^(2x) + 2e^x + 1) / sin(x)."
+      , "Determine the limit as x approaches infinity of sqrt(x^2 + 1) / x."
+      , "Find the limit as x approaches infinity of 2^x / e^x."
+      , "Evaluate the limit as x approaches infinity of ln(x + 1) / sqrt(x)."
+      , "Determine the limit as x approaches infinity of e^x / (x^2 + 1)."
+      , "Find the limit as x approaches 0 of tan(2x) / sin(x)."
+      , "Calculate the limit as x approaches 0 of (e^x - 1 - x) / x^2."]
+          
+      
+          qderiv = ["Find the derivative of f(x) = 4x^3 + 2x^2 - 7x + 1."
+      , "Calculate the derivative of g(x) = 5x^6 - 3x^4 + 2x^2."
+      , "Determine the derivative of h(x) = 3x^(-2) - 2x^(-3) + 5x^(-1)."
+      , "Find the derivative of y(x) = x^4 - 2x^2 + 1."
+      , "Calculate the derivative of f(t) = e^t * t^4."
+      , "Determine the derivative of g(x) = 1/x^3."
+      , "Find the derivative of h(x) = sqrt(x^5)."
+      , "Calculate the derivative of y(t) = 6t^(-3) + 2t^2 - 3."
+      , "Determine the derivative of f(x) = 1/x^5."
+      , "Find the derivative of g(t) = 3t^(-1/3)."
+      , "Calculate the derivative of h(x) = 2x^4 - 5x^2 + 4."
+      , "Determine the derivative of y(t) = e^t * t^2."
+      , "Find the derivative of f(x) = 2x^6 - 3x^4 + 7x^2."
+      , "Calculate the derivative of g(x) = 1/sqrt(x)."
+      , "Determine the derivative of h(x) = sqrt(x^3) - x."
+      , "Find the derivative of y(t) = 4t^(-2) - 2t^3 + 1."
+      , "Calculate the derivative of f(x) = 1/x^6."
+      , "Determine the derivative of g(t) = 4t^(1/2)."
+      , "Find the derivative of h(x) = 3x^5 - 2x^3 + 5."
+      , "Calculate the derivative of y(t) = e^t * t^3 - t^2 + 1."
+      , "Determine the derivative of f(x) = 1/x^7."
+      , "Find the derivative of g(t) = 2t^(-1/2) + t^(-3/2)."
+      , "Calculate the derivative of h(x) = 2x^7 - x^5 + 3x^3."
+      , "Determine the derivative of y(t) = e^t * t^5 - 2t^2 + 1."
+      , "Find the derivative of g(x) = 5x^(-4) - 3x^(-2) + 2."
+      , "Find the derivative of f(x) = (3x^2 - 2x + 1) / (4x + 2)."
+      , "Calculate the derivative of g(x) = (5x^3 + 2x^2 - 3x) / (2x + 1)."
+      , "Determine the derivative of h(x) = (2x^2 + 1) / (x - 1)."
+      , "Find the derivative of y(x) = (x^4 - 2x^2 + 1) / (x^2 + 1)."
+      , "Calculate the derivative of f(t) = (e^t - t^2 + 3) / (2e^t + 1)."
+      , "Determine the derivative of g(x) = (cos(x) + 1) / (sin(x) + 2)."
+      , "Find the derivative of h(x) = (ln(x) + 2) / (3x + 1)."
+      , "Calculate the derivative of y(t) = (4t^3 - 2t^2 + 1) / (t^2 - 2)."
+      , "Determine the derivative of f(x) = (1/x) / (2x + 1)."
+      , "Find the derivative of g(t) = (sqrt(t) + 1) / (3 - t)."
+      , "Calculate the derivative of h(x) = (2x^2 - 5x + 4) / (x^2 + 3x - 2)."
+      , "Determine the derivative of y(t) = (e^t + t^2 - 1) / (2e^t - 1)."
+      , "Find the derivative of f(x) = (2x^3 - 3x^2 + 1) / (4x^2 + 2x + 1)."
+      , "Calculate the derivative of g(x) = (tan(x) + 2) / (cos(x) + 1)."
+      , "Determine the derivative of h(x) = (ln(x) - 1) / (x^2 + x + 2)."
+      , "Find the derivative of y(t) = (3t^2 - 2t + 1) / (e^t + 2)."
+      , "Calculate the derivative of f(x) = (1/x^2 - 2) / (3x + 1)."
+      , "Determine the derivative of g(t) = (e^t - 1) / (sqrt(t) + 2)."
+      , "Find the derivative of h(x) = (4x^2 - 3x + 1) / (x^3 + x + 2)."
+      , "Calculate the derivative of y(t) = (e^t + 2t) / (t^2 - 1)."
+      , "Determine the derivative of f(x) = (3x^2 - 4x + 1) / (2/x + 1)."
+      , "Find the derivative of g(t) = (sin(t) + 1) / (cos(t) + 2)."
+      , "Calculate the derivative of h(x) = (2ln(x) - 3) / (4x + 1)."
+      , "Determine the derivative of y(t) = (e^t - t^2 + 1) / (3e^t - 2)."
+      , "Find the derivative of g(x) = (5x^3 - 2x^2 + 3x) / (2x^2 + 1)."
+      , "Find the derivative of the composition: y = (2x^3 - 5x^2 + 1)^2."
+      , "Calculate the derivative of f(t) = e^(3t^2 - 1)."
+      , "Determine the derivative of h(x) = sqrt(cos(2x))."
+      , "Find the derivative of y(x) = ln(4x^2 - 3x + 1)."
+      , "Calculate the derivative of g(t) = e^(sin(t))."
+      , "Determine the derivative of p(x) = (x^2 + 1)^3."
+      , "Find the derivative of y(t) = e^(2t) * sin(t)."
+      , "Calculate the derivative of f(x) = ln(cos(x))."
+      , "Determine the derivative of h(t) = sqrt(3t + 1)^2."
+      , "Find the derivative of y(x) = e^(2x) * cos(3x)."
+      , "Calculate the derivative of g(t) = ln(2t + 1)^2."
+      , "Determine the derivative of p(x) = tan(3x + 1)."
+      , "Find the derivative of y(t) = e^(4t^2 - 1) * sin(t)."
+      , "Calculate the derivative of f(x) = sqrt(1 - x^2)."
+      , "Determine the derivative of h(t) = e^(2t) * ln(t)."
+      , "Find the derivative of y(x) = cos(2x)^2."
+      , "Calculate the derivative of g(t) = ln(e^(2t) + 1))."
+      , "Determine the derivative of p(x) = e^(x^2) * tan(x)."
+      , "Find the derivative of y(t) = e^(3t^2) * cos(2t)."
+      , "Calculate the derivative of f(x) = sin(ln(x))."
+      , "Determine the derivative of h(t) = sqrt(4t^2 + 1)."
+      , "Find the derivative of y(x) = e^(sin(2x))."
+      , "Calculate the derivative of g(t) = cos(e^t + 1)."
+      , "Determine the derivative of p(x) = ln(e^(2x) + 1)."
+      , "Find the derivative of y(t) = tan(e^t)."
+      , "Find the derivative of y = e^(sin(2x)) / ln^2(1 + x^2)."
+      , "Find the derivative of f(x) = sqrt(cos(e^(3x)))."
+      , "Find the derivative of g(t) = e^(2t)sin(ln(t)) / (cos^3(t) + 1)."
+      , "Find the derivative of y(x) = (tan^3(x) + e^(sin^2(x))) / ln(2x^2 + 1)."
+      , "Find the derivative of h(x) = sqrt(e^(2x) + cos^2(x)) / ln(1 + e^x)."
+      , "Find the derivative of p(t) = e^tan(t) / (sin^2(t) + cos(t))."
+      , "Find the derivative of y(x) = e^(sqrt(ln^2(x) + cos(2x)))."
+      , "Find the derivative of f(t) = e^(2t) / sqrt(sin^2(t) + 1)."
+      , "Find the derivative of g(x) = e^(2x)cos(ln(x)) / (sin^3(x) + 1)."
+      , "Find the derivative of y(t) = sqrt((e^(3t) + ln(t^2 + 1)) / (cos^2(t) + 1))."
+      , "Find the derivative of h(x) = e^tan(e^x)cos(ln(2x + 1))."
+      , "Find the derivative of p(t) = sqrt(ln(t) + 1) / (e^(2t) - sin^2(t))."
+      , "Find the derivative of y(x) = e^(sin(x)) / sqrt(cos^2(x) + e^x)."
+      , "Find the derivative of f(t) = e^(2t)cos(sin(t)) / sqrt(cos(t) + 1)."
+      , "Find the derivative of g(x) = sqrt(ln(e^(2x) + sqrt(x)))."
+      , "Find the derivative of h(t) = e^(sin^2(t))cos(t)."
+      , "Find the derivative of y(x) = e^(cos(x)) / sqrt(sin^2(x) + ln^2(x))."
+      , "Find the derivative of p(t) = (e^(3t) - cos(t)) / sqrt(cos(e^t) + sqrt(t))."
+      , "Find the derivative of y(x) = tan(e^x) + sqrt((e^(2x) + 1) / (cos(x) + 1))."
+      , "Find the derivative of f(t) = ln^2(t) / (e^t + cos(t))."
+      , "Find the derivative of g(x) = e^(sqrt(sin^2(x) + 1))."
+      , "Find the derivative of h(t) = e^(2t)sin(t) / (cos^3(t) + 1)."
+      , "Find the derivative of p(x) = tan(e^(2x)) + sqrt(cos^2(x) + e^(2x))."
+      , "Find the derivative of y(t) = e^(sin(t))cos(t)."
+      , "Find the derivative of f(x) = ln(x) / sqrt(e^x + 1)."]
+      
+      
+          qrieman = ["Find the left Riemann sum of f(x) = x^2 on the interval [0, 1], with n = 4."
+      , "Find the left Riemann sum of f(x) = 2x on the interval [1, 3], with n = 3."
+      , "Find the left Riemann sum of f(x) = sqrt(x) on the interval [0, 4], with n = 2."
+      , "Find the left Riemann sum of f(x) = 3 - x on the interval [1, 4], with n = 3."
+      , "Find the left Riemann sum of f(x) = x^3 on the interval [0, 2], with n = 4."
+      , "Find the left Riemann sum of f(x) = sin(x) on the interval [0, π], with n = 3."
+      , "Find the left Riemann sum of f(x) = 2x + 1 on the interval [1, 2], with n = 2."
+      , "Find the left Riemann sum of f(x) = e^x on the interval [0, 1], with n = 4."
+      , "Find the left Riemann sum of f(x) = 1/x on the interval [1, 3], with n = 3."
+      , "Find the left Riemann sum of f(x) = x^2 - 2x on the interval [0, 3], with n = 3."
+      , "Find the left Riemann sum of f(x) = 4 - x^2 on the interval [0, 2], with n = 4."
+      , "Find the left Riemann sum of f(x) = sqrt(x) on the interval [1, 4], with n = 3."
+      , "Find the left Riemann sum of f(x) = cos(x) on the interval [0, π], with n = 4."
+      , "Find the left Riemann sum of f(x) = x^3 + 2x^2 on the interval [1, 2], with n = 2."
+      , "Find the left Riemann sum of f(x) = ln(x) on the interval [1, 2], with n = 3."
+      , "Find the left Riemann sum of f(x) = 2 - x on the interval [1, 3], with n = 4."
+      , "Find the left Riemann sum of f(x) = x^2 + 3x on the interval [0, 2], with n = 3."
+      , "Find the left Riemann sum of f(x) = e^(-x) on the interval [0, 2], with n = 2."
+      , "Find the left Riemann sum of f(x) = 1/x^2 on the interval [1, 2], with n = 3."
+      , "Find the left Riemann sum of f(x) = cos(2x) on the interval [0, π], with n = 4."
+      , "Find the left Riemann sum of f(x) = ln(x + 1) on the interval [0, 2], with n = 3."
+      , "Find the left Riemann sum of f(x) = 4x - x^2 on the interval [0, 4], with n = 4."
+      , "Find the left Riemann sum of f(x) = sqrt(1 + x) on the interval [0, 3], with n = 3."
+      , "Find the left Riemann sum of f(x) = 1 - e^(-x) on the interval [0, 1], with n = 4."
+      , "Find the left Riemann sum of f(x) = sin(x) + cos(x) on the interval [0, π], with n =3."
+      , "Find the right Riemann sum of f(x) = x^2 on the interval [0, 1] with n = 4."
+      , "Find the right Riemann sum of f(x) = 2x on the interval [1, 3] with n = 3."
+      , "Find the right Riemann sum of f(x) = sqrt(x) on the interval [0, 4] with n = 2."
+      , "Find the right Riemann sum of f(x) = 3 - x on the interval [1, 4] with n = 3."
+      , "Find the right Riemann sum of f(x) = x^3 on the interval [0, 2] with n = 4."
+      , "Find the right Riemann sum of f(x) = sin(x) on the interval [0, π] with n = 3."
+      , "Find the right Riemann sum of f(x) = 2x + 1 on the interval [1, 2] with n = 2."
+      , "Find the right Riemann sum of f(x) = e^x on the interval [0, 1] with n = 4."
+      , "Find the right Riemann sum of f(x) = 1/x on the interval [1, 3] with n = 3."
+      , "Find the right Riemann sum of f(x) = x^2 - 2x on the interval [0, 3] with n = 3."
+      , "Find the right Riemann sum of f(x) = 4 - x^2 on the interval [0, 2] with n = 4."
+      , "Find the right Riemann sum of f(x) = sqrt(x) on the interval [1, 4] with n = 3."
+      , "Find the right Riemann sum of f(x) = cos(x) on the interval [0, π] with n = 4."
+      , "Find the right Riemann sum of f(x) = x^3 + 2x^2 on the interval [1, 2] with n = 2."
+      , "Find the right Riemann sum of f(x) = ln(x) on the interval [1, 2] with n = 3."
+      , "Find the right Riemann sum of f(x) = 2 - x on the interval [1, 3] with n = 4."
+      , "Find the right Riemann sum of f(x) = x^2 + 3x on the interval [0, 2] with n = 3."
+      , "Find the right Riemann sum of f(x) = e^(-x) on the interval [0, 2] with n = 2."
+      , "Find the right Riemann sum of f(x) = 1/x^2 on the interval [1, 2] with n = 3."
+      , "Find the right Riemann sum of f(x) = cos(2x) on the interval [0, π] with n = 4."
+      , "Find the right Riemann sum of f(x) = ln(x + 1) on the interval [0, 2] with n = 3."
+      , "Find the right Riemann sum of f(x) = 4x - x^2 on the interval [0, 4] with n = 4."
+      , "Find the right Riemann sum of f(x) = sqrt(1 + x) on the interval [0, 3] with n = 3."
+      , "Find the right Riemann sum of f(x) = 1 - e^(-x) on the interval [0, 1] with n = 4."
+      , "Find the right Riemann sum of f(x) = sin(x) + cos(x) on the interval [0, π] with n = 3."
+      , "Find the left Riemann sum of f(x) = x^2 - 2x on the interval [0, 2] with n = 4."
+      , "Find the left Riemann sum of f(x) = e^(-x) on the interval [0, 1] with n = 3."
+      , "Find the left Riemann sum of f(x) = sin(2x) on the interval [0, π] with n = 5."
+      , "Find the left Riemann sum of f(x) = ln(x) on the interval [1, 3] with n = 4."
+      , "Find the left Riemann sum of f(x) = 3x^2 on the interval [1, 2] with n = 3."
+      , "Find the left Riemann sum of f(x) = 1/x on the interval [1, 4] with n = 4."
+      , "Find the left Riemann sum of f(x) = cos(x) on the interval [0, π] with n = 3."
+      , "Find the left Riemann sum of f(x) = 2 + x on the interval [1, 3] with n = 5."
+      , "Find the left Riemann sum of f(x) = sqrt(x) on the interval [0, 1] with n = 2."
+      , "Find the left Riemann sum of f(x) = 4 - x on the interval [0, 4] with n = 4."
+      , "Find the left Riemann sum of f(x) = x^3 + 2x^2 on the interval [0, 3] with n = 3."
+      , "Find the left Riemann sum of f(x) = e^x on the interval [1, 2] with n = 4."
+      , "Find the left Riemann sum of f(x) = 1 - e^(-x) on the interval [0, 2] with n = 2."
+      , "Find the left Riemann sum of f(x) = x^2 + 3x on the interval [0, 3] with n = 3."
+      , "Find the left Riemann sum of f(x) = 2x - x^2 on the interval [0, 2] with n = 4."
+      , "Find the left Riemann sum of f(x) = sqrt(1 + x) on the interval [1, 2] with n = 3."
+      , "Find the left Riemann sum of f(x) = ln(x + 1) on the interval [0, 1] with n = 4."
+      , "Find the left Riemann sum of f(x) = 3 - 2x on the interval [0, 2] with n = 4."
+      , "Find the left Riemann sum of f(x) = sin(x) + cos(x) on the interval [0, π] with n = 5."
+      , "Find the left Riemann sum of f(x) = x^3 - 2x^2 on the interval [0, 1] with n = 3."
+      , "Find the left Riemann sum of f(x) = 2 - e^(-x) on the interval [1, 2] with n = 4."
+      , "Find the left Riemann sum of f(x) = 1/x^2 on the interval [1, 3] with n = 3."
+      , "Find the left Riemann sum of f(x) = 4x - x^2 on the interval [0, 1] with n = 2."
+      , "Find the left Riemann sum of f(x) = cos(2x) on the interval [0, π] with n = 4."
+      , "Find the left Riemann sum of f(x) = x^2 on the interval [1, 4] with n = 5."
+      , "Find the right Riemann sum of f(x) = 2 - e^(-x) on the interval [1, 2] with n = 4."
+      , "Find the right Riemann sum of f(x) = 1/x^2 on the interval [1, 3] with n = 3."
+      , "Find the right Riemann sum of f(x) = 4x - x^2 on the interval [0, 1] with n = 2."
+      , "Find the right Riemann sum of f(x) = cos(2x) on the interval [0, π] with n = 4."
+      , "Find the right Riemann sum of f(x) = x^2 on the interval [1, 4] with n = 5."
+      , "Find the right Riemann sum of f(x) = 3 - 2x on the interval [0, 2] with n = 4."
+      , "Find the right Riemann sum of f(x) = sin(x) + cos(x) on the interval [0, π] with n = 5."
+      , "Find the right Riemann sum of f(x) = x^3 - 2x^2 on the interval [0, 1] with n = 3."
+      , "Find the right Riemann sum of f(x) = 2 + x on the interval [1, 3] with n = 5."
+      , "Find the right Riemann sum of f(x) = sqrt(x) on the interval [0, 1] with n = 2."
+      , "Find the right Riemann sum of f(x) = 4 - x on the interval [0, 4] with n = 4."
+      , "Find the right Riemann sum of f(x) = x^3 + 2x^2 on the interval [0, 3] with n = 3."
+      , "Find the right Riemann sum of f(x) = e^x on the interval [1, 2] with n = 4."
+      , "Find the right Riemann sum of f(x) = 1 - e^(-x) on the interval [0, 2] with n = 2."
+      , "Find the right Riemann sum of f(x) = x^2 + 3x on the interval [0, 3] with n = 3."
+      , "Find the right Riemann sum of f(x) = 2x - x^2 on the interval [0, 2] with n = 4."
+      , "Find the right Riemann sum of f(x) = sqrt(1 + x) on the interval [1, 2] with n = 3."
+      , "Find the right Riemann sum of f(x) = ln(x + 1) on the interval [0, 1] with n = 4."
+      , "Find the right Riemann sum of f(x) = x^2 - 2x on the interval [0, 2] with n = 4."
+      , "Find the right Riemann sum of f(x) = e^(-x) on the interval [0, 1] with n = 3."
+      , "Find the right Riemann sum of f(x) = sin(2x) on the interval [0, π] with n = 5."
+      , "Find the right Riemann sum of f(x) = ln(x) on the interval [1, 3] with n = 4."
+      , "Find the right Riemann sum of f(x) = 3x^2 on the interval [1, 2] with n = 3."
+      , "Find the right Riemann sum of f(x) = 1/x on the interval [1, 4] with n = 4."
+      , "Find the right Riemann sum of f(x) = cos(x) on the interval [0, π] with n = 3."]
+      
+      
+          qinteg = ["Integrate x^2 dx"
+      , "Evaluate the integral of (3x + 2) dx"
+      , "Find the integral of (4 - 2x) dx"
+      , "Calculate the integral of (5x^3 + 2) dx"
+      , "Integrate 2e^x dx"
+      , "Evaluate the integral of (1/x) dx"
+      , "Find the integral of (3sin(x) + 4cos(x)) dx"
+      , "Calculate the integral of (x + 1/x) dx"
+      , "Integrate 5 ln(x) dx"
+      , "Evaluate the integral of (2/x^2) dx"
+      , "Find the integral of (e^x + 1) dx"
+      , "Calculate the integral of (2sin(x) - 3cos(x)) dx"
+      , "Integrate x^4 dx"
+      , "Evaluate the integral of (1 + 2x + 3x^2) dx"
+      , "Find the integral of (1/(2x)) dx"
+      , "Calculate the integral of (4e^x - 2) dx"
+      , "Integrate cos(x) dx"
+      , "Evaluate the integral of (1/(x^2 + 1)) dx"
+      , "Find the integral of (e^x - e^(-x)) dx"
+      , "Calculate the integral of (sin(x) + cos(x)) dx"
+      , "Integrate 1/x dx"
+      , "Evaluate the integral of (3/x^3) dx"
+      , "Find the integral of (5e^x + 2/x) dx"
+      , "Calculate the integral of (2sin(x) + 3cos(x)) dx"
+      , "Integrate e^(2x) dx"
+      , "Integrate e^(x^2) dx"
+      , "Evaluate x^2 e^x dx"
+      , "Find ln(x) / x dx"
+      , "Calculate sin^2(x) + cos^2(x) dx"
+      , "Integrate x^2 ln(x) dx"
+      , "Evaluate e^x sin(x) dx"
+      , "Find 1 / (x^2 + 1) dx"
+      , "Calculate sqrt(1 - x^2) dx"
+      , "Integrate (tan(x) + sec(x))^2 dx"
+      , "Evaluate e^(2x) cos(3x) dx"
+      , "Find x^2 / (x^4 + 1) dx"
+      , "Calculate ln(x) / sqrt(x) dx"
+      , "Integrate (1 + e^x) / (1 + e^(2x)) dx"
+      , "Evaluate x e^x ln(x) dx"
+      , "Find 1 / (x^3 + x^2) dx"
+      , "Calculate sqrt(e^x + 1) / e^x dx"
+      , "Integrate (cos(x))^2 / (sin(x) + 1) dx"
+      , "Evaluate x^2 / sqrt(1 - x^2) dx"
+      , "Find (e^x + e^(-x)) / (e^x - e^(-x)) dx"
+      , "Calculate sec^3(x) dx"
+      , "Integrate e^(-x^2) / x dx"
+      , "Evaluate sin^2(2x) dx"
+      , "Find (ln(x))^2 / x dx"
+      , "Calculate sqrt(x) / (1 + sqrt(x)) dx"
+      , "Integrate (1 + tan(x))^2 / cos(x) dx"
+      , "Find the integral of e^(x^2)cos(x) dx"
+      , "Find the integral of x^3 ln(x) dx"
+      , "Find the integral of (sin^2(x) + cos^2(x))^2 dx"
+      , "Find the integral of x^2 e^(x^3) dx"
+      , "Find the integral of ln(x)/(1 + x) dx"
+      , "Find the integral of e^(-x)sin(x) dx"
+      , "Find the integral of sqrt(1 - x^2)cos(x) dx"
+      , "Find the integral of (tan(x) + sec(x))^3 dx"
+      , "Find the integral of e^x / (e^x + 1) dx"
+      , "Find the integral of x^2 / sqrt(1 - x^2) dx"
+      , "Find the integral of e^x sin^2(x) dx"
+      , "Find the integral of x^2 / (1 + x^4) dx"
+      , "Find the integral of (ln(x))^3 / x dx"
+      , "Find the integral of e^(2x)sin(3x) dx"
+      , "Find the integral of sqrt(1 + e^x) dx"
+      , "Find the integral of cos(x) / (1 - sin(x)) dx"
+      , "Find the integral of x^2 / (e^x + 1)^2 dx"
+      , "Find the integral of e^(2x)cos^2(x) dx"
+      , "Find the integral of x^2 / (x^4 + 1) dx"
+      , "Find the integral of (1 - e^x)^2 dx"
+      , "Find the integral of ln^2(x) / x dx"
+      , "Find the integral of e^(-x^2)sin(x) dx"
+      , "Find the integral of (1 + e^x)^2 / (1 + e^(2x)) dx"
+      , "Find the integral of x^2 / (1 + x^2)^2 dx"
+      , "Find the integral of e^(2x) / sqrt(e^2x - 1) dx"
+      , "Find the integral of e^(x^3)cos(x) dx"
+      , "Find the integral of x^4 ln(x) dx"
+      , "Find the integral of (sin^2(x) + cos^2(x))^3 dx"
+      , "Find the integral of x^3 e^(x^4) dx"
+      , "Find the integral of ln(x^2 + 1)/(x + 1) dx"
+      , "Find the integral of e^(-x)cos(2x) dx"
+      , "Find the integral of sqrt(1 - x^2)sin(x) dx"
+      , "Find the integral of (tan(x) + sec(x))^4 dx"
+      , "Find the integral of e^x / (e^x + 1)^2 dx"
+      , "Find the integral of x^3 / sqrt(1 - x^2) dx"
+      , "Find the integral of e^x sin^3(x) dx"
+      , "Find the integral of x^3 / (1 + x^4) dx"
+      , "Find the integral of (ln(x))^4 / x dx"
+      , "Find the integral of e^(2x)sin(4x) dx"
+      , "Find the integral of sqrt(1 + e^x + e^(2x)) dx"
+      , "Find the integral of cos^2(x) / (1 - sin(x)) dx"
+      , "Find the integral of x^3 / (e^x + 1)^3 dx"
+      , "Find the integral of e^(2x)cos^3(x) dx"
+      , "Find the integral of x^3 / (x^4 + 1) dx"
+      , "Find the integral of (1 - e^x)^3 dx"
+      , "Find the integral of (ln(x))^3 / x^2 dx"
+      , "Find the integral of e^(-x^2)sin(2x) dx"
+      , "Find the integral of (1 + e^x)^3 / (1 + e^(2x)) dx"
+      , "Find the integral of x^3 / (1 + x^2)^3 dx"
+      , "Find the integral of e^(2x) / sqrt(e^2x - 1) dx"]
+      
+      
+          
+          anslim = ["11", "0", "0", "20", "0", "10", "infinity", "2", "5", "0", "0", "8"
+                    , "0", "2", "3", "infinity", "0", "0", "infinity", "0", "-4", "0", "0"
+                    , "9", "0", "1", "1", "1", "3/4", "0", "1/2", "1", "0", "1", "0", "0"
+                    , "0", "-1", "3", "1", "-1/2", "0", "0", "2/3", "-1", "0", "0", "0"
+                    , "1", "1", "1", "0", "3", "2/3", "1/2", "1/2", "1", "0", "1/3", "0"
+                    , "0", "0", "-1", "0", "1", "-1", "0", "0", "0", "-1", "0", "0", "0"
+                    , "-1", "0", "1", "0", "2", "2", "1", "0", "0", "3", "0", "1", "3/2"
+                    , "2", "1/2", "0", "1/2", "1", "1", "0", "2", "1", "0", "1", "0", "2"
+                    , "1/2"]
+          
+      
+          ansderiv = ["12x^2 + 4x - 7"
+      , "30x^5 - 12x^3 + 4x"
+      , "-6x^(-3) + 6x^(-4) - 5x^(-2)"
+      , "4x^3 - 4x"
+      , "e^t * (4t^3 + 3t^2)"
+      , "-1/x^4"
+      , "5/2 * x^(-1/2)"
+      , "-18t^(-4) + 4t"
+      , "-5x^(-6)"
+      , "-t^(-4/3)"
+      , "8x^3 - 10x"
+      , "2e^t * t^2 + e^t * 2t"
+      , "12x^5 - 12x^3 + 14x"
+      , "-1/2 * x^(-3/2)"
+      , "3/2 * x^(1/2) - 1"
+      , "8t^(-3) - 6t^2"
+      , "-6x^(-7)"
+      , "2t^(-1/2)"
+      , "15x^4 - 6x^2"
+      , "3e^t * t^2 + e^t * 3t^2 - 2t"
+      , "-7x^(-8)"
+      , "-1/2 * t^(-3/2) - 3/2 * t^(-5/2)"
+      , "14x^6 - 5x^4 + 9x^2"
+      , "5e^t * t^4 + e^t * 5t^4 - 4t"
+      , "20x^(-5) - 6x^(-3)"
+      , "(12x^2 + 4x - 7) / (4x + 2)^2"
+      , "(30x^5 - 12x^3 + 4x) / (2x + 1)^2"
+      , "((4x - 2) - (2x^2 + 1)) / (x - 1)^2"
+      , "(4x^3 - 4x) / (x^2 + 1)^2"
+      , "((e^t + 2t^2 - 1)(2e^t + 1) - (e^t - t^2 + 3)(2e^t)) / (2e^t + 1)^2"
+      , "((sin(x) + 2)(sin(x) + 2) - (cos(x) + 1)(cos(x) + 1)) / (sin(x) + 2)^2"
+      , "((3x + 1)(ln(x) - 1) - (ln(x) + 2)(1)) / (3x + 1)^2"
+      , "((12t^2 - 4t)(t^2 - 2) - (4t^3 - 2t^2 + 1)(2t)) / (t^2 - 2)^2"
+      , "((2x + 1) - (1/x)(2)) / (2x + 1)^2"
+      , "((2)(sqrt(t) + 1) - (sqrt(t) + 1)(1)) / (3 - t)^2"
+      , "((4x + 2)(2x^2 - 5x + 4) - (2x^2 - 5x + 4)(2)) / (x^2 + 3x - 2)^2"
+      , "((2e^t - 1)(e^t + t^2 - 1) - (e^t + t^2 - 1)(2e^t)) / (2e^t - 1)^2"
+      , "((4x^2 + 2x + 1)(2x^3 - 3x^2 + 1) - (2x^2 - 5x + 4)(12x^2 + 4x - 7)) / (4x^2 + 2x + 1)^2"
+      , "((cos(x) + 1)(cos(x) + 1) - (tan(x) + 2)(-sin(x))) / (cos(x) + 1)^2"
+      , "((x^2 + x + 2)(ln(x) - 1) - (2ln(x) - 3)(2x + 1)) / (x^2 + x + 2)^2"
+      , "((e^t + 2)(3t^2 - 2t + 1) - (3t^2 - 2t + 1)(e^t + 2)) / (e^t + 2)^2"
+      , "((3x + 1)(1/x^2 - 2) - (1/x)(6x)) / (3x + 1)^2"
+      , "((sqrt(t) + 2)(sqrt(t) + 2) - (e^t - 1)(1/(2sqrt(t)))) / (sqrt(t) + 2)^2"
+      , "((x^3 + x + 2)(4x^2 - 3x + 1) - (4x^2 - 3x + 1)(3x^2 + x)) / (x^3 + x + 2)^2"
+      , "((t^2 - 1)(e^t + 2t) - (e^t + 2t)(2t)) / (t^2 - 1)^2"
+      , "((2/x + 1)(3x^2 - 4x + 1) - (3x^2 - 4x + 1)(-2/x^2)) / (2/x + 1)^2"
+      , "((cos(t) + 2)(cos(t) + 2) - (sin(t) + 1)(-sin(t))) / (cos(t) + 2)^2"
+      , "((4x + 1)(2ln(x) - 3) - (2)(2x + 1)) / (4x + 1)^2"
+      , "((3e^t - 2)(e^t - t^2 + 1) - (e^t - t^2 + 1)(3e^t)) / (3e^t - 2)^2"
+      , "((2x^2 + 1)(5x^3 - 2x^2 + 3x) - (5x^3 - 2x^2 + 3x)(4x)) / (2x^2 + 1)^2"
+      , "2(2x^3 - 5x^2 + 1)(6x^2 - 10x)"
+      , "6te^(3t^2 - 1)"
+      , "sin(2x)(2)"
+      , "(8x - 3) / (4x^2 - 3x + 1)"
+      , "cos(t)e^(sin(t))"
+      , "3(x^2 + 1)^2(2x)"
+      , "e^(2t) * (2cos(t) + sin(t))"
+      , "-tan(x)csc(x)"
+      , "(3) / (2sqrt(3t + 1))"
+      , "e^(2x) * (2cos(3x) - 3sin(3x))"
+      , "(2) / (2t + 1)"
+      , "3sec^2(3x + 1)"
+      , "e^(4t^2 - 1)(8t^2 + cos(t))"
+      , "-x / sqrt(1 - x^2)"
+      , "(2e^(2t) + e^(2t)ln(t))"
+      , "-4cos(2x)sin(2x)"
+      , "(2) / (e^(2t) + 1)"
+      , "e^(x^2) * (2x + tan(x)sec^2(x))"
+      , "e^(3t^2)(6tcos(2t) + sin(2t))"
+      , "cos(ln(x)) / x"
+      , "(8t) / sqrt(4t^2 + 1)"
+      , "2e^(sin(2x))cos(2x)"
+      , "-e^(e^t + 1)sin(e^t + 1)"
+      , "2 / (e^(2x) + 1)"
+      , "e^tsec^2(e^t)"
+      , "-2e^(2x)sin(cos(e^(2x))) - 2x(2x^2 - 5x + 1)e^(2x)cos(cos(e^(2x)))"
+      , "(e^x / (2sqrt{e^x + ln(x)})) + (1 / (x(e^x + ln(x))))"
+      , "(2e^(2t) + 2tsin(t)cos(ln(t))) / (cos(ln(t)) - (e^(2t) + sin^2(t))sin(ln(t)))"
+      , "6tan(3x)sec^2(3x) + e^sin(x)cos(x)"
+      , "(2x - 1) / (x^2 + 1)^2 - (e^(2x) + sqrt(x))ln(x) / (e^(2x) + sqrt(x))^2"
+      , "(3e^(3t) - cos(t)) / (cos^2(t) + 1)^2 - 2(e^(3t) - sin(t))sin(t) / (cos^2(t) + 1)^2"
+      , "-sin(e^x) / sqrt(1 + e^(2x)) - (e^(2x)cos(e^x)) / (2sqrt(1 + e^(2x))(1 + e^(2x)))"
+      , "(2ln(t)) / (t(2t + 1)) + 2te^(t^2)"
+      , "(2e^(2x)cos(e^x)(sin^2(x) + 1) - (e^(2x) + sin(x))(2sin(x)cos(x) + 2sin(x)e^xcos(e^x))) / (sin^2(x) + 1)^2"
+      , "(2e^(2t) + ln^2(t)) / (2sqrt(e^(2t) + ln^2(t)))"
+      , "3e^(3x)tan(e^x) + e^(3x)sec^2(e^x)"
+      , "((e^t + 1) / (2sqrt(e^t + 1)) - sin(t)(e^t - cos^2(t))) / (e^t - cos^2(t))^2"
+      , "(e^(2x) + sin(x))(2cos(e^x) - e^(2x)sin(x)) / (cos(e^x) + 1)^2"
+      , "2e^(2t)sin^2(t) + 2te^(2t)sin(t)cos(t)"
+      , "1 / (e^(2x) + sqrt(x)) + ln(e^(2x) + sqrt(x)) / (2e^(2x) + 1)"
+      , "e^(sin^2(t) + sin(t))cos(t) - 2e^(sin^2(t))sin(t)"
+      , "-2cos^2(x)sin(x) / (e^(2x) + ln(x))^2"
+      , "(3e^(3t) - cos(t))(cos(e^t) + sqrt(t)) / (cos^2(e^t) + sqrt(t))^2 - 1 / (2sqrt(t))"
+      , "e^xsec^2(e^x) + e^(2x)cos(e^x) / sqrt(e^(2x) + 1)"
+      , "(2ln(t)) / (t(e^t + cos(t))) - ln^2(t)(e^t + cos(t)) / (e^t + cos(t))^2"
+      , "(e^(x)sin(x) + sin(x)cos^2(x)) / sqrt(e^x + sin^2(x))"
+      , "(2e^(2t)sin(t)(cos^2(t) + 1) - (e^(2t) + sin(t))2sin(t)cos(t)) / (cos^2(t) + 1)^2"
+      , "sec^2(e^(2x)) + 2e^(2x) / sqrt(1 + e^(2x))"
+      , "e^(sin(t) + sin^2(t))cos(t) - e^(sin(t))sin(t)"
+      , "(1 / (x(sqrt(e^x + 1)))) - (ln(x) / (2(e^x + 1)^(3/2)))"]
+          
+      
+          ansrieman = ["0.875", "12.0", "2.0", "6.0", "3.5", "1.673", "8.0", "7.788", "1.833"
+                       , "-8.0", "5.778", "4.732", "0.0", "15.0", "1.792", "-12.0", "12.0"
+                       , "1.367", "1.361", "-2.072", "1.792", "30.0", "4.732", "2.197", "1.673"
+                       , "0.5625", "18.0", "2.0", "5.25", "4.375", "1.673", "9.0", "8.533"
+                       , "0.833", "-5.0", "6.778", "4.732", "-0.354", "18.0", "2.301", "-4.0"
+                       , "18.0", "1.632", "0.861", "-1.072", "2.301", "18.0", "4.732", "1.802"
+                       , "1.673", "-3.5", "1.0", "0.0", "0.693", "7.333", "1.708", "1.0", "10.0"
+                       , "0.5", "8.0", "4.732", "9.788", "0.367", "12.0", "2.0", "1.732", "0.693"
+                       , "5.0", "1.673", "-1.75", "5.105", "1.361", "-0.5", "-2.072", "5.875""5.105"
+                       , "1.361", "1.0", "-2.072", "5.875", "-1.75", "1.673", "-2.75", "12.0", "0.5"
+                       , "8.0", "4.732", "9.788", "0.367", "12.0", "2.0", "1.732", "0.693", "-3.5"
+                       , "1.0", "0.0", "0.693", "7.333", "1.708", "0.833"]
+          
+          
+          ansinteg = ["(1/3)x^3 + C"
+      , "(3/2)x^2 + 2x + C"
+      , "4x - x^2 + C"
+      , "(5/4)x^4 + 2x + C"
+      , "2e^x + C"
+      , "ln(|x|) + C"
+      , "-3cos(x) + 4sin(x) + C"
+      , "(1/2)x^2 + ln(|x|) + C"
+      , "5x ln(x) - 5x + C"
+      , "-2/x + C"
+      , "e^x + x + C"
+      , "-2cos(x) - 3sin(x) + C"
+      , "(1/5)x^5 + C"
+      , "x + x^2 + x^3 + C"
+      , "ln(|2x|) + C"
+      , "4e^x - 2x + C"
+      , "sin(x) + C"
+      , "arctan(x) + C"
+      , "e^x - e^(-x) + C"
+      , "-cos(x) + sin(x) + C"
+      , "ln(|x|) + C"
+      , "-3/(2x^2) + C"
+      , "5e^x + 2ln(|x|) + C"
+      , "-2cos(x) + 3sin(x) + C"
+      , "(1/2)e^(2x) + C"
+      , "1/2 sqrt(pi) erf(x) + C"
+      , "(x^2 - 2x + 2)e^x + C"
+      , "(ln(x))^2 / 2 + C"
+      , "x + C"
+      , "(1/3)x^3 ln(x) - (1/9)x^3 + C"
+      , "(1/2)e^x(sin(x) - cos(x)) + C"
+      , "arctan(x) + C"
+      , "(1/2)arcsin(x) + (1/2)x sqrt(1 - x^2) + C"
+      , "tan(x) + C"
+      , "(1/13)e^(2x)(2sin(3x) - 3cos(3x)) + C"
+      , "(1/5)x^5 / (x^4 + 1) + arctan(x^2) + C"
+      , "-2sqrt(x)(ln(x) + 2) + C"
+      , "ln(1 + e^x) + C"
+      , "(x^2 - 2)x e^x + C"
+      , "ln(x + 1) + C"
+      , "-sqrt(e^x + 1) + C"
+      , "x - cos(x) + sin(x) - C"
+      , "(1/2)arcsin(x) + x sqrt(1 - x^2) + C"
+      , "2arctan(e^x) + C"
+      , "(1/2)tan(x)sec(x) + C"
+      , "Ei(-x^2) / 2 + C"
+      , "(1/4)(2x - sin(4x)) + C"
+      , "(x - ln(x) - 2) ln(x) + C"
+      , "2sqrt(x) - 2ln(1 + sqrt(x)) + C"
+      , "(1/2)ln|cos(x)| + (1/2)tan(x) + C"
+      , "(1/2) sqrt(pi) erf(x) + C"
+      , "(x^4 / 4 - x^3 / 9) ln(x) + C"
+      , "(x - sin(x)cos(x)) / 2 + C"
+      , "(e^(x^3) / 3) + C"
+      , "x ln(x) - x + C"
+      , "-e^(-x)cos(x) - e^(-x)sin(x) + C"
+      , "(x / 2) sqrt(1 - x^2) + (1 / 2) arcsin(x) + C"
+      , "(1 / 2) tan(x) sec(x) - (1 / 2) ln|sec(x) + tan(x)| + C"
+      , "ln(e^x + 1) + C"
+      , "(1/2) arcsin(x) + (1/2) x sqrt(1 - x^2) + C"
+      , "(e^x sin^3(x)) / 3 + C"
+      , "(x / 2) - (1 / 4) ln(1 + x^4) + C"
+      , "(1/4) (ln(x))^4 + C"
+      , "(1 / 13) e^(2x) (3sin(3x) - cos(3x)) + C"
+      , "(2/3) (1 + e^x)^(3/2) + C"
+      , "ln|1 - sin(x)| + C"
+      , "-1 / (e^x + 1) + 1 / (e^x + 1)^2 - ln(e^x + 1) + C"
+      , "(1 / 4) e^(2x) (sin(2x) + 2) + C"
+      , "(x / 2) - (1 / 4) ln(1 + x^4) + C"
+      , "x - 2e^x + e^(2x) / 2 + C"
+      , "-ln^3(x) + 6ln^2(x) + 12ln(x) - 24x + C"
+      , "-e^(-x^2)cos(x) + C"
+      , "(1 / 2) e^x (e^x - 1) + C"
+      , "(x^2 / 2) - (1 / 2) arctan(x) - (1 / 4) x / (1 + x^2) + C"
+      , "-arctan(sqrt(e^2x - 1)) + C"
+      , "(1/4) sqrt(pi) erf(x) e^(x^3) + C"
+      , "(x^5 / 5 - x^4 / 16) ln(x) + C"
+      , "(x / 2) - (sin(2x)sin^2(x) + cos(2x)cos^2(x)) / 2 + C"
+      , "(e^(x^4) / 4) + C"
+      , "(x ln(x^2 + 1) - x) / 2 + atan(x) + C"
+      , "(1 / 5) e^(-x)(cos(2x) - 2sin(2x)) + C"
+      , "-sqrt(1 - x^2)cos(x) + C"
+      , "(1 / 4) tan(x) sec(x) - (1 / 4) ln|sec(x) + tan(x)| + (1 / 32) tan(x) sec^3(x) - (1 / 64) ln|sec(x) + tan(x)| sec^2(x) + C"
+      , "e^x / (e^x + 1) + 1 / (e^x + 1) + ln(e^x + 1) - 1 / 2ln|e^x + 1| + C"
+      , "(1/2) arcsin(x) + (1/2) x sqrt(1 - x^2) + (1/8) sqrt(1 - x^2) x (3x^2 - 1) + C"
+      , "(1 / 32) e^x (8sin(x) - 12sin(3x) + sin(5x)) + C"
+      , "(x / 4) - (1 / 16) ln(1 + x^4) + (1 / 32) arctan(x^2) - (1 / 64) ln|1 + x^4| + C"
+      , "(1/5) (ln(x))^5 - (2/3) (ln(x))^3 + 2ln(x) - (8/15) x^(-2) + C"
+      , "(1 / 130) e^(2x) (65sin(4x) - 12sin(6x) - 36cos(4x) - 108cos(6x)) + C"
+      , "(2/3) (1 + e^x + e^(2x))^(3/2) - 2 / sqrt(1 + e^x + e^(2x)) + C"
+      , "-ln|1 - sin(x)| - 2atan(sqrt(1 - sin(x))) + C"
+      , "-1 / (e^x + 1) + 1 / (e^x + 1)^2 - 1 / 2ln(e^x + 1) + 1 / 4(e^x + 1)^(-2) + C"
+      , "(1 / 160) e^(2x) (40sin(2x) + 120sin(4x) - 45sin(6x) - 5sin(8x)) + C"
+      , "(x / 4) - (1 / 16) ln(1 + x^4) + (1 / 32) arctan(x^2) - (1 / 64) ln|1 + x^4| + C"
+      , "(1 / 4) e^x (e^x - 1)^4 + C"
+      , "(ln(x))^4 / 4 - (3/2) (ln(x))^3 + 6ln(x) - 24x + C"
+      , "(1 / 2) e^(-x^2) cos(2x) + C"
+      , "(1 / 2) e^x (e^x + 1)^3 - 3 / 2 ln(e^x + 1) + 3 / 4(e^x + 1)^(-2) + C"
+      , "(x / 4) - (1 / 16) ln(1 + x^4) + (1 / 32) arctan(x^2) - (1 / 64) ln|1 + x^4| + C"
+      , "-arctan(sqrt(e^2x - 1)) + C"]
+      
+          numq = 10
+          array = int ( input ( " What topic would you like to do: " ) )
+          count = 0
+          difficulty = int( input (" Enter difficulty from 1 to 4: " ) )
+          if array == 1 :
+              topic = "Calculus 1 - Limits"
+          elif array == 2 :
+              topic = "Calculus 1 - Reimann Sums"
+          elif array == 3 :
+              topic = "Calculus 1 - Derivatives"
+          else :
+              topic = "Calculus 1 - Integrals"
+          if array == 1 :
+              print( " We will now begin testing you on Calculus 1 Limits: " )
+              for i in range(0, numq-1):
+                  if difficulty == 1 :
+                      a = random.randint(0,25)
+                  elif difficulty == 2 :
+                      a = random.randint(25,50)
+                  elif difficulty == 3 :
+                      a = random.randint(50,75)
+                  elif difficulty == 4 :
+                      a = random.randint(75,100)
+                  
+                  userans = str(input(print(qlim[a], " = ")))
+                  ans = anslim[a]
+      
+                  if ans == userans :
+                      print(" Congratulations!! your answer is correct.\n")
+                      count = count + 1
+                  else :
+                      print( " Your answer is wrong!!\n", " The correct answer is ", ans)
+              return count, difficulty
+                  
+          elif array == 2 :
+              print(" We will now begin testing you on Calculus 1 Riemann sums: " )
+              for i in range(0, numq-1):
+                  if difficulty == 1 :
+                      a = random.randint(0,25)
+                  elif difficulty == 2 :
+                      a = random.randint(25,50)
+                  elif difficulty == 3 :
+                      a = random.randint(50,75)
+                  elif difficulty == 4 :
+                      a = random.randint(75,100)
+                  xyz = qrieman[a]
+                  userans = str(input(print(qrieman[a], " = ")))
+                  ans = ansrieman[a]
+                  
+                  if ans == userans :
+                      print(" Congratulations!! your answer is correct.\n")
+                      count = count + 1
+                  else :
+                      print( " Your answer is wrong!!\n", " The correct answer is ", ans)
+              return count, difficulty
+      
+          elif array == 3 :
+              print(" We will now begin testing you on Calculus 1 Derivatives: " )
+              for i in range(0, numq-1):
+      
+                  if difficulty == 1 :
+                      a = random.randint(0,25)
+                  elif difficulty == 2 :
+                      a = random.randint(25,50)
+                  elif difficulty == 3 :
+                      a = random.randint(50,75)
+                  elif difficulty == 4 :
+                      a = random.randint(75,100)
+                  xyz = qderiv[a]
+                  userans = str(input(print(qderiv[a], " = ")))
+                  ans = ansderiv[a]
+                  if ans == userans :
+                      print(" Congratulations!! your answer is correct.\n")
+                      count = count + 1
+                  else :
+                      print( " Your answer is wrong!!\n", " The correct answer is ", ans )
+              return count, difficulty
+      
+          elif array == 4 :
+              print(" We will now begin testing you on Calculus 1 Integrals: " )
+              for i in range(0, numq-1):
+      
+                  if difficulty == 1 :
+                      a = random.randint(0,25)
+                  elif difficulty == 2 :
+                      a = random.randint(25,50)
+                  elif difficulty == 3 :
+                      a = random.randint(50,75)
+                  elif difficulty == 4 :
+                      a = random.randint(75,100)
+      
+                  userans = str(input(print(qinteg[a], " = ")))
+                  ans = ansinteg[a]
+                  if ans == userans :
+                      print(" Congratulations!! your answer is correct.\n")
+                      count = count + 1
+                  else :
+                      print( " Your answer is wrong!!\n", " The correct answer is ", ans)
+              return count, difficulty
+      
+      def main():
+          repeat = "yes"
+          points = 0
+          while repeat == "yes" :
+              quest()
+              points = count * difficulty
+              if difficulty == 1 :
+                  if points == 10 :
+                      print("Congratulations, you have acheived a perfect score on Basic Difficulty, your current level is BASIC GOLD")
+                      print("You have ", count, " correct questions out of 10. ")
+                  elif 10 > points >= 7 :
+                      print("Congratulations, you have achieved a high score on Basic Difficulty, your current level is BASIC SILVER")
+                      print("You have ", count, " correct questions out of 10. ")
+                  elif 7 > points >=5 :
+                      print("Well Done, you have completed the quiz, your current level is BASIC BRONZE")
+                      print("You have ", count, " correct questions out of 10. ")
+                  else :
+                      print("You have ", count, " correct questions. Please try again...")
+      
+              elif difficulty == 2 :
+                  if points == 20 :
+                      print("Congratulations, you have acheived a perfect score on intermediate Difficulty, your current level is INTERMEDIATE GOLD")
+                      print("You have ", count, " correct questions out of 10. ")
+                  elif 20 > points >= 16 :
+                      print("Congratulations, you have achieved a high score on intermediate Difficulty, your current level is INTERMEDIATE SILVER")
+                      print("You have ", count, " correct questions out of 10. ")
+                  elif 16 > points >=10 :
+                      print("Well Done, you have completed the quiz, your current level is INTERMEDIATE BRONZE")
+                      print("You have ", count, " correct questions out of 10. ")
+                  else :
+                      print("You have ", count, " correct questions. Please try again...")
+              
+              elif difficulty == 3 :
+                  if points == 30 :
+                      print("Congratulations, you have acheived a perfect score on advanced Difficulty, your current level is ADVANCED GOLD")
+                      print("You have ", count, " correct questions out of 10. ")
+                  elif 30 > points >= 24 :
+                      print("Congratulations, you have achieved a high score on advanced Difficulty, your current level is ADVANCED SILVER")
+                      print("You have ", count, " correct questions out of 10. ")
+                  elif 24 > points >=15 :
+                      print("Well Done, you have completed the quiz, your current level is ADVANCED BRONZE")
+                      print("You have ", count, " correct questions out of 10. ")
+                  else :
+                      print("You have ", count, " correct questions. Please try again...")
+      
+              elif difficulty == 4 :
+                  if points == 40 :
+                      print("Amazing, you have attained a perfect score on the challenge level.\n","You have achieved mastery over this topic, hence your current level in ", topic, " is PLATINUM :)\n")
+                  elif  40 > points >= 32 :
+                      print("Congratulations, you have achived a high level in the challenge level, your level is CHALLENGER GOLD")
+                      print("You got ", count, " correct questions correct out of 10.")
+                  elif 32 > points >= 24 :
+                      print("Well done, you have achieved a good understanding of the topic, your level is CHALLENGER SILVER")
+                      print("You got ", count, " correct questions correct out of 10.")
+                  elif 24 > points >= 16 :
+                      print("You have completed the challenge level, your current level is CHALLENGER BRONZE")
+                      print("You got ", count, " correct questions out of 10.")
+                  else :
+                      print("You have ", count, " correct questions out of 10, please try again...")
+      main()
     </py-script>
       <!-- blog section end -->
       
